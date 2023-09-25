@@ -1,11 +1,41 @@
 ---
-title: "floraham.github.io"
+title: "Flora Hamilton"
+image: replace.png
+toc: false
+about: 
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  image-width: 10em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/flora-hamilton-946980122/
+    - icon: github
+      text: GitHub
+      href: https://github.com/floraham
+  
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+:::{#hero-heading}
+## Bio
 
-```{r}
-1 + 1
-```
+Flora Hamilton is a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. When not thinking about data science she's probably reading, playing board games, or outdoors. 
+
+---
+
+## Education
+
+Bowdoin College | Brunswick, ME
+BA in Mathematics and Environmental Studies, Economics Minor | Aug 2014 - May 2021
+
+---
+
+## Experience
+
+Data Intern | Cary Institute of Ecosystems Studies | Dec 2022 - Jun 2023
+
+Investment Specialist | SOSV | Jul 2021 - April 2022
+
+:::
+
