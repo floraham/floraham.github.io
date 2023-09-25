@@ -3,20 +3,24 @@ project:
   output-dir: docs
 
 website:
-  title: "Flora Hamilton"
+  title: "floraham.github.io"
   navbar:
-   background: primary
    left:
      - href: index.qmd
        text: Home
      - about.qmd
-
+     - CV.qmd
+     - Projects.qmd
 
 format:
   html:
-    theme: flatly
-    css: styles.css
+    theme:
+      - mystyles.css
+    mainfont: Roboto
+      #light: minty
+      #dark: slate
+    #css: styles.css
     toc: true
-    page-layout: full
+    
 editor: visual
 

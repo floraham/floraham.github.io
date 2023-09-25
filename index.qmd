@@ -1,23 +1,18 @@
 ---
 title: "Flora Hamilton"
-image: replace.png
-toc: false
+image: IMG_2339.jpg
 about: 
-  id: hero-heading
   template: trestles
-  image-shape: rectangle
-  image-width: 10em
+  image-shape: round
+  image-width: 9em
   links:
-    - text: LinkedIn
+    - icon: linkedin
       href: https://www.linkedin.com/in/flora-hamilton-946980122/
     - icon: github
-      text: GitHub
       href: https://github.com/floraham
-  
+toc: false
 ---
 
-
-:::{#hero-heading}
 ## Bio
 
 Flora Hamilton is a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. When not thinking about data science she's probably reading, playing board games, or outdoors. 
@@ -37,5 +32,4 @@ Data Intern | Cary Institute of Ecosystems Studies | Dec 2022 - Jun 2023
 
 Investment Specialist | SOSV | Jul 2021 - April 2022
 
-:::
 
