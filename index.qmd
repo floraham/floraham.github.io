@@ -15,7 +15,7 @@ toc: false
 
 ## Bio
 
-Flora Hamilton is a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. When not thinking about data science she's probably reading, playing board games, or outdoors. 
+Flora Hamilton is a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. When not thinking about data science she's probably reading, playing board games, or recharging in the outdoors. 
 
 ---
 
