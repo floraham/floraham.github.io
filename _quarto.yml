@@ -3,14 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "floraham.github.io"
   navbar:
-   left:
-     - href: index.qmd
-       text: Home
-     - about.qmd
-     - CV.qmd
-     - Projects.qmd
+    title: "floraham.github.io"
+    right:
+    - href: index.qmd
+      text: Home
+    - about.qmd
+    - CV.qmd
+    - Projects.qmd
+  page-footer:
+    background: light # or dark 
+    left: 
+      - "Copyright 2023, Flora Hamilton"
+    right: 
+      - icon: github
+    
+
 
 format:
   html:
@@ -20,7 +28,7 @@ format:
       #light: minty
       #dark: slate
     #css: styles.css
-    toc: true
-    
+    toc: false
+  
 editor: visual
 

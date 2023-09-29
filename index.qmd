@@ -1,5 +1,6 @@
 ---
 title: "Flora Hamilton"
+subtitle: "洪書琪"
 image: IMG_2339.jpg
 about: 
   template: trestles
@@ -8,28 +9,41 @@ about:
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/flora-hamilton-946980122/
+      
     - icon: github
       href: https://github.com/floraham
+    - icon: link-45deg
+      text: bren
+      href: https://bren.ucsb.edu/people/flora-hamilton
+    - icon: envelope
+      href: mailto:flora_hamilton@ucsb.edu
+      
+html:
+  page-layout: full
 toc: false
 ---
 
-## Bio
+## Hello, I'm Flora
 
-Flora Hamilton is a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. When not thinking about data science she's probably reading, playing board games, or recharging in the outdoors. 
+I'm a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. I draw from a breadth of disciplines to understand and solve problems pertaining to the carbon economy and GHG's. When not thinking about data science I'm reading, playing board games, or recharging in the outdoors. 
 
 ---
 
 ## Education
 
-Bowdoin College | Brunswick, ME
+ > **Bren School of Environmental Science & Management, University of California Santa Barbara** | Master of Environmental Data Science | Expected June 2024
+
+ > **Bowdoin College** | Brunswick, ME |
 BA in Mathematics and Environmental Studies, Economics Minor | Aug 2014 - May 2021
 
 ---
 
 ## Experience
 
-Data Intern | Cary Institute of Ecosystems Studies | Dec 2022 - Jun 2023
+> Data Jam Data Intern | Cary Institute of Ecosystems Studies | Dec 2022 - Jun 2023
 
-Investment Specialist | SOSV | Jul 2021 - April 2022
+> Investment Specialist | SOSV | Jul 2021 - April 2022
 
 
+--- 
+###### (c) Flora Hamilton 2023
