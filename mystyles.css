@@ -11,6 +11,7 @@ $black: #000000;
 $white: #ffffff;
 $WhiteSmoke: #F5F5F5;
 $electric-blue: #7DF9FF;
+$coral-pink: #F88379;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display#=swap');
@@ -21,7 +22,7 @@ $electric-blue: #7DF9FF;
 
 $navbar-bg: $steal-blue; //navbar
 $navbar-fg: $WhiteSmoke; // navbar foreground elements
-$navbar-hl: $electric-blue; // highlight color when hovering over navbar links
+$navbar-hl: $coral-pink; // highlight color when hovering over navbar links
 $body-bg: $WhiteSmoke; // page background 
 $body-color: $black; // page text 
 $footer-bg: $steal-blue; // footer 

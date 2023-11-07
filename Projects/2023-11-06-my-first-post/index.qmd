@@ -1,0 +1,15 @@
+---
+title: "My first blog post"
+description: "this is my short description"
+author:
+  - name: Flora Hamilton 
+    url: https://floraham.github.io/
+    affiliation: Master of Environmental Data Science Program 
+    affiliation-url: https://ucsb-meds.github.io
+    
+date: 11-6-2023
+categories: [Quarto, R, MEDS]
+citation:
+  url: https://floraham.github.io/Projects/2023-11-06-my-first-post
+image: preview-image.png
+---

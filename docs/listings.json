@@ -1,0 +1,12 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": []
+  },
+  {
+    "listing": "/Projects.html",
+    "items": [
+      "/Projects/2023-11-06-my-first-post/index.html"
+    ]
+  }
+]
