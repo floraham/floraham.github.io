@@ -13,3 +13,13 @@ citation:
   url: https://floraham.github.io/Projects/2023-11-06-my-first-post
 image: preview-image.png
 ---
+
+### **Welcome to my first blog post**
+
+If you're reading this, thanks for stopping by! I am currently learning data science through the Masters of Environmental Data Science program at the Bren School of Environmental Science & Management at UC Santa Barbara.
+
+This blog space will be used as a space to showcase & keep track of my data science projects, and practice my data communication skills. I also hope to make these blog posts informative, accessible, and friendly.
+
+In my senior spring at Bowdoin College I did what every liberal arts STEM student must do for a last hurrah. In my case, I took a course cross registered under the English, Italian, and Religion departments: Dante's Divine Comedy. The next-to-final assignment in the course was to do a formal, close-reading of any Canto (Chapter) of our choice. When I got my paper comments back, the professor remarked in red pen (in an endearing tone) that I should start.... a blog :,)
+
+I guess that now, years later, is my time to shine.

@@ -22,7 +22,7 @@ $coral-pink: #F88379;
 
 $navbar-bg: $steal-blue; //navbar
 $navbar-fg: $WhiteSmoke; // navbar foreground elements
-$navbar-hl: $coral-pink; // highlight color when hovering over navbar links
+$navbar-hl: $white; // highlight color when hovering over navbar links
 $body-bg: $WhiteSmoke; // page background 
 $body-color: $black; // page text 
 $footer-bg: $steal-blue; // footer 
