@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-Flora Hamilton graduated from Bowdoin College in 2021 with bachelor\'s degrees in mathematics and environmental studies, and a minor in economics. With a liberal arts philosophy in mind, Flora took her quantitative foundations to Taipei where she gained exposure to the workings of mobile technology startups in Southeast Asia and early-stage investing at SOSV, a multinational venture capital firm. This time abroad kindled her interest in applying science and technology to solving environmental issues at scale.\
+Flora Hamilton graduated from Bowdoin College in 2021 with bachelor's degrees in mathematics and environmental studies, and a minor in economics. With a liberal arts philosophy in mind, Flora took her quantitative foundations to Taipei where she gained exposure to the workings of mobile technology startups in Southeast Asia and early-stage investing at SOSV, a multinational venture capital firm. This time abroad kindled her interest in applying science and technology to solving environmental issues at scale.\
 \
 In 2022 Flora returned to Oregon, where she applied her knowledge of geospatial and remote-sensing methods to support pollinator habitat restoration in agricultural landscapes of the Willamette Valley. Most recently, she worked with ecologists at Cary Institute of Ecosystem Studies, a nonprofit environmental science research center in Millbrook, NY, to source long-term environmental datasets for its state-funded science education program.\
 \

@@ -1,6 +1,6 @@
 ---
 title: "My first blog post"
-description: "this is my short description"
+description: "A short intro"
 author:
   - name: Flora Hamilton 
     url: https://floraham.github.io/

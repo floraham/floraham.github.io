@@ -1,6 +1,6 @@
 ---
 title: "Flora Hamilton"
-subtitle: "洪書琪"
+subtitle: "洪書琪 (Hong Shu-Qi)"
 image: IMG_2339.jpg
 about: 
   template: trestles
