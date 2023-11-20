@@ -24,11 +24,9 @@ website:
 format:
   html:
     theme:
-      - mystyles.css
+      light: mystyles.css
+      dark: [cosmo, theme-dark.scss]
     mainfont: Roboto
-      #light: minty
-      #dark: slate
-    #css: styles.css
     toc: false
   
 editor: visual

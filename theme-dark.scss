@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+// Base document colors
+$body-bg: #181818;
+$body-color: white;
+$link-color: #75AADB;
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+/*-- scss:rules --*/
+
+h1, h2, h3 {
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: white;
+}
+
+.title {
+  color: #75AADB;
+}
+
+.custom-subtitle {
+  font-size: 22px;
+  font-style: italic;
+  color: #74AADB;
+}
