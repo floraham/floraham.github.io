@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -197,7 +197,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#importing-libraries-and-functions" id="toc-importing-libraries-and-functions" class="nav-link active" data-scroll-target="#importing-libraries-and-functions">Importing Libraries and Functions</a></li>
+  <li><a href="#importing-datasets-for-1-visualizing-thomas-fire-burn-scar-and-2-aqi-impacts" id="toc-importing-datasets-for-1-visualizing-thomas-fire-burn-scar-and-2-aqi-impacts" class="nav-link" data-scroll-target="#importing-datasets-for-1-visualizing-thomas-fire-burn-scar-and-2-aqi-impacts">Importing datasets for 1) visualizing Thomas Fire Burn Scar and 2) AQI Impacts</a></li>
+  <li><a href="#part-1-visualizing-thomas-fire-burn-scar" id="toc-part-1-visualizing-thomas-fire-burn-scar" class="nav-link" data-scroll-target="#part-1-visualizing-thomas-fire-burn-scar">Part 1: Visualizing Thomas Fire Burn Scar</a>
+  <ul class="collapse">
+  <li><a href="#data-exploration-understanding-the-dataset-structures" id="toc-data-exploration-understanding-the-dataset-structures" class="nav-link" data-scroll-target="#data-exploration-understanding-the-dataset-structures">Data Exploration – Understanding the dataset structures</a></li>
+  <li><a href="#updates-the-files-and-project-them-into-the-same-crs" id="toc-updates-the-files-and-project-them-into-the-same-crs" class="nav-link" data-scroll-target="#updates-the-files-and-project-them-into-the-same-crs">Updates the files and project them into the same CRS</a></li>
+  <li><a href="#plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue." id="toc-plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue." class="nav-link" data-scroll-target="#plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue.">Plotting a true color image of Landsat data using red, green, and blue.</a></li>
+  <li><a href="#plotting-a-false-color-image" id="toc-plotting-a-false-color-image" class="nav-link" data-scroll-target="#plotting-a-false-color-image">Plotting a false color image</a></li>
+  <li><a href="#cleaning-up-ca_fire-dataset-to-select-for-the-desired-fire-perimeter" id="toc-cleaning-up-ca_fire-dataset-to-select-for-the-desired-fire-perimeter" class="nav-link" data-scroll-target="#cleaning-up-ca_fire-dataset-to-select-for-the-desired-fire-perimeter">Cleaning up ca_fire dataset to select for the desired fire perimeter</a></li>
+  <li><a href="#maping-the-false-color-image-with-thomas-fire-perimeter" id="toc-maping-the-false-color-image-with-thomas-fire-perimeter" class="nav-link" data-scroll-target="#maping-the-false-color-image-with-thomas-fire-perimeter">Maping the false color image with Thomas Fire perimeter</a></li>
+  <li><a href="#final-output" id="toc-final-output" class="nav-link" data-scroll-target="#final-output">Final Output</a></li>
+  </ul></li>
+  <li><a href="#part-2-thomas-fire-aqi-impact-analysis" id="toc-part-2-thomas-fire-aqi-impact-analysis" class="nav-link" data-scroll-target="#part-2-thomas-fire-aqi-impact-analysis">Part 2: Thomas Fire AQI Impact Analysis</a>
+  <ul class="collapse">
+  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration">Data Exploration</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#make-an-average-over-a-rolling-window." id="toc-make-an-average-over-a-rolling-window." class="nav-link" data-scroll-target="#make-an-average-over-a-rolling-window.">Make an average over a rolling window.</a></li>
+  <li><a href="#final-output-graphing-aqi-rolling-averages" id="toc-final-output-graphing-aqi-rolling-averages" class="nav-link" data-scroll-target="#final-output-graphing-aqi-rolling-averages">Final Output: Graphing AQI rolling averages</a></li>
+  <li><a href="#we-notice-that" id="toc-we-notice-that" class="nav-link" data-scroll-target="#we-notice-that">We notice that:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -287,16 +314,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>aqi_18 <span class="op">=</span> pd.read_csv(<span class="st">"https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2018.zip"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="part-1-visualizing-thomas-fire-burn-scar" class="level2">
-<h2 class="anchored" data-anchor-id="part-1-visualizing-thomas-fire-burn-scar">Part 1: Visualizing Thomas Fire Burn Scar</h2>
-</section>
-<section id="data-exploration-understanding-the-dataset-structures" class="level2">
-<h2 class="anchored" data-anchor-id="data-exploration-understanding-the-dataset-structures">Data Exploration: Understanding the dataset structures</h2>
+<section id="part-1-visualizing-thomas-fire-burn-scar" class="level1">
+<h1>Part 1: Visualizing Thomas Fire Burn Scar</h1>
+<section id="data-exploration-understanding-the-dataset-structures" class="level3">
+<h3 class="anchored" data-anchor-id="data-exploration-understanding-the-dataset-structures">Data Exploration – Understanding the dataset structures</h3>
+<p>We simply print columns to look at ca_fire &amp; print landsat to look at landsat data.</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#We simply print columns to look at ca_fire. Thomas fire will likely be a name under "FIRE_NAME" column. </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#it's also got polygon geometries of the fire perimeters stored in the geometry column. </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>ca_fire.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ca_fire.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>Index(['index', 'OBJECTID', 'YEAR_', 'STATE', 'AGENCY', 'UNIT_ID', 'FIRE_NAME',
        'INC_NUM', 'ALARM_DATE', 'CONT_DATE', 'CAUSE', 'C_METHOD', 'OBJECTIVE',
@@ -305,6 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       dtype='object')</code></pre>
 </div>
 </div>
+<p>Thomas fire will likely be a name under “FIRE_NAME” column. it’s also got polygon geometries of the fire perimeters stored in the geometry column.</p>
 <div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#looking at the landsat data</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(landsat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -325,8 +350,8 @@ Data variables:
 </div>
 </div>
 </section>
-<section id="updates-the-files-and-project-them-into-the-same-crs" class="level2">
-<h2 class="anchored" data-anchor-id="updates-the-files-and-project-them-into-the-same-crs">Updates the files and project them into the same CRS</h2>
+<section id="updates-the-files-and-project-them-into-the-same-crs" class="level3">
+<h3 class="anchored" data-anchor-id="updates-the-files-and-project-them-into-the-same-crs">Updates the files and project them into the same CRS</h3>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># drop the dimensions </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>landsat <span class="op">=</span> landsat.squeeze() </span>
@@ -344,8 +369,8 @@ CRS match: True</code></pre>
 </div>
 </div>
 </section>
-<section id="plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue." class="level2">
-<h2 class="anchored" data-anchor-id="plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue.">Plotting a true color image of Landsat data using red, green, and blue.</h2>
+<section id="plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue." class="level3">
+<h3 class="anchored" data-anchor-id="plotting-a-true-color-image-of-landsat-data-using-red-green-and-blue.">Plotting a true color image of Landsat data using red, green, and blue.</h3>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#select the red green and blue bands in that order</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>landsat[[<span class="st">'red'</span>, <span class="st">'green'</span>, <span class="st">'blue'</span>]].to_array().plot.imshow()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -371,8 +396,8 @@ CRS match: True</code></pre>
 </div>
 </div>
 </section>
-<section id="plotting-a-false-color-image" class="level2">
-<h2 class="anchored" data-anchor-id="plotting-a-false-color-image">Plotting a false color image</h2>
+<section id="plotting-a-false-color-image" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-a-false-color-image">Plotting a false color image</h3>
 <p>Creating a false color image by plotting the short-wave infrared (swir22), near-infrared, and red variables (in that order).</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># creating the false color image and plotting it to see results </span></span>
@@ -641,11 +666,11 @@ CRS match: True</code></pre>
 </div>
 </section>
 </section>
-<section id="part-2-thomas-fire-aqi-impact-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-thomas-fire-aqi-impact-analysis">Part 2: Thomas Fire AQI Impact Analysis</h2>
 </section>
-<section id="data-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="data-exploration">Data Exploration</h2>
+<section id="part-2-thomas-fire-aqi-impact-analysis" class="level1">
+<h1>Part 2: Thomas Fire AQI Impact Analysis</h1>
+<section id="data-exploration" class="level3">
+<h3 class="anchored" data-anchor-id="data-exploration">Data Exploration</h3>
 <div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at the structure of aqi_17. aqi_18 has the same structure. </span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>aqi_17</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1007,6 +1032,7 @@ In the next line run <code>aqi</code>.</p>
 </div>
 </div>
 </div>
+</section>
 <section id="data-cleaning" class="level3">
 <h3 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h3>
 <p><em>Format aqi dataframe nicely so we can select only data from SB County</em> - initial column names: notice caps and spaces (difficult to work with!) - re-assign the column names - .str.lower() makes them lower case - re-assign the column names again - .str.replace(’ ‘,’<em>’) replaces the space for </em></p>
