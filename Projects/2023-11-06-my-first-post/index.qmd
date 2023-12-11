@@ -20,6 +20,6 @@ If you're reading this, thanks for stopping by! I am currently learning data sci
 
 This blog space will be used as a space to showcase & keep track of my data science projects, and practice my data communication skills. I also hope to make these blog posts informative, accessible, and friendly.
 
-In my senior spring at Bowdoin College I did what every liberal arts STEM student must do for a last hurrah. In my case, I took a course cross registered under the English, Italian, and Religion departments: Dante's Divine Comedy. The next-to-final assignment in the course was to do a formal, close-reading of any Canto (Chapter) of our choice. When I got my paper comments back, the professor wrote in red pen (endearingly) that I should get into..... blogging.
+In my senior spring at Bowdoin College, I did what every liberal arts STEM student must do to remedy a bad case of Senioritis: take a course from a subject as unrelated to their major as possible. In my case, I took a course cross registered under the English, Italian, and Religion departments: Dante's Divine Comedy. The next-to-final assignment in the course was to do a formal, close-reading of any Canto of our choice. When I got my paper comments back, the professor critiqued in red text (endearingly) that I should get into..... blogging.
 
-Well I guess that now is my time to shine.
+I hope that this blog will be useful to you. 
