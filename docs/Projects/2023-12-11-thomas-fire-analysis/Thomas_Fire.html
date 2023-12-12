@@ -202,7 +202,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#importing-libraries-and-functions" id="toc-importing-libraries-and-functions" class="nav-link active" data-scroll-target="#importing-libraries-and-functions">Importing Libraries and Functions</a></li>
+  <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About This Project</a></li>
+  <li><a href="#importing-libraries-and-functions" id="toc-importing-libraries-and-functions" class="nav-link" data-scroll-target="#importing-libraries-and-functions">Importing Libraries and Functions</a></li>
   <li><a href="#importing-datasets-for-1-visualizing-thomas-fire-burn-scar-and-2-aqi-impacts" id="toc-importing-datasets-for-1-visualizing-thomas-fire-burn-scar-and-2-aqi-impacts" class="nav-link" data-scroll-target="#importing-datasets-for-1-visualizing-thomas-fire-burn-scar-and-2-aqi-impacts">Importing datasets for 1) visualizing Thomas Fire Burn Scar and 2) AQI Impacts</a></li>
   <li><a href="#part-1-visualizing-thomas-fire-burn-scar" id="toc-part-1-visualizing-thomas-fire-burn-scar" class="nav-link" data-scroll-target="#part-1-visualizing-thomas-fire-burn-scar">Part 1: Visualizing Thomas Fire Burn Scar</a>
   <ul class="collapse">
@@ -231,9 +232,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="purpose" class="level4">
-<h4 class="anchored" data-anchor-id="purpose">Purpose:</h4>
-<p>This exercise aims to: 1) create a false color image showing the fire scar of the Thomas fire in 2017 2) visualize the Thomas fire’s impact on air quality in Santa Barbara</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="thomas_fire_burn_scarMedium.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Thomas Fire Burn Scar, November 2020</figcaption>
+</figure>
+</div>
+<section id="github-repo-httpsgithub.comflorahamthomas_fire_analysis" class="level5">
+<h5 class="anchored" data-anchor-id="github-repo-httpsgithub.comflorahamthomas_fire_analysis">📦 Github Repo: https://github.com/floraham/thomas_fire_analysis</h5>
+<blockquote class="blockquote">
+<p>This repository contains a Jupyter Notebook (.ipynb) using Python to visualize the Thomas Fire’s Burn scar and AQI impacts in Santa Barbara, CA. We use three datasets to conduct this analysis (two for the burn scar visualization, one for AQI).</p>
+</blockquote>
+</section>
+<section id="about-this-project" class="level3">
+<h3 class="anchored" data-anchor-id="about-this-project">About This Project</h3>
+<p>The Thomas Fire of December 2017, recognized as California’s largest recorded wildfire up to that point, encompassed approximately 281,893 acres in Ventura County. It prompted the evacuation of more than 104,607 residents and tragically resulted in two fatalities. This analysis examines the fire’s environmental impacts, using satellite data and fire perimeter shapefiles to create a false color image of the fire scar and assess its influence on air quality in Santa Barbara. The utilization of vector and raster data, along with basic time series analysis, aims to provide a data-driven understanding of the environmental consequences stemming from the Thomas Fire.</p>
+<section id="this-exercise-aims-to" class="level4">
+<h4 class="anchored" data-anchor-id="this-exercise-aims-to">This exercise aims to:</h4>
+<ul>
+<li>Create a false color image showing the fire scar of the Thomas fire in 2017 and,</li>
+<li>Visualize the Thomas fire’s impact on air quality in Santa Barbara</li>
+</ul>
 </section>
 <section id="highlights-of-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="highlights-of-analysis">Highlights of analysis:</h4>
@@ -264,8 +283,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="references-to-datasets." class="level4">
-<h4 class="anchored" data-anchor-id="references-to-datasets.">References to datasets.</h4>
+<section id="references-to-datasets" class="level4">
+<h4 class="anchored" data-anchor-id="references-to-datasets">References to datasets</h4>
 <ul>
 <li><p>Landsat Data: The data was accessed and pre-processed in the Microsoft Planetary Computer to remove data outside land and coarsen the spatial resolution (<a href="https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2">Landsat Collection in MPC</a>).</p></li>
 <li><p>CA Shapefile: The complete file can be accessed in the CA state geoportal (see previous link). A local copy is stored in a hidden folder in this repo. (Accessed November, 2023)</p></li>
@@ -274,6 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>Accessing AQI data: 1. Go to <a href="https://www.epa.gov/outdoor-air-quality-data">EPA’s website on Air Quality Data Collected at Outdoor Monitors Across the US</a>. 2. Under “Download Data” click on “Pre-generated Data Files” 3. Click on “Tables of Daily AQI” 4. Copy the URL to the 2017 Daily AQI <strong>by County</strong> zip file <code>daily_aqi_by_county_2017.zip</code> 5. Read in the data from the URL using the <code>pd.read_csv</code> function. We store it as <code>aqi_17</code>. 6. Read in the data for the 2018 Daily AQI by County zip file. We store it as <code>aqi_18</code>.</p>
 </blockquote>
+</section>
 </section>
 <section id="importing-libraries-and-functions" class="level3">
 <h3 class="anchored" data-anchor-id="importing-libraries-and-functions">Importing Libraries and Functions</h3>
