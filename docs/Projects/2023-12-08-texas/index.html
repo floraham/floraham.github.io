@@ -196,6 +196,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#find-locations-of-blackouts" id="toc-find-locations-of-blackouts" class="nav-link" data-scroll-target="#find-locations-of-blackouts">Find locations of blackouts</a></li>
   <li><a href="#finding-homes-impacted-by-blackouts" id="toc-finding-homes-impacted-by-blackouts" class="nav-link" data-scroll-target="#finding-homes-impacted-by-blackouts">Finding homes impacted by blackouts</a></li>
   <li><a href="#investigate-socioeconomic-factors" id="toc-investigate-socioeconomic-factors" class="nav-link" data-scroll-target="#investigate-socioeconomic-factors">Investigate socioeconomic factors</a></li>
+  </ul></li>
+  <li><a href="#evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status" id="toc-evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status" class="nav-link" data-scroll-target="#evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status"><strong>Evaluate the distribution of median incomes of homes by blackout status</strong></a>
+  <ul class="collapse">
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
   </ul></li>
   </ul>
@@ -304,11 +307,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#reclassify the difference raster, assuming that any location that experienced a drop of more than 200 nW cm-2sr-1 experienced a blackout by assigning NA to locations that experienced drop of less than 200 nW cm-2sr-1</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#assigning all the houses that experienced a drop of 200 and more to a blackout mask.</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>mask_blackout <span class="ot">&lt;-</span> difference <span class="sc">&gt;</span> <span class="dv">200</span> </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>mask_blackout[mask_blackout <span class="sc">==</span> <span class="cn">FALSE</span>]  <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#reclassify the difference raster, assuming that any location that experienced a drop of more than 200 nW cm-2sr-1 experienced a blackout by assigning NA to locations that experienced drop of less than 200 nW cm-2sr-1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Assigning all the houses that experienced a drop of 200 and more to a blackout mask.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mask_blackout <span class="ot">&lt;-</span> difference <span class="sc">&gt;</span> <span class="dv">200</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mask_blackout[mask_blackout <span class="sc">==</span> <span class="cn">FALSE</span>]  <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -318,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>blackout_mask_vector <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(mask_blackout) <span class="sc">%&gt;%</span> <span class="fu">st_make_valid</span>() <span class="do">##can plot() to check out what the blackout mask looks like </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>blackout_mask_vector <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(mask_blackout) <span class="sc">%&gt;%</span> <span class="fu">st_make_valid</span>() <span class="do">##can plot() to check out what the blackout mask looks like </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -332,125 +339,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#crop the vectorized map to our region of interest using polygon of Houston's coordinates </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>houston_polygon <span class="ot">&lt;-</span> <span class="fu">st_polygon</span>(<span class="fu">list</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">96.5</span>,<span class="dv">29</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">96.5</span>,<span class="fl">30.5</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">94.5</span>, <span class="fl">30.5</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">94.5</span>,<span class="dv">29</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">96.5</span>,<span class="dv">29</span>))))</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#convert the polygon into a simple feature collection using st_sfc() and assign the CRS 4326, which is the same as the night lights data</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>houston_border_sf <span class="ot">&lt;-</span> <span class="fu">st_sfc</span>(houston_polygon, <span class="at">crs =</span> <span class="fu">st_crs</span>(mask_blackout))</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="do">##inspect the polygon crs to make sure the crs is 4326, nightlights dataset</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(houston_border_sf) <span class="sc">==</span> <span class="fu">st_crs</span>(mask_blackout)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#crop the vectorized map to our region of interest using polygon of Houston's coordinates </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>houston_polygon <span class="ot">&lt;-</span> <span class="fu">st_polygon</span>(<span class="fu">list</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">96.5</span>,<span class="dv">29</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">96.5</span>,<span class="fl">30.5</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">94.5</span>, <span class="fl">30.5</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">94.5</span>,<span class="dv">29</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="fl">96.5</span>,<span class="dv">29</span>))))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#convert the polygon into a simple feature collection using st_sfc() and assign the CRS 4326, which is the same as the night lights data</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>houston_border_sf <span class="ot">&lt;-</span> <span class="fu">st_sfc</span>(houston_polygon, <span class="at">crs =</span> <span class="fu">st_crs</span>(mask_blackout))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">##inspect the polygon crs to make sure the crs is 4326, nightlights dataset</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(houston_border_sf) <span class="sc">==</span> <span class="fu">st_crs</span>(mask_blackout)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># spatially subset the blackout mask to the Houston Area</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>houston_blackout <span class="ot">&lt;-</span> blackout_mask_vector[houston_border_sf, ,]</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#re-project the cropped blackout dataset to EPSG:3083 (NAD83 / Texas Centric Albers Equal Area)</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>houston_blackout <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(houston_blackout, <span class="at">crs =</span> <span class="st">'EPSG:3083'</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="do">## transform to sf object</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>final_houston_blackout <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(houston_blackout)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#verify that it's an sf object </span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(final_houston_blackout)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "sf"         "data.frame"</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">##verify that the final, transformed sf houston blackout dataset is 3083 </span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#st_crs(final_houston_blackout) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># spatially subset the blackout mask to the Houston Area</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>houston_blackout <span class="ot">&lt;-</span> blackout_mask_vector[houston_border_sf, ,]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#re-project the cropped blackout dataset to EPSG:3083 (NAD83 / Texas Centric Albers Equal Area)</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>houston_blackout <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(houston_blackout, <span class="at">crs =</span> <span class="st">'EPSG:3083'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="do">## transform to sf object</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>final_houston_blackout <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(houston_blackout)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#verify that it's an sf object </span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#class(final_houston_blackout)</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="do">##verify that the final, transformed sf houston blackout dataset is 3083 </span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#st_crs(final_houston_blackout) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="excluding-highways-from-blackout-mask" class="level5">
 <h5 class="anchored" data-anchor-id="excluding-highways-from-blackout-mask"><u>Excluding highways from blackout mask</u></h5>
 <p>The roads geopackage includes data on roads other than highways. However, we can avoid reading in data we don’t need by taking advantage of <code>st_read</code>’s ability to subset using a SQL query. First, we load just highway data from geopackage using <code>st_read and</code>reproject data to EPSG:3083, identifying areas within 200m of all highways using <code>st_buffer. st_buffer</code> produces undissolved buffers, so we use <code>st_union</code> to dissolve them. Then we find areas that experienced blackouts that are further than 200m from a highway.</p>
-<p>The SQL query we will use is:</p>
+<p><u>Read in highway data from roads using SQL query</u> :</p>
 <p><code>query &lt;- "SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"</code><br>
 <code>highways &lt;- st_read("data/gis_osm_roads_free_1.gpkg", query = query)</code></p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Read in highway data from roads using SQL query ##</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>query <span class="ot">&lt;-</span> <span class="st">"SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>highways <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"~/dev/eds223/assignment-3-floraham/data/gis_osm_roads_free_1.gpkg"</span>, <span class="at">query =</span> query)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>query <span class="ot">&lt;-</span> <span class="st">"SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>highways <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"~/dev/eds223/assignment-3-floraham/data/gis_osm_roads_free_1.gpkg"</span>, <span class="at">query =</span> query)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>Then reproject and subset using st_difference()</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reproject data to EPSG:3083 </span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>highways_3038 <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(highways, <span class="at">crs=</span><span class="st">"EPSG:3083"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#verify it's the right crs</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(highways_3038)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Coordinate Reference System:
-  User input: EPSG:3083 
-  wkt:
-PROJCRS["NAD83 / Texas Centric Albers Equal Area",
-    BASEGEOGCRS["NAD83",
-        DATUM["North American Datum 1983",
-            ELLIPSOID["GRS 1980",6378137,298.257222101,
-                LENGTHUNIT["metre",1]]],
-        PRIMEM["Greenwich",0,
-            ANGLEUNIT["degree",0.0174532925199433]],
-        ID["EPSG",4269]],
-    CONVERSION["Texas Centric Albers Equal Area",
-        METHOD["Albers Equal Area",
-            ID["EPSG",9822]],
-        PARAMETER["Latitude of false origin",18,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8821]],
-        PARAMETER["Longitude of false origin",-100,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8822]],
-        PARAMETER["Latitude of 1st standard parallel",27.5,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8823]],
-        PARAMETER["Latitude of 2nd standard parallel",35,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8824]],
-        PARAMETER["Easting at false origin",1500000,
-            LENGTHUNIT["metre",1],
-            ID["EPSG",8826]],
-        PARAMETER["Northing at false origin",6000000,
-            LENGTHUNIT["metre",1],
-            ID["EPSG",8827]]],
-    CS[Cartesian,2],
-        AXIS["easting (X)",east,
-            ORDER[1],
-            LENGTHUNIT["metre",1]],
-        AXIS["northing (Y)",north,
-            ORDER[2],
-            LENGTHUNIT["metre",1]],
-    USAGE[
-        SCOPE["State-wide spatial data presentation requiring true area measurements."],
-        AREA["United States (USA) - Texas."],
-        BBOX[25.83,-106.66,36.5,-93.5]],
-    ID["EPSG",3083]]</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># identify areas within 200m of all highways using st_buffer. Use st_union to dissolve overlapping polygons. </span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>a_near_hwys <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(highways_3038, <span class="at">dist =</span> <span class="dv">200</span>) <span class="sc">%&gt;%</span> <span class="fu">st_union</span>()</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># find areas that experienced blackouts that are further than 200m from a highway by spacially subsetting houston blackout areas to ones near highways, and taking st_difference of that. </span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>blackouts_far_hwy_houston <span class="ot">&lt;-</span> final_houston_blackout[a_near_hwys, , op <span class="ot">=</span> st_difference] </span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#plot to see what it looks like </span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(blackouts_far_hwy_houston)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reproject data to EPSG:3083 </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>highways_3038 <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(highways, <span class="at">crs=</span><span class="st">"EPSG:3083"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#verify it's the right crs</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#st_crs(highways_3038)</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># identify areas within 200m of all highways using st_buffer. Use st_union to dissolve overlapping polygons. </span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>a_near_hwys <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(highways_3038, <span class="at">dist =</span> <span class="dv">200</span>) <span class="sc">%&gt;%</span> <span class="fu">st_union</span>()</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># find areas that experienced blackouts that are further than 200m from a highway by spacially subsetting houston blackout areas to ones near highways, and taking st_difference of that. </span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>blackouts_far_hwy_houston <span class="ot">&lt;-</span> final_houston_blackout[a_near_hwys, , op <span class="ot">=</span> st_difference] </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">#plot to see what it looks like </span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(blackouts_far_hwy_houston)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -468,39 +422,34 @@ PROJCRS["NAD83 / Texas Centric Albers Equal Area",
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load buildings dataset using st_read and the following SQL query to select only residential buildings</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>query_buildings <span class="ot">&lt;-</span> <span class="st">"SELECT * FROM gis_osm_buildings_a_free_1 WHERE (type IS NULL AND name IS NULL) OR type in ('residential', 'apartments', 'house', 'static_caravan', 'detached')"</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>buildings <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"~/dev/eds223/assignment-3-floraham/data/gis_osm_buildings_a_free_1.gpkg"</span>, <span class="at">query =</span> query_buildings)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load buildings dataset using st_read and the following SQL query to select only residential buildings</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>query_buildings <span class="ot">&lt;-</span> <span class="st">"SELECT * FROM gis_osm_buildings_a_free_1 WHERE (type IS NULL AND name IS NULL) OR type in ('residential', 'apartments', 'house', 'static_caravan', 'detached')"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>buildings <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"~/dev/eds223/assignment-3-floraham/data/gis_osm_buildings_a_free_1.gpkg"</span>, <span class="at">query =</span> query_buildings)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="finding-homes-in-blackout-areas" class="level5">
 <h5 class="anchored" data-anchor-id="finding-homes-in-blackout-areas"><u>finding homes in blackout areas</u></h5>
-<p>First, we filter to homes within blackout areas, then we count number of impacted <strong>homes.</strong></p>
+<p>We filter to homes within blackout areas, then we count number of impacted homes. First, checking for CRS compatibility. Since they aren’t, we need to transform and then subset.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">##check CRS's are the same </span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(buildings) <span class="sc">==</span> <span class="fu">st_crs</span>(blackouts_far_hwy_houston)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">##transform buildings crs </span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>buildings <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(buildings, <span class="at">crs =</span> <span class="fu">st_crs</span>(blackouts_far_hwy_houston))</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># filtering the houses data with the blackout mask</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>buildings_blackout <span class="ot">&lt;-</span> buildings[blackouts_far_hwy_houston, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="do">## View the data frame for inspection </span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(buildings_blackout)</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">#count number of impacted homes</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="fu">nrow</span>(buildings_blackout), <span class="st">" Houston homes experienced power outage due to the Texas storms in Feburary, 2021"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">##check CRS's are the same. No, they're not!</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#st_crs(buildings) == st_crs(blackouts_far_hwy_houston)</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="do">##transform buildings crs </span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>buildings <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(buildings, <span class="at">crs =</span> <span class="fu">st_crs</span>(blackouts_far_hwy_houston))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># filtering the houses data with the blackout mask</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>buildings_blackout <span class="ot">&lt;-</span> buildings[blackouts_far_hwy_houston, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="do">## View the data frame for inspection </span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">#View(buildings_blackout)</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#count number of impacted homes</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="fu">nrow</span>(buildings_blackout), <span class="st">" Houston homes experienced power outage due to the Texas storms in Feburary, 2021"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "164867 Houston homes experienced power outage due to the Texas storms in Feburary, 2021"</code></pre>
@@ -513,36 +462,6 @@ PROJCRS["NAD83 / Texas Centric Albers Equal Area",
 <section id="load-acs-data" class="level5">
 <h5 class="anchored" data-anchor-id="load-acs-data"><u>load ACS data</u></h5>
 <p>To set up for loading, we use <code>st_read()</code> to load the geodatabase layers and geometries are stored in the <code>ACS_2019_5YR_TRACT_48_TEXAS</code> layer. The income data is stored in the <code>X19_INCOME</code> layer, so we select the median income field <code>B19013e1 and</code>reproject data to EPSG:3083.</p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>census <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"~/dev/eds223/assignment-3-floraham/data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>,  <span class="at">layer =</span> <span class="st">"ACS_2019_5YR_TRACT_48_TEXAS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `ACS_2019_5YR_TRACT_48_TEXAS' from data source 
-  `/Users/florahamilton/dev/eds223/assignment-3-floraham/data/ACS_2019_5YR_TRACT_48_TEXAS.gdb' 
-  using driver `OpenFileGDB'
-Simple feature collection with 5265 features and 15 fields
-Geometry type: MULTIPOLYGON
-Dimension:     XY
-Bounding box:  xmin: -106.6456 ymin: 25.83716 xmax: -93.50804 ymax: 36.5007
-Geodetic CRS:  NAD83</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>income <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"~/dev/eds223/assignment-3-floraham/data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>, <span class="at">layer =</span> <span class="st">"X19_INCOME"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `X19_INCOME' from data source 
-  `/Users/florahamilton/dev/eds223/assignment-3-floraham/data/ACS_2019_5YR_TRACT_48_TEXAS.gdb' 
-  using driver `OpenFileGDB'</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#select median income field B19013e1</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>median_income <span class="ot">&lt;-</span> income <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(GEOID, B19013e1) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 </section>
 <section id="determine-which-census-tracts-experienced-blackouts" class="level5">
 <h5 class="anchored" data-anchor-id="determine-which-census-tracts-experienced-blackouts"><u>Determine which census tracts experienced blackouts</u></h5>
@@ -551,80 +470,55 @@ Geodetic CRS:  NAD83</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#determine which census tracts experienced blackouts </span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Join the income data to the census tract geometries. Join by geometry ID</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>median_income_df <span class="ot">&lt;-</span> median_income <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">GEOID_Data =</span> GEOID,</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">median_income =</span> B19013e1) </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="do">##check types to varify that they are the same class </span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(median_income_df<span class="sc">$</span>GEOID_Data) <span class="sc">==</span> <span class="fu">class</span>(census<span class="sc">$</span>GEOID_Data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>joined_income_census <span class="ot">&lt;-</span> <span class="fu">left_join</span>(census, </span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>                         median_income_df, </span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="st">"GEOID_Data"</span>)</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="do">## filter census data by buildings determined to be impacted by blackouts. </span></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co"># transforming both objects to the correct crs</span></span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>joined_income_census <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(joined_income_census, <span class="at">crs =</span> <span class="fu">st_crs</span>(census))</span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>buildings_blackout <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(buildings_blackout, <span class="at">crs =</span> <span class="fu">st_crs</span>(census))</span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="co">#check that they are the same crs </span></span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(joined_income_census) <span class="sc">==</span> <span class="fu">st_crs</span>(buildings_blackout)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## filtering and mutating to add a blackout column for affected tracts </span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>census_blackout <span class="ot">&lt;-</span> joined_income_census[buildings_blackout,]<span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">blackout =</span> <span class="st">'Y'</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="fu">nrow</span>(census_blackout), <span class="st">" census tracts had blackouts"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#determine which census tracts experienced blackouts </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Join the income data to the census tract geometries. Join by geometry ID</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>median_income_df <span class="ot">&lt;-</span> median_income <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">GEOID_Data =</span> GEOID,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">median_income =</span> B19013e1) </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="do">##check types to varify that they are the same class </span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#class(median_income_df$GEOID_Data) == class(census$GEOID_Data)</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>joined_income_census <span class="ot">&lt;-</span> <span class="fu">left_join</span>(census, </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                         median_income_df, </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="st">"GEOID_Data"</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="do">## filter census data by buildings determined to be impacted by blackouts. </span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># transforming both objects to the correct crs</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>joined_income_census <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(joined_income_census, <span class="at">crs =</span> <span class="fu">st_crs</span>(census))</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>buildings_blackout <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(buildings_blackout, <span class="at">crs =</span> <span class="fu">st_crs</span>(census))</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co">#check that they are the same crs </span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co">#st_crs(joined_income_census) == st_crs(buildings_blackout)</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="do">## filtering and mutating to add a blackout column for affected tracts </span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>census_blackout <span class="ot">&lt;-</span> joined_income_census[buildings_blackout,]<span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">blackout =</span> <span class="st">'Y'</span>)</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="fu">nrow</span>(census_blackout), <span class="st">" census tracts had blackouts"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "778 census tracts had blackouts"</code></pre>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Since we have blackout status of Y indicated, we will want to indicate "N" for no-blackout areas as well, for full dataset. </span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">#census_income_cropped combined with census_blackout</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>census_Y_N <span class="ot">&lt;-</span> <span class="fu">full_join</span>(<span class="fu">as.data.frame</span>(joined_income_census), <span class="fu">as.data.frame</span>(census_blackout))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Since we have blackout status of Y indicated, we will want to indicate "N" for no-blackout areas as well, for full dataset. </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#census_income_cropped combined with census_blackout</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>census_Y_N <span class="ot">&lt;-</span> <span class="fu">full_join</span>(<span class="fu">as.data.frame</span>(joined_income_census), <span class="fu">as.data.frame</span>(census_blackout))</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>census_Y_N<span class="sc">$</span>blackout[<span class="fu">is.na</span>(census_Y_N<span class="sc">$</span>blackout)] <span class="ot">=</span> <span class="st">"N"</span> </span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">#check the class </span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co">#class(census_Y_N)</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="do">## make sure it's an sf object </span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>census_Y_N <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(census_Y_N)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co">#check census_Y_N class, that it's a dataframe. </span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co">#class(census_Y_N)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(STATEFP, COUNTYFP, TRACTCE, GEOID, NAME, NAMELSAD,
-MTFCC, FUNCSTAT, ALAND, AWATER, INTPTLAT, INTPTLON, Shape_Length, Shape_Area,
-GEOID_Data, median_income, Shape)`</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>census_Y_N<span class="sc">$</span>blackout[<span class="fu">is.na</span>(census_Y_N<span class="sc">$</span>blackout)] <span class="ot">=</span> <span class="st">"N"</span> </span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co">#check the class </span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(census_Y_N)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "data.frame"</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="do">## make sure it's an sf object </span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>census_Y_N <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(census_Y_N)</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">#check census_Y_N class, that it's a dataframe. </span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(census_Y_N)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "sf"         "data.frame"</code></pre>
-</div>
 </div>
 </section>
 <section id="comparing-incomes-of-impacted-tracts-to-unimpacted-tracts" class="level5">
@@ -633,79 +527,86 @@ GEOID_Data, median_income, Shape)`</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#join income data to the census tract geometries and crop to region of interest</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>census_income_geom <span class="ot">&lt;-</span> <span class="fu">left_join</span>(census, median_income_df, </span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="st">"GEOID_Data"</span>) <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>) <span class="co">#this is texas#</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>houston_border_sf <span class="ot">&lt;-</span> houston_border_sf <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>)</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co">#spatial crop joined census data to houston border </span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>census_income_geom_cropped <span class="ot">&lt;-</span> census_income_geom[houston_border_sf, op <span class="ot">=</span> st_intersects] </span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="do">## use tmap to plot income distribution and affected areas. Make graph aesthetics. </span></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="fu">tmap_mode</span>(<span class="st">"plot"</span>)</span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(census_income_geom_cropped) <span class="sc">+</span> </span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_graticules</span>() <span class="sc">+</span> </span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="st">"median_income"</span>, <span class="at">palette=</span> <span class="st">"-viridis"</span>, <span class="at">title =</span> <span class="st">"Median income"</span>) <span class="sc">+</span> </span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_shape</span>(census_blackout) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="at">size =</span> <span class="fl">0.4</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_title</span>( <span class="st">"Distribution of Med. Income &amp; blackout status in Houston"</span>) <span class="sc">+</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_scalebar</span>(<span class="at">position =</span> <span class="fu">c</span>(<span class="st">"RIGHT"</span>, <span class="st">"BOTTOM"</span>)) <span class="sc">+</span> </span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_compass</span>(<span class="at">position =</span> <span class="fu">c</span>(<span class="st">"LEFT"</span>, <span class="st">"BOTTOM"</span>)) <span class="sc">+</span> </span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_xlab</span>(<span class="st">"Longitude"</span>, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_ylab</span>(<span class="st">"Latitude"</span>, <span class="at">rotation =</span> <span class="dv">90</span>, <span class="at">size =</span> <span class="fl">0.5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#join income data to the census tract geometries and crop to region of interest</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>census_income_geom <span class="ot">&lt;-</span> <span class="fu">left_join</span>(census, median_income_df, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="st">"GEOID_Data"</span>) <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>) <span class="co">#this is texas#</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>houston_border_sf <span class="ot">&lt;-</span> houston_border_sf <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">#spatial crop joined census data to houston border </span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>census_income_geom_cropped <span class="ot">&lt;-</span> census_income_geom[houston_border_sf, op <span class="ot">=</span> st_intersects] </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="do">## use tmap to plot income distribution and affected areas. Make graph aesthetics. </span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">tmap_mode</span>(<span class="st">"plot"</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(census_income_geom_cropped) <span class="sc">+</span> </span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_graticules</span>() <span class="sc">+</span> </span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="st">"median_income"</span>, <span class="at">palette=</span> <span class="st">"-viridis"</span>, <span class="at">title =</span> <span class="st">"Median income"</span>) <span class="sc">+</span> </span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_shape</span>(census_blackout) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="at">size =</span> <span class="fl">0.4</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_title</span>( <span class="st">"Distribution of Med. Income &amp; blackout status in Houston"</span>) <span class="sc">+</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_scalebar</span>(<span class="at">position =</span> <span class="fu">c</span>(<span class="st">"RIGHT"</span>, <span class="st">"BOTTOM"</span>)) <span class="sc">+</span> </span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_compass</span>(<span class="at">position =</span> <span class="fu">c</span>(<span class="st">"LEFT"</span>, <span class="st">"BOTTOM"</span>)) <span class="sc">+</span> </span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_xlab</span>(<span class="st">"Longitude"</span>, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_ylab</span>(<span class="st">"Latitude"</span>, <span class="at">rotation =</span> <span class="dv">90</span>, <span class="at">size =</span> <span class="fl">0.5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p><strong>Evaluate the distribution of median incomes of homes by blackout status</strong></p>
+</section>
+</section>
+</section>
+<section id="evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status" class="level1">
+<h1><strong>Evaluate the distribution of median incomes of homes by blackout status</strong></h1>
+<p>Plot a histogram of median income for blackout or non-blackout regions.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot from one dataset so that ggplot can plot both datasets on one axis &amp; autogenerate legend</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>census_Y_N_houston <span class="ot">&lt;-</span> census_Y_N <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>) </span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>houston_border_sf <span class="ot">&lt;-</span> houston_border_sf <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>)</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>census_Y_N_houston <span class="ot">&lt;-</span> census_Y_N_houston[houston_border_sf, op <span class="ot">=</span> st_intersects] </span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(census_Y_N_houston, <span class="fu">aes</span>(median_income)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">color =</span> blackout, <span class="at">fill =</span> blackout), <span class="at">bins =</span> <span class="dv">50</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Distribution of median income of homes in Houston by blackout status"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot from one dataset so that ggplot can plot both datasets on one axis &amp; autogenerate legend</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>census_Y_N_houston <span class="ot">&lt;-</span> census_Y_N <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>) </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>houston_border_sf <span class="ot">&lt;-</span> houston_border_sf <span class="sc">%&gt;%</span> <span class="fu">st_transform</span>(<span class="dv">3083</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>census_Y_N_houston <span class="ot">&lt;-</span> census_Y_N_houston[houston_border_sf, op <span class="ot">=</span> st_intersects] </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(census_Y_N_houston, <span class="fu">aes</span>(median_income)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">color =</span> blackout, <span class="at">fill =</span> blackout), <span class="at">bins =</span> <span class="dv">50</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Distribution of median income of homes in Houston by blackout status"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 10 rows containing non-finite values (`stat_bin()`).</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>I decided that a box and whisker plot might be helpful to compare the distribution as well.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plotting the comparison data via geom jitter plot</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(census_Y_N_houston, <span class="fu">aes</span>(<span class="at">x =</span> median_income, <span class="at">y =</span> blackout)) <span class="sc">+</span></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">color =</span> blackout), <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Median Income of Houston Homes based on Blackout Status"</span>,</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Blackout Status"</span>,</span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Median Income"</span>) <span class="sc">+</span></span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plotting the comparison data via geom jitter plot</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(census_Y_N_houston, <span class="fu">aes</span>(<span class="at">x =</span> median_income, <span class="at">y =</span> blackout)) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">color =</span> blackout), <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Median Income of Houston Homes based on Blackout Status"</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Blackout Status"</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Median Income"</span>) <span class="sc">+</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 10 rows containing non-finite values (`stat_boxplot()`).</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>And included some summary statistics.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Summarizing statistics </span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>census_Y_N_houston <span class="sc">%&gt;%</span> </span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(blackout) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(median_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">median =</span> <span class="fu">median</span>(median_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(median_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Summarizing statistics </span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>census_Y_N_houston <span class="sc">%&gt;%</span> </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(blackout) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(median_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">median =</span> <span class="fu">median</span>(median_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(median_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Simple feature collection with 2 features and 4 fields
@@ -720,8 +621,6 @@ Projected CRS: NAD83 / Texas Centric Albers Equal Area
 2 Y        70939. 59916  39311. (((1895641 7236524, 1896074 7237007, 1896410 72…</code></pre>
 </div>
 </div>
-</section>
-</section>
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
 <p>We found that 778 census tracts had been affected by Texas’s 2021 energy crisis, amounting to 164,867 total homes experiencing power outage between the studied dates (Feb 07, 2021 to Feb 16, 2021).</p>

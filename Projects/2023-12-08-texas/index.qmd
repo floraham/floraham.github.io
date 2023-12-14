@@ -246,11 +246,11 @@ buildings <- st_read("~/dev/eds223/assignment-3-floraham/data/gis_osm_buildings_
 
 ##### [finding homes in blackout areas]{.underline}
 
-First, we filter to homes within blackout areas, then we count number of impacted **homes.**
+We filter to homes within blackout areas, then we count number of impacted homes. First, checking for CRS compatibility. Since they aren't, we need to transform and then subset.
 
 ```{r include=TRUE}
-##check CRS's are the same 
-st_crs(buildings) == st_crs(blackouts_far_hwy_houston)
+##check CRS's are the same. No, they're not!
+#st_crs(buildings) == st_crs(blackouts_far_hwy_houston)
 
 ##transform buildings crs 
 buildings <- st_transform(buildings, crs = st_crs(blackouts_far_hwy_houston))
@@ -259,7 +259,7 @@ buildings <- st_transform(buildings, crs = st_crs(blackouts_far_hwy_houston))
 buildings_blackout <- buildings[blackouts_far_hwy_houston, drop = FALSE]
 
 ## View the data frame for inspection 
-View(buildings_blackout)
+#View(buildings_blackout)
 
 #count number of impacted homes
 print(paste0(nrow(buildings_blackout), " Houston homes experienced power outage due to the Texas storms in Feburary, 2021"))
@@ -286,7 +286,7 @@ median_income <- income %>% dplyr::select(GEOID, B19013e1)
 
 We join the income data to the census tract geometries by joining by geometry ID and spatially join census tract data with buildings determined to be impacted by blackouts, then find which census tracts had blackouts.\
 
-```{r include=TRUE}
+```{r include=TRUE, warning = FALSE, message = FALSE}
 
 #determine which census tracts experienced blackouts 
 #Join the income data to the census tract geometries. Join by geometry ID
