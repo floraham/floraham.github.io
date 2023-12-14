@@ -131,8 +131,6 @@ difference <- combined_02_07 - combined_02_16
 #check out difference in night lights intensity 
 plot(difference)
 
-#reclassify the difference raster, assuming that any location that experienced a drop of more than 200 nW cm-2sr-1 experienced a blackout by assigning NA to locations that experienced drop of less than 200 nW cm-2sr-1
-
 ```
 
 Assigning all the houses that experienced a drop of 200 and more to a blackout mask.
@@ -167,9 +165,14 @@ houston_polygon <- st_polygon(list(rbind(c(-96.5,29), c(-96.5,30.5), c(-94.5, 30
 houston_border_sf <- st_sfc(houston_polygon, crs = st_crs(mask_blackout))
 
 
-##inspect the polygon crs to make sure the crs is 4326, nightlights dataset
-st_crs(houston_border_sf) == st_crs(mask_blackout)
+#inspect the polygon crs to make sure the crs is 4326, nightlights dataset
+#st_crs(houston_border_sf) == st_crs(mask_blackout)
 
+```
+
+Spatially subsetting blackout mask to Houston region, then reprojecting to the correct CRS.
+
+```{r include = FALSE}
 
 # spatially subset the blackout mask to the Houston Area
 houston_blackout <- blackout_mask_vector[houston_border_sf, ,]
@@ -316,8 +319,14 @@ census_blackout <- joined_income_census[buildings_blackout,]%>% mutate(blackout 
 
 print(paste0(nrow(census_blackout), " census tracts had blackouts"))
 
-## Since we have blackout status of Y indicated, we will want to indicate "N" for no-blackout areas as well, for full dataset. 
 
+
+
+```
+
+Since we have blackout status of Y indicated, we will want to indicate "N" for no-blackout areas as well, for full dataset.
+
+```{r include = FALSE}
 #census_income_cropped combined with census_blackout
 census_Y_N <- full_join(as.data.frame(joined_income_census), as.data.frame(census_blackout))
 census_Y_N$blackout[is.na(census_Y_N$blackout)] = "N" 
