@@ -171,7 +171,7 @@ final_houston_blackout <- st_as_sf(houston_blackout)
 class(final_houston_blackout)
 
 ##verify that the final, transformed sf houston blackout dataset is 3083 
-st_crs(final_houston_blackout) 
+#st_crs(final_houston_blackout) 
 ```
 
 ##### exclude highways from blackout mask
@@ -195,7 +195,7 @@ highways <- st_read("~/dev/eds223/assignment-3-floraham/data/gis_osm_roads_free_
 # reproject data to EPSG:3083 
 highways_3038 <- st_transform(highways, crs="EPSG:3083")
 
-##verify it's the right crs
+#verify it's the right crs
 st_crs(highways_3038)
 
 # identify areas within 200m of all highways using st_buffer. Use st_union to dissolve overlapping polygons. 
@@ -206,7 +206,7 @@ blackouts_far_hwy_houston <- final_houston_blackout[a_near_hwys, , op = st_diffe
 
 
 #plot to see what it looks like 
-plot(blackouts_far_hwy_houston)
+#plot(blackouts_far_hwy_houston)
 ```
 
 ## Find homes impacted by blackouts
