@@ -14,11 +14,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-📦 repo link: https://github.com/floraham/texas-blackout
+![](images/Screenshot 2023-12-14 at 12.03.11 AM.png)
 
-![](images/Screenshot 2023-12-13 at 11.50.02 PM.png)
+# Texas Blackouts
 
-# Analyzing the Effects of the Texas February 2021 Storm on the Houston metropolitan Area
+### Analyzing the Effects of the Texas February 2021 Storm on the Houston metropolitan Area
+
+📦 repo link \| https://github.com/floraham/texas-blackout
 
 ## Context
 
@@ -29,13 +31,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## The objectives and methods:
 
 -   Estimate the number of households in Houston that experienced power loss due to the initial two storms.
-    -    To determine the count of homes affected by power outages, we will spatially join these areas with \[OpenStreetMap\](https://www.openstreetmap.org/#map=4/38.01/-95.84) data on buildings and roads.
-
-```{=html}
-<!-- -->
-```
+    -   To determine the count of homes affected by power outages, we will spatially join these areas with \[OpenStreetMap\](https://www.openstreetmap.org/#map=4/38.01/-95.84) data on buildings and roads.
 -   Investigate whether socioeconomic factors serve as predictors of community recovery from a power outage.
-
     -   For the exploration of potential socioeconomic factors influencing recovery, the analysis will be linked with data from the US Census Bureau.
 
 This analysis will rely on remotely-sensed night lights data acquired from the [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://en.wikipedia.org/wiki/Visible_Infrared_Imaging_Radiometer_Suite) aboard the Suomi satellite. Specifically, we will use the VNP46A1 to identify variations in night lights before and after the storms as a method to identify areas that lost electrical power.
