@@ -14,6 +14,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 📦 repo link: https://github.com/floraham/texas-blackout
 
 ![](images/Screenshot 2023-12-13 at 11.50.02 PM.png)
@@ -31,9 +32,11 @@ knitr::opts_chunk$set(echo = TRUE)
 -   Estimate the number of households in Houston that experienced power loss due to the initial two storms.
     -    To determine the count of homes affected by power outages, we will spatially join these areas with \[OpenStreetMap\](https://www.openstreetmap.org/#map=4/38.01/-95.84) data on buildings and roads.
 
+
 ```{=html}
 <!-- -->
 ```
+
 -   Investigate whether socioeconomic factors serve as predictors of community recovery from a power outage.
 
     -   For the exploration of potential socioeconomic factors influencing recovery, the analysis will be linked with data from the US Census Bureau.
@@ -97,6 +100,7 @@ For improved computational efficiency and easier inter-operability with `sf`, we
 -   read in night lights tiles\
 -   combine tiles into a single `stars` object for each date (2021-02-07 and 2021-02-16) using `st_mosaic`
 
+
 ```{r, warning=FALSE, message=FALSE}
 library(sf)
 library(stars)
@@ -125,11 +129,13 @@ combined_02_16 = st_mosaic(tile3_2021_02_16, tile4_2021_02_16)
 
 ```
 
+
 ##### create a blackout mask
 
 -   find the change in night lights intensity (presumably) caused by the storm\
 -   reclassify the difference raster, assuming that any location that experienced a drop of more than 200 nW cm^-2^sr^-1^ experienced a blackout\
 -   assign `NA` to all locations that experienced a drop of *less* than 200 nW cm^-2^sr^-1^\
+
 
 ```{r}
 #find the change in night lights intensity (presumably) caused by the storm by calculating the light difference between the two dates 
@@ -148,16 +154,19 @@ mask_blackout[mask_blackout == FALSE]  <- NA
 
 ```
 
+
 ##### vectorize the mask
 
 -   use `st_as_sf()` to vectorize the blackout mask\
 -   fix any invalid geometries using `st_make_valid`
+
 
 ```{r results = FALSE}
 
 blackout_mask_vector <- st_as_sf(mask_blackout) %>% st_make_valid() ##can plot() to check out what the blackout mask looks like 
 
 ```
+
 
 ##### crop the vectorized map to our region of interest
 
@@ -166,6 +175,7 @@ blackout_mask_vector <- st_as_sf(mask_blackout) %>% st_make_valid() ##can plot()
 -   convert the polygon into a simple feature collection using `st_sfc()` and assign a CRS, making sure that the polygon is in the same CRS
 -   crop (spatially subset) the blackout mask to our region of interest 
 -   re-project the cropped blackout dataset to EPSG:3083 (NAD83 / Texas Centric Albers Equal Area)\
+
 
 ```{r include=TRUE}
 
@@ -198,6 +208,7 @@ class(final_houston_blackout)
 st_crs(final_houston_blackout) 
 ```
 
+
 ##### exclude highways from blackout mask
 
 The roads geopackage includes data on roads other than highways. However, we can avoid reading in data we don't need by taking advantage of `st_read`'s ability to subset using a SQL query.\
@@ -212,6 +223,7 @@ The roads geopackage includes data on roads other than highways. However, we can
 
 `query <- "SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"`\
 `highways <- st_read("data/gis_osm_roads_free_1.gpkg", query = query)`
+
 
 ```{r results = FALSE, warning=FALSE,message=FALSE}
 
@@ -239,6 +251,7 @@ blackouts_far_hwy_houston <- final_houston_blackout[a_near_hwys, , op = st_diffe
 plot(blackouts_far_hwy_houston)
 ```
 
+
 ## Find homes impacted by blackouts
 
 ##### load buildings data
@@ -251,6 +264,7 @@ The SQL query we will use is:
 `WHERE (type IS NULL AND name IS NULL)`\
 `OR type in ('residential', 'apartments', 'house', 'static_caravan', 'detached')`\
 
+
 ```{r results=FALSE, include=TRUE}
 
 #load buildings dataset using st_read and the following SQL query to select only residential buildings
@@ -260,10 +274,12 @@ query_buildings <- "SELECT * FROM gis_osm_buildings_a_free_1 WHERE (type IS NULL
 buildings <- st_read("~/dev/eds223/assignment-3-floraham/data/gis_osm_buildings_a_free_1.gpkg", query = query_buildings)
 ```
 
+
 ##### find homes in blackout areas
 
 -   filter to homes within blackout areas\
 -   count number of impacted **homes**\
+
 
 ```{r include=TRUE}
 ##check CRS's are the same 
@@ -283,6 +299,7 @@ print(paste0(nrow(buildings_blackout), " Houston homes experienced power outage 
 
 ```
 
+
 ## Investigate socioeconomic factors
 
 ##### load ACS data
@@ -292,6 +309,7 @@ print(paste0(nrow(buildings_blackout), " Houston homes experienced power outage 
 -   income data is stored in the `X19_INCOME` layer\
 -   select the median income field `B19013e1`\
 -   reproject data to EPSG:3083\
+
 
 ```{r, warning=FALSE,message=FALSE}
 
@@ -303,11 +321,13 @@ income <- st_read("~/dev/eds223/assignment-3-floraham/data/ACS_2019_5YR_TRACT_48
 median_income <- income %>% dplyr::select(GEOID, B19013e1) 
 ```
 
+
 ##### determine which census tracts experienced blackouts
 
 -   join the income data to the census tract geometries by joining by geometry ID\
 -   spatially join census tract data with buildings determined to be impacted by blackouts\
 -   find which census tracts had blackouts\
+
 
 ```{r include=TRUE}
 
@@ -357,10 +377,12 @@ class(census_Y_N)
 
 ```
 
+
 ##### compare incomes of impacted tracts to unimpacted tracts
 
 -   create a map of median income by census tract, designating which tracts had blackouts
 -   plot the distribution of income in impacted and unimpacted tracts
+
 
 ```{r, warning=FALSE,message=FALSE}
 #join income data to the census tract geometries and crop to region of interest
@@ -429,8 +451,10 @@ census_Y_N_houston %>%
             sd = sd(median_income, na.rm = TRUE))
 ```
 
+
 ## Discussion
 
 We found that 778 census tracts had been affected by Texas's 2021 energy crisis, amounting to 164,867 total homes experiencing power outage between the studied dates (Feb 07, 2021 to Feb 16, 2021).
 
 The average median income for homes that experienced a blackout was \$70,939, slightly higher than the average median income for homes that didn't experience a blackout, which was \$67,859. It is important to note that 1) our factor of interest was median income within census tracts and that other socioeconomic factors could reveal unexplored spatial patterns, and that 2) weather conditions were not normalized to conduct this exercise, variable that could cause a different outcome.
+
