@@ -8,6 +8,8 @@ output:
       toc: yes
       toc_depth: 4
       toc_float: yes
+execute:
+  freeze: auto
 ---
 
 ```{r setup, include=FALSE}
@@ -19,6 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 # Texas Blackouts
 
 ### Analyzing the Effects of the Texas February 2021 Storm on the Houston metropolitan Area
+
+Using satellite imagery, roads & house data, and socioeconomic data
 
 📦 repo link \| https://github.com/floraham/texas-blackout
 
