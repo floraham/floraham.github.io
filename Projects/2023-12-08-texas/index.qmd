@@ -16,7 +16,7 @@ draft: false
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-![](images/Screenshot 2023-12-14 at 12.03.11 AM.png)
+![](images/Screenshot%202023-12-14%20at%2012.03.11%20AM.png)
 
 # Texas Blackouts
 
@@ -53,7 +53,7 @@ The following files had been sub-setted & stored in the `VNP46A1` folder.
 -   `VNP46A1.A2021047.h08v05.001.2021048091106.tif`: tile h08v05, collected on 2021-02-16
 -   `VNP46A1.A2021047.h08v06.001.2021048091105.tif`: tile h08v06, collected on 2021-02-16
 
-#### Roads 🛣️  `gis_osm_roads_free_1.gpkg`
+#### Roads 🛣️ `gis_osm_roads_free_1.gpkg`
 
 Typically highways account for a large portion of the night lights observable from space (see Google's [Earth at Night](https://earth.google.com/web/@27.44405464,-84.7693044,206.63660162a,8916361.52264659d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc)). To minimize falsely identifying areas with reduced traffic as areas without power, we will ignore areas near highways.
 
@@ -141,7 +141,7 @@ blackout_mask_vector <- st_as_sf(mask_blackout) %>% st_make_valid() ##can plot()
 ##### crop the vectorized map to our region of interest
 
 -   We first define the Houston metropolitan area with the following coordinates : (-96.5, 29), (-96.5, 30.5), (-94.5, 30.5), (-94.5, 29) and then turn these coordinates into a polygon using `st_polygon.`
--   Then we convert the polygon into a simple feature collection using `st_sfc()` and assign a CRS, making sure that the polygon is in the same CRS and crop (spatially subset) the blackout mask to our region of interest. Lastly we re-project the cropped blackout dataset to EPSG:3083 (NAD83 / Texas Centric Albers Equal Area). \
+-   Then we convert the polygon into a simple feature collection using `st_sfc()` and assign a CRS, making sure that the polygon is in the same CRS and crop (spatially subset) the blackout mask to our region of interest. Lastly we re-project the cropped blackout dataset to EPSG:3083 (NAD83 / Texas Centric Albers Equal Area).\
 
 ```{r include=TRUE}
 
@@ -257,7 +257,7 @@ print(paste0(nrow(buildings_blackout), " Houston homes experienced power outage 
 
 ##### load ACS data
 
-To set up for loading, we use `st_read()` to load the geodatabase layers and geometries are stored in the `ACS_2019_5YR_TRACT_48_TEXAS` layer. The income data is stored in the `X19_INCOME` layer, so we select the median income field `B19013e1 and`reproject data to EPSG:3083. \
+To set up for loading, we use `st_read()` to load the geodatabase layers and geometries are stored in the `ACS_2019_5YR_TRACT_48_TEXAS` layer. The income data is stored in the `X19_INCOME` layer, so we select the median income field `B19013e1 and`reproject data to EPSG:3083.\
 
 ```{r, warning=FALSE,message=FALSE}
 
@@ -271,7 +271,7 @@ median_income <- income %>% dplyr::select(GEOID, B19013e1)
 
 ##### determine which census tracts experienced blackouts
 
--   join the income data to the census tract geometries by joining by geometry ID and spatially join census tract data with buildings determined to be impacted by blackouts, then find which census tracts had blackouts. \
+-   join the income data to the census tract geometries by joining by geometry ID and spatially join census tract data with buildings determined to be impacted by blackouts, then find which census tracts had blackouts.\
 
 ```{r include=TRUE}
 
