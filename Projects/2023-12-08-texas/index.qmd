@@ -9,6 +9,7 @@ output:
       toc: yes
       toc_depth: 4
       toc_float: yes
+      code-fold: true 
 draft: false
 ---
 
@@ -32,9 +33,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## The objectives and methods:
 
-Estimate the number of households in Houston that experienced power loss due to the initial two storms. To determine the count of homes affected by power outages, we will spatially join these areas with \[OpenStreetMap\](https://www.openstreetmap.org/#map=4/38.01/-95.84) data on buildings and roads.
+This project aims to estimate the number of households in Houston that experienced power loss due to the initial two storms. To determine the count of homes affected by power outages, we will spatially join these areas with \[OpenStreetMap\](https://www.openstreetmap.org/#map=4/38.01/-95.84) data on buildings and roads.
 
-Investigate whether socioeconomic factors serve as predictors of community recovery from a power outage. For the exploration of potential socioeconomic factors influencing recovery, the analysis will be linked with data from the US Census Bureau.
+This project also investigates whether socioeconomic factors serve as predictors of community recovery from a power outage. For the exploration of potential socioeconomic factors influencing recovery, the analysis will be linked with data from the US Census Bureau.
 
 This analysis will rely on remotely-sensed night lights data acquired from the [Visible Infrared Imaging Radiometer Suite (VIIRS)](https://en.wikipedia.org/wiki/Visible_Infrared_Imaging_Radiometer_Suite) aboard the Suomi satellite. Specifically, we will use the VNP46A1 to identify variations in night lights before and after the storms as a method to identify areas that lost electrical power.
 
@@ -323,8 +324,7 @@ class(census_Y_N)
 
 ##### compare incomes of impacted tracts to unimpacted tracts
 
--   create a map of median income by census tract, designating which tracts had blackouts
--   plot the distribution of income in impacted and unimpacted tracts
+To do this, we create a map using tmap of median income by census tract, designating which tracts had blackouts. We then plot the distribution of income in impacted and unimpacted tracts.
 
 ```{r, warning=FALSE,message=FALSE}
 #join income data to the census tract geometries and crop to region of interest
