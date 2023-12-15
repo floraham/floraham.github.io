@@ -1,0 +1,479 @@
+---
+title: 'Does global warming affect soil carbon respiration?'
+description: 'Evaluating data from the Harvard Forest LTER soil warming experiment to simulate global climate change'
+author: "Flora Hamilton"
+date: "2022-12-15"
+code-fold: true 
+toc: true
+output:
+    html_document:
+      print_df: paged
+      toc: yes
+      toc_depth: 4
+      toc_float: yes
+draft: false
+---
+
+![](images/Screenshot%202023-12-15%20at%209.26.16%20AM.png)
+
+*Does a soil warming effect cause soil to change its monthly average respiration rates in a different way than an untreated plot naturally changes respiration?*
+
+# Background:
+
+The Intergovernmental Panel on Climate Change (IPCC)'s AR6 report published in August, 2021 projects that the world will likely reach or exceed 1.5 degrees C (2.7 degrees F) of warming within the next two decades [\[1\]](https://www.wri.org/insights/ipcc-climate-report). Under these circumstances, preserving soil health will be evermore important. Soil respiration, or "carbon flux," plays a significant role in soil health and the global carbon and nutrient cycles, and can be considered the "vitality" of the soil, as it an indicator of microbial activity and the content and decomposition of soil organic matter. Carbon flux is measured as the rate of carbon dioxide released from the soil by microbes decomposing soil organic matter and from the respiration of plant roots, in units of micromoles of CO2 per meter squared, per second.
+
+Importantly, the Harvard Forest LTER (Long Term Ecological Research) station has been "examining ecological dynamics in the New England region resulting from natural disturbances, environmental change, and human impacts" since the early 1990's [\[2\]](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-hfr.18.34). One of their main focuses is studying the effects of soil warming on soil respiration, nutrient availbility, carbon sequestration, and other ecoystemic factors impacted by global warming.
+
+One of its most important research findings is that soil respiration is also a driver for and associated with positive feedback with global climate change \[[3](https://harvardforest.fas.harvard.edu/news/results-20-year-soil-warming-experiment)\]. To arrive at this conclusion, the researchers designated control and temperature-treated plots of soil, maintaining soil temperatures at 5°C above ambient levels via hot wires running underneath the soil surface, at three replicated sites [\[4\]](https://harvardforest.fas.harvard.edu/soil-warming-experiment).
+
+While these research findings have been formalized by the studies' scientists, I would like to better understand the relationship between global warming and soil respiration for myself by applying hypothesis testing and linear regression, using the data from the Barre Woods site to evaluate changes of carbon flux based on differences in soil temperature and soil moisture over time.
+
+# The Data
+
+The data used in this project was retrieved from [this EDI Portal](https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-hfr&identifier=18&revision=34), with a temporal range of 2001 to 2019
+
+🌡️ **Soil temperature data** ([Explore data here and sampling methods here](https://dex.edirepository.org/https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fdata%2Feml%2Fknb-lter-hfr%2F18%2F34%2F326d32c64ccd7337a0f88b91db895e55))
+
+The EDI Portal provides R code to assist with the data wrangling. This is the code chunk I used for reading in the file & performing preliminary cleaning.
+
+```{r results = FALSE, message = FALSE, warnings = FALSE}
+
+library(tidyverse)
+library(readr)
+library(feasts)
+library(ggplot2)
+library(moderndive)
+library(dplyr)
+library(gridExtra)
+
+
+# reading in temperature data 
+infile3 <- trimws("https://pasta.lternet.edu/package/data/eml/knb-lter-hfr/18/34/9967b5716716078674fdd9755f9d5f1f") 
+infile3 <-sub("^https","http",infile3)
+# This creates a tibble named: dt3 
+	dt3 <-read_delim(infile3  
+                ,delim=","   
+                ,skip=1 
+                    , col_names=c( 
+                        "datetime",   
+                        "doy",   
+                        "year",   
+                        "time",   
+                        "ctrl.av",   
+                        "p1.av",   
+                        "p2.av",   
+                        "p3.av",   
+                        "p4.av",   
+                        "p5.av",   
+                        "p6.av",   
+                        "p7.av",   
+                        "p8.av",   
+                        "p9.av",   
+                        "p10.av"   ), 
+                    col_types=list( 
+                        col_datetime("%Y-%m-%dT%H:%M"), 
+                                    
+                        col_number() , 
+                        col_character(),  
+                        col_character(), 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() , 
+                        col_number() ), 
+                        na=c(" ",".","NA","")  )
+                        
+                    
+# Convert Missing Values to NA for individual vectors 
+dt3$datetime <- ifelse((trimws(as.character(dt3$datetime))==trimws("NA")),NA,dt3$datetime)               
+suppressWarnings(dt3$datetime <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$datetime))==as.character(as.numeric("NA"))),NA,dt3$datetime))
+dt3$doy <- ifelse((trimws(as.character(dt3$doy))==trimws("NA")),NA,dt3$doy)               
+suppressWarnings(dt3$doy <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$doy))==as.character(as.numeric("NA"))),NA,dt3$doy))
+dt3$year <- ifelse((trimws(as.character(dt3$year))==trimws("NA")),NA,dt3$year)               
+suppressWarnings(dt3$year <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$year))==as.character(as.numeric("NA"))),NA,dt3$year))
+dt3$time <- ifelse((trimws(as.character(dt3$time))==trimws("NA")),NA,dt3$time)               
+suppressWarnings(dt3$time <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$time))==as.character(as.numeric("NA"))),NA,dt3$time))
+dt3$ctrl.av <- ifelse((trimws(as.character(dt3$ctrl.av))==trimws("NA")),NA,dt3$ctrl.av)               
+suppressWarnings(dt3$ctrl.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$ctrl.av))==as.character(as.numeric("NA"))),NA,dt3$ctrl.av))
+dt3$p1.av <- ifelse((trimws(as.character(dt3$p1.av))==trimws("NA")),NA,dt3$p1.av)               
+suppressWarnings(dt3$p1.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p1.av))==as.character(as.numeric("NA"))),NA,dt3$p1.av))
+dt3$p2.av <- ifelse((trimws(as.character(dt3$p2.av))==trimws("NA")),NA,dt3$p2.av)               
+suppressWarnings(dt3$p2.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p2.av))==as.character(as.numeric("NA"))),NA,dt3$p2.av))
+dt3$p3.av <- ifelse((trimws(as.character(dt3$p3.av))==trimws("NA")),NA,dt3$p3.av)               
+suppressWarnings(dt3$p3.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p3.av))==as.character(as.numeric("NA"))),NA,dt3$p3.av))
+dt3$p4.av <- ifelse((trimws(as.character(dt3$p4.av))==trimws("NA")),NA,dt3$p4.av)               
+suppressWarnings(dt3$p4.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p4.av))==as.character(as.numeric("NA"))),NA,dt3$p4.av))
+dt3$p5.av <- ifelse((trimws(as.character(dt3$p5.av))==trimws("NA")),NA,dt3$p5.av)               
+suppressWarnings(dt3$p5.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p5.av))==as.character(as.numeric("NA"))),NA,dt3$p5.av))
+dt3$p6.av <- ifelse((trimws(as.character(dt3$p6.av))==trimws("NA")),NA,dt3$p6.av)               
+suppressWarnings(dt3$p6.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p6.av))==as.character(as.numeric("NA"))),NA,dt3$p6.av))
+dt3$p7.av <- ifelse((trimws(as.character(dt3$p7.av))==trimws("NA")),NA,dt3$p7.av)               
+suppressWarnings(dt3$p7.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p7.av))==as.character(as.numeric("NA"))),NA,dt3$p7.av))
+dt3$p8.av <- ifelse((trimws(as.character(dt3$p8.av))==trimws("NA")),NA,dt3$p8.av)               
+suppressWarnings(dt3$p8.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p8.av))==as.character(as.numeric("NA"))),NA,dt3$p8.av))
+dt3$p9.av <- ifelse((trimws(as.character(dt3$p9.av))==trimws("NA")),NA,dt3$p9.av)               
+suppressWarnings(dt3$p9.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p9.av))==as.character(as.numeric("NA"))),NA,dt3$p9.av))
+dt3$p10.av <- ifelse((trimws(as.character(dt3$p10.av))==trimws("NA")),NA,dt3$p10.av)               
+suppressWarnings(dt3$p10.av <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt3$p10.av))==as.character(as.numeric("NA"))),NA,dt3$p10.av))
+                  
+soiltemp_df <- dt3
+```
+
+**💧 💨 Soil respiration + moisture data** ([Explore data and sampling methods here](https://dex.edirepository.org/https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fdata%2Feml%2Fknb-lter-hfr%2F18%2F34%2F6f307eb9dfd8291d8826d69d73c18d27)):
+
+Reading in file & cleaning.
+
+```{r results = FALSE, message = FALSE, warnings = FALSE}
+
+inUrl7  <- "https://pasta.lternet.edu/package/data/eml/knb-lter-hfr/18/33/6f307eb9dfd8291d8826d69d73c18d27" 
+infile7 <- tempfile()
+try(download.file(inUrl7,infile7,method="curl"))
+if (is.na(file.size(infile7))) download.file(inUrl7,infile7,method="auto")
+
+
+
+dt7 <-read.csv(infile7,header=F 
+          ,skip=1
+            ,sep=","  
+        , col.names=c(
+                    "datetime",     
+                    "date",     
+                    "year",     
+                    "month",     
+                    "day",     
+                    "time",     
+                    "treatment",     
+                    "plot",     
+                    "co2",     
+                    "cm2",     
+                    "cm4",     
+                    "moisture",     
+                    "measurement"    ), check.names=TRUE)
+               
+unlink(infile7)
+		    
+# Fix any interval or ratio columns mistakenly read in as nominal and nominal columns read as numeric or dates read as strings
+                
+if (class(dt7$datetime)!="factor") dt7$datetime<- as.factor(dt7$datetime)                                   
+# attempting to convert dt7$date dateTime string to R date structure (date or POSIXct)                                
+tmpDateFormat<-"%Y-%m-%d"
+tmp7date<-as.Date(dt7$date,format=tmpDateFormat)
+# Keep the new dates only if they all converted correctly
+if(length(tmp7date) == length(tmp7date[!is.na(tmp7date)])){dt7$date <- tmp7date } else {print("Date conversion failed for dt7$date. Please inspect the data and do the date conversion yourself.")}                                                                    
+rm(tmpDateFormat,tmp7date) 
+if (class(dt7$month)!="factor") dt7$month<- as.factor(dt7$month)
+if (class(dt7$day)!="factor") dt7$day<- as.factor(dt7$day)
+if (class(dt7$treatment)!="factor") dt7$treatment<- as.factor(dt7$treatment)
+if (class(dt7$plot)!="factor") dt7$plot<- as.factor(dt7$plot)
+if (class(dt7$co2)=="factor") dt7$co2 <-as.numeric(levels(dt7$co2))[as.integer(dt7$co2) ]               
+if (class(dt7$co2)=="character") dt7$co2 <-as.numeric(dt7$co2)
+if (class(dt7$cm2)=="factor") dt7$cm2 <-as.numeric(levels(dt7$cm2))[as.integer(dt7$cm2) ]               
+if (class(dt7$cm2)=="character") dt7$cm2 <-as.numeric(dt7$cm2)
+if (class(dt7$cm4)=="factor") dt7$cm4 <-as.numeric(levels(dt7$cm4))[as.integer(dt7$cm4) ]               
+if (class(dt7$cm4)=="character") dt7$cm4 <-as.numeric(dt7$cm4)
+if (class(dt7$moisture)=="factor") dt7$moisture <-as.numeric(levels(dt7$moisture))[as.integer(dt7$moisture) ]               
+if (class(dt7$moisture)=="character") dt7$moisture <-as.numeric(dt7$moisture)
+if (class(dt7$measurement)!="factor") dt7$measurement<- as.factor(dt7$measurement)
+                
+# Convert Missing Values to NA for non-dates
+                
+dt7$datetime <- as.factor(ifelse((trimws(as.character(dt7$datetime))==trimws("NA")),NA,as.character(dt7$datetime)))
+dt7$month <- as.factor(ifelse((trimws(as.character(dt7$month))==trimws("NA")),NA,as.character(dt7$month)))
+dt7$day <- as.factor(ifelse((trimws(as.character(dt7$day))==trimws("NA")),NA,as.character(dt7$day)))
+dt7$treatment <- as.factor(ifelse((trimws(as.character(dt7$treatment))==trimws("NA")),NA,as.character(dt7$treatment)))
+dt7$plot <- as.factor(ifelse((trimws(as.character(dt7$plot))==trimws("NA")),NA,as.character(dt7$plot)))
+dt7$co2 <- ifelse((trimws(as.character(dt7$co2))==trimws("NA")),NA,dt7$co2)               
+suppressWarnings(dt7$co2 <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt7$co2))==as.character(as.numeric("NA"))),NA,dt7$co2))
+dt7$cm2 <- ifelse((trimws(as.character(dt7$cm2))==trimws("NA")),NA,dt7$cm2)               
+suppressWarnings(dt7$cm2 <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt7$cm2))==as.character(as.numeric("NA"))),NA,dt7$cm2))
+dt7$cm4 <- ifelse((trimws(as.character(dt7$cm4))==trimws("NA")),NA,dt7$cm4)               
+suppressWarnings(dt7$cm4 <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt7$cm4))==as.character(as.numeric("NA"))),NA,dt7$cm4))
+dt7$moisture <- ifelse((trimws(as.character(dt7$moisture))==trimws("NA")),NA,dt7$moisture)               
+suppressWarnings(dt7$moisture <- ifelse(!is.na(as.numeric("NA")) & (trimws(as.character(dt7$moisture))==as.character(as.numeric("NA"))),NA,dt7$moisture))
+dt7$measurement <- as.factor(ifelse((trimws(as.character(dt7$measurement))==trimws("NA")),NA,as.character(dt7$measurement)))
+
+
+# Here is the structure of the input data frame:
+str(dt7)                            
+attach(dt7)                            
+# The analyses below are basic descriptions of the variables. After testing, they should be replaced.                 
+                # Get more details on character variables
+                 
+detach(dt7)   
+
+co2flux_df <- dt7
+```
+
+# Cleaning + preparing for analysis 🧼
+
+Aligning data with the some datetime specifications
+
+```{r results = FALSE, message = FALSE, warnings = FALSE}
+
+#-------------------co2 data cleaning--------------------#
+#Convert the date time using lubridate with co2 data 
+co2flux_df$datetime = as_datetime(co2flux_df$datetime)
+
+# Create a datetime column using lubridate
+co2flux_df$datetime <- ymd(paste(co2flux_df$year, co2flux_df$month, co2flux_df$day, sep = "-")) + hm(co2flux_df$time)
+co2flux_df$date <-  date(co2flux_df$datetime)
+
+#------------------soil temp data cleaning--------------#
+
+#Convert the date time using lubridate with temperature data 
+soiltemp_df$datetime <- as_datetime(soiltemp_df$datetime)
+# Extract day, month, and year
+day <- sprintf("%02d", day(soiltemp_df$datetime))
+month <- sprintf("%02d", month(soiltemp_df$datetime))
+year <- year(soiltemp_df$datetime)
+soiltemp_df$date <- paste(year, month, day, sep = '-')
+```
+
+Because the soiltemp records temperature at individual plots, we also want to average all the plots by date and across all plots
+
+```{r results = FALSE, message = FALSE, warnings = FALSE}
+
+# Specify columns to average across
+columns_to_average <- c("p1.av", "p2.av", "p3.av", "p4.av", "p5.av", "p6.av", "p7.av", "p8.av", "p9.av", "p10.av")
+
+# Calculate the row-wise mean for the selected columns
+soiltemp_df <- soiltemp_df %>%
+  rowwise() %>%
+  mutate(treatment.avgT = mean(c_across(all_of(columns_to_average)), na.rm = TRUE)) %>% 
+  rename(ctrl.avgT=ctrl.av) %>% 
+  select(-p1.av, -p2.av, -p3.av, -p4.av, -p5.av, -p6.av, -p7.av, -p8.av, -p9.av, -p10.av, -doy, -year, -time) %>%  #drop columns 
+  select(date, ctrl.avgT, treatment.avgT) #reorder columns
+```
+
+Group by and average both data frames by to get a daily average.
+
+```{r}
+#co2flux_df 
+#soiltemp_df
+
+#group by date and average 
+soiltemp_df_avgs <- soiltemp_df %>% 
+  group_by(date) %>% 
+  summarise(treatment.avgT_daily = mean(treatment.avgT), ctrl.avgT_daily= mean(ctrl.avgT))
+
+co2flux <- co2flux_df %>% select("datetime", "treatment", "co2", "moisture", "date") %>% filter(treatment == "H" | treatment == "C") 
+co2flux_avgs <- co2flux %>%  group_by(date, treatment) %>% 
+  summarise(avg_co2 = mean(co2), avg_moisture = mean(moisture)) 
+
+```
+
+## Exploratory Data Visualizations  👀
+
+I plot the raw carbon flux data over time to gain a better understanding of the underlying dataset, hoping to visually identify trends and notice patterns upon first assessment.
+
+```{r}
+
+raw <- ggplot(data=co2flux, aes(x=date, y=co2, color = treatment)) + geom_point(alpha = 0.3)  +
+    xlab("Date") + 
+    ylab("CO2 flux, μmol/(m²·s) ")  + 
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y-%m-%d") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+![](images/Screenshot 2023-12-15 at 12.42.31 PM.png)
+
+Notice the periodic gaps in the winter. After doing some research, I found that no samples were taken due to snow pack. This gap in observations is likely to cause biases in our data, as it omits a key season in our dataset. Due to these gaps, it is difficult to perform a time series analysis & decompose seasonality effects.
+
+Now some box plots and violin plots to observe the distribution of the soil data averaged daily by treatment type, without the time component.
+
+```{r}
+box_vio <- ggplot(data=co2flux_avgs, aes(x = treatment, y = avg_co2, col = treatment)) + geom_violin()+ geom_boxplot(width=0.5) + 
+    xlab("Plot type") + 
+    ylab("CO2 flux, μmol/(m²·s) ")  
+
+```
+
+![](images/Screenshot 2023-12-15 at 1.34.36 PM.png)
+
+The box-violin plot reveals that our data is a little bit right skewed, but
+
+Joining soil temperature and moisture data to the co2flux daily averages
+
+```{r}
+
+#soiltemp_df at this point is the dataframe of averaged plot temperatures (averaging across all treatment plots)
+soiltemp_df_avgs <- soiltemp_df_avgs %>% rename( "C" = ctrl.avgT_daily, "H" = treatment.avgT_daily)
+soiltemp_df_avgs <- soiltemp_df_avgs %>% reshape2::melt(id = "date") 
+soiltemp_df_avgs <- soiltemp_df_avgs %>% rename(treatment = variable)
+
+#joining the two datasets by treatment and date 
+result <- merge(co2flux_avgs, soiltemp_df_avgs, by= c("date", "treatment"))
+result <- result %>% rename(avg_temp = value)
+result$month <- format(result$date, "%m")
+result$year <- format(result$date, "%Y")
+daily_avgs <- result 
+
+head(daily_avgs, 6)
+```
+
+### Averaging by month or year? 
+
+Averaging over different time scales makes a big impact on what is interpreted. While yearly averages are probably most accurate in terms of smoothing out seasonal variability, the trade-off is the small sample size. Taking monthly averages, on the other-hand, would give us a bigger sample to work with, but much more variability. We group data by month and average, then plot.
+
+```{r results = FALSE, message = FALSE, warnings = FALSE}
+#grouping data by month
+monthly_avgs <- daily_avgs %>% group_by(year, month, treatment) %>%  summarise(avg_co2_mo = mean(avg_co2), avg_moisture_mo = mean(avg_moisture),  avg_temp_mo = mean(avg_temp)) 
+
+monthly_avgs$datetime <- ym(paste(monthly_avgs$year, monthly_avgs$month, sep = "-"))
+
+
+#plotting distribution 
+ggplot(data=monthly_avgs, aes(x = treatment, y = avg_co2_mo, color = treatment)) + geom_boxplot() +  
+    xlab("treatment type") + 
+    ylab("CO2 flux, μmol/(m²·s) ")  
+
+```
+
+Grouping by year, on the other hand:
+
+```{r results = FALSE, message = FALSE, warnings = FALSE}
+yearly_avgs <- daily_avgs %>% group_by(year, treatment) %>%  summarise(avg_co2_yr = mean(avg_co2), avg_moisture_yr = mean(avg_moisture),  avg_temp_yr = mean(avg_temp)) 
+
+
+ggplot(data=yearly_avgs, aes(x = treatment, y = avg_co2_yr, color = treatment)) + geom_boxplot() +  geom_point() +
+    xlab("treatment type") + 
+    ylab("CO2 flux, μmol/(m²·s) ")  
+```
+
+# Analysis 
+
+## Evaluating significant differences in average CO2flux between average treatment and control plots
+
+We have an overall idea how yearly vs monthly averaging affects the distribution of the dataset, now let's test it using regression.
+
+***Single variable, categorical model for yearly averaging***
+
+```{r}
+single_ct_lm <- lm (avg_co2_yr ~ treatment, data = yearly_avgs)
+summary(single_ct_lm)
+```
+
+The results of an adjusted R Squared of -0.04507 and p value (equivalent to that of a two tailed t-test) of 0.9295 reveal that there was no significant change in carbon flux between heated and treated plots. There was likely still too much variability between the seasons and soil conditions to determine a significant effect of the treatment. Let's repeat this with monthly average data.
+
+***Single variable, categorical model for monthly averaging***
+
+```{r}
+single_ct_lm <- lm (avg_co2_mo ~ treatment, data = monthly_avgs)
+summary(single_ct_lm)
+```
+
+Averaging variables by month yields a better (albeit, still poor) R squared value and p-value. Yearly averaging reduces the seasonal variability and tells us the overall long term effect of temperature on carbon flux, while monthly averaging gives us the option of considering the effects of seasonality on our data. For the purposes of finding a linear regression to describe the data, we will choose the dataset with variables averaged monthly.
+
+I'll use this model for my single variable, categorical regression.
+
+# Defining a regression model
+
+Once again, let's define a single variable categorical regression model with just monthly averages data. We regress Co2 flux on treatment.
+
+## Model 0) Single variable, categorical regression 
+
+We first establish that our null hypothesis (what we aim to reject based on the results of the regression) is that there is no difference in mean monthly carbon flux between the control and heat treated plots. This is a good moment to define both our null and alternative hypotheses:
+
+-   **Null hypothesis:** there is no significant difference in mean monthly carbon flux between control and heat-applied (treatment) plots.
+
+-   **Alternative hypothesis:** there is a significant difference in mean monthly carbon flux between control and heat-applied (treatment) plots
+
+```{r}
+
+model_0 <- lm(avg_co2_mo ~ treatment, data = monthly_avgs)
+
+model_0_plt <- ggplot(monthly_avgs, aes(y = avg_co2_mo, x = treatment, color = treatment)) +
+geom_point(alpha = 0.5) +
+geom_categorical_model() +
+    xlab("treatment type") + 
+    ylab("CO2 flux, μmol/(m²·s) ")  
+
+```
+
+![](images/Screenshot 2023-12-15 at 2.25.58 PM.png){width="455"}
+
+```{r}
+print(summary(model_0))
+```
+
+![](images/Screenshot 2023-12-15 at 12.58.52 PM.png){width="432"}
+
+In summary, this single variable, categorical regression model regressing the average monthly carbon flux on plot type reveals:
+
+-   ....a p-value of 0.548, suggesting that there is not enough evidence to conclude that there is a significant relationship between plot type and carbon flux.
+
+-   .... an adjusted R-squared of -0.0029, suggesting that the model, with plot type as the predictor, is not explaining much of the variability in carbon flux, and the model may not be a good fit.
+
+-   .... that the application of 5 degrees Celcius of heat increases the carbon flux by 5 umol/meters\^2 per second.
+
+## Model 1) multiple regression 
+
+```{r}
+#model_1
+model_1 <- lm(avg_co2_mo ~ treatment + month + avg_temp_mo + avg_moisture_mo , data = monthly_avgs)
+summary(model_1)
+```
+
+This multiple variable regression model regressing the average monthly carbon flux on plot type, month, average monthly temperature, and average moisture reveals:
+
+-   .... a p-value of \<2.2e-16, suggesting that there is enough evidence to conclude that there is a significant relationship between carbon flux and the regressed variables.
+
+-   .... an adjusted R-squared of 0.79, suggesting that the model, with plot type as the predictor, is explaining much (79.75%) of the variability in carbon flux, and the model may be a good fit!
+
+-   .... that treatment, three months, average monthly temperature, and average monthly moisture are variables that contribute significantly (p \< 0.05) to the model.
+
+## Addressing ommited variables bias 
+
+Before we move on, we need to ask if there are any omitted variables to avoid omitted variable bias.
+
+My guess is that there is some sort of dependency between moisture and temperature. Let's plot moisture and temperature first to see if there's a possibility for dependency between them.
+
+```{r}
+
+#create scatter plot with line of best fit
+ovb <- ggplot(monthly_avgs, aes(x=avg_temp_mo, y=avg_moisture_mo)) +
+    geom_point(alpha = 0.4) +
+    geom_smooth(method='lm', se=TRUE, color = "coral")
+
+```
+
+![](images/Screenshot 2023-12-15 at 1.14.28 PM.png){width="516"}
+
+From this graph, we can see that there is most likely a negative relationship between temperature and moisture. Our second iteration of the model will take these factors into consideration
+
+## Model 2) multiple regression with interaction term 
+
+```{r}
+model_2 <- lm(avg_co2_mo ~ treatment + month + avg_temp_mo + avg_moisture_mo + avg_temp_mo:avg_moisture_mo, data = monthly_avgs)
+summary(model_2)
+
+```
+
+With an adjusted R squared of 0.8134, and a p-value of \<2.2e-16, this model is looking pretty good! Coefficients that are significant are: treatment type, three months of the year, average monthly temperature, and the interaction between average monthly moisture and average monthly temperature. We see that when all independent variables are equal, the average monthly carbon flux on the control plot is 3.69 carbon flux units (umol/(meter squared \* sec) )
+
+Breaking this down, we can say that this model explains 81.34% of the variation in carbon flux, and that there is an almost zero % chance that the observed carbon flux data occurred by random chance alone, assuming the null hypothesis is true. However, this model simultaneously suggests that the addition of treatment reduces the average carbon flux by -37 units. This is a little counter-intuitive, since in our single variable, categorical model we had already seen that it has an overall positive effect. This suggests that the addition of more variables may explain our model better, mathematically, but some more work needs to be done to evaluate the scientific robustness of this model.
+
+## Limitations + next steps
+
+This statistical analysis was limited by a variety of factors, including periodic sampling gaps during the winter months, which accounts for a quarter of the year. This gap significantly introduces biases into our results. To adjust for this bias, the study by Dr. Jerry Melillo et Al. fills in the gaps based on a model that derives estimated carbon flux with sampled ambient air temperature as inputs. Unfortunately, the scope of this project did not encompass statistical data modeling. Due to these gaps, I was unable to perform a time series analysis, that would have helped decompose seasonality effects in our data. It would be interesting to perform such a process and rerun these models to see what difference adding in winter data could bring. Additionally, I would be interested to incorporate more parameters into the model such as nitrogen availability, leaf-litter composition, and plant-root density into the regression.
+
+## References 
+
+\[[1](https://www.wri.org/insights/ipcc-climate-report)\] Levin, K. (August 9, 2021). IPCC's 2021 Climate Report. World Resources Institute. Accessed December 15, 2023. URL: https://www.wri.org/insights/ipcc-climate-report
+
+\[[2](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-hfr.18.34)\] EDI Data Package Summary: Barre Woods Soil Warming Experiment at Harvard Forest since 2001. Retrieved from: https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-hfr.18.34
+
+\[[3](https://harvardforest.fas.harvard.edu/news/results-20-year-soil-warming-experiment)\] Potier, B. (2013). Warmer Soils Release More CO2 to Atmosphere; Effect Stabilizes Over Long Term. Retrieved:https://harvardforest.fas.harvard.edu/sites/default/files/Harvard%20Forest_Frey_Nature%20Climate%20Change_press%20release%202013.pdf
+
+\[[4](https://harvardforest.fas.harvard.edu/soil-warming-experiment)\] Soil Warming Experiments, Harvard Forest. Accessed Dec 10, 2023. URL: https://harvardforest.fas.harvard.edu/soil-warming-experiment
+
+\[5\] Frey, S. and J. Melillo. 2023. Barre Woods Soil Warming Experiment at Harvard Forest since 2001 ver 34. Environmental Data Initiative. https://doi.org/10.6073/pasta/9e34836122d20a123ff2c38d95527e28 (Accessed 2023-12-15).
+
+\[6\] Melillo, Jerry et Al. Soil warming, carbon--nitrogen interactions, and forest carbon budgets. PNAS Vol. 108, Volume 23. Published May 23, 2011.
