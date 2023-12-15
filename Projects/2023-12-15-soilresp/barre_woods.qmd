@@ -1,5 +1,5 @@
 ---
-title: 'Does global warming affect soil carbon respiration?'
+title: 'Does global warming affect soil respiration?'
 description: 'Evaluating data from the Harvard Forest LTER soil warming experiment to simulate global climate change'
 author: "Flora Hamilton"
 date: "2022-12-15"

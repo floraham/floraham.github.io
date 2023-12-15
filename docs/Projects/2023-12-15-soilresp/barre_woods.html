@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-12-15">
 <meta name="description" content="Evaluating data from the Harvard Forest LTER soil warming experiment to simulate global climate change">
 
-<title>Does global warming affect soil carbon respiration?</title>
+<title>Does global warming affect soil respiration?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Does global warming affect soil carbon respiration?</h1>
+      <h1 class="title">Does global warming affect soil respiration?</h1>
                   <div>
         <div class="description">
           Evaluating data from the Harvard Forest LTER soil warming experiment to simulate global climate change
@@ -196,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
   <ul class="collapse">
-  <li><a href="#evaluating-significant-differences-in-average-co2flux-between-average-treatment-and-control-plots" id="toc-evaluating-significant-differences-in-average-co2flux-between-average-treatment-and-control-plots" class="nav-link" data-scroll-target="#evaluating-significant-differences-in-average-co2flux-between-average-treatment-and-control-plots">Evaluating significant differences in average CO2flux between average treatment and control plots</a></li>
+  <li><a href="#evaluating-significant-differences-in-average-co2-flux-between-average-treatment-and-control-plots" id="toc-evaluating-significant-differences-in-average-co2-flux-between-average-treatment-and-control-plots" class="nav-link" data-scroll-target="#evaluating-significant-differences-in-average-co2-flux-between-average-treatment-and-control-plots">Evaluating significant differences in average CO2 flux between average treatment and control plots</a></li>
   </ul></li>
   <li><a href="#defining-a-regression-model" id="toc-defining-a-regression-model" class="nav-link" data-scroll-target="#defining-a-regression-model">Defining a regression model</a>
   <ul class="collapse">
@@ -217,13 +217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><img src="images/Screenshot 2023-12-15 at 9.26.16 AM.png" class="img-fluid"></p>
-<p><em>Does a soil warming effect cause soil to change its monthly average respiration rates in a different way than an untreated plot naturally changes respiration?</em></p>
+<p><em>Does a soil warming effect have influence on monthly average respiration rates in a different way than an untreated plot?</em></p>
 <section id="background" class="level1">
 <h1>Background:</h1>
 <p>The Intergovernmental Panel on Climate Change (IPCC)’s AR6 report published in August, 2021 projects that the world will likely reach or exceed 1.5 degrees C (2.7 degrees F) of warming within the next two decades <a href="https://www.wri.org/insights/ipcc-climate-report">[1]</a>. Under these circumstances, preserving soil health will be evermore important. Soil respiration, or “carbon flux,” plays a significant role in soil health and the global carbon and nutrient cycles, and can be considered the “vitality” of the soil, as it an indicator of microbial activity and the content and decomposition of soil organic matter. Carbon flux is measured as the rate of carbon dioxide released from the soil by microbes decomposing soil organic matter and from the respiration of plant roots, in units of micromoles of CO2 per meter squared, per second.</p>
 <p>Importantly, the Harvard Forest LTER (Long Term Ecological Research) station has been “examining ecological dynamics in the New England region resulting from natural disturbances, environmental change, and human impacts” since the early 1990’s <a href="https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-hfr.18.34">[2]</a>. One of their main focuses is studying the effects of soil warming on soil respiration, nutrient availbility, carbon sequestration, and other ecoystemic factors impacted by global warming.</p>
 <p>One of its most important research findings is that soil respiration is also a driver for and associated with positive feedback with global climate change [<a href="https://harvardforest.fas.harvard.edu/news/results-20-year-soil-warming-experiment">3</a>]. To arrive at this conclusion, the researchers designated control and temperature-treated plots of soil, maintaining soil temperatures at 5°C above ambient levels via hot wires running underneath the soil surface, at three replicated sites <a href="https://harvardforest.fas.harvard.edu/soil-warming-experiment">[4]</a>.</p>
-<p>While these research findings have been formalized by the studies’ scientists, I would like to better understand the relationship between global warming and soil respiration for myself by applying hypothesis testing and linear regression, using the data from the Barre Woods site to evaluate changes of carbon flux based on differences in soil temperature and soil moisture over time.</p>
+<p>While these research findings have been formalized by the studies’ scientists, I would like to better understand the relationship between soil warming and soil respiration for myself by applying hypothesis testing and linear regression, using the data from the Barre Woods site to evaluate changes of carbon flux based on differences in soil temperature and soil moisture.</p>
 </section>
 <section id="the-data" class="level1">
 <h1>The Data</h1>
@@ -578,8 +578,8 @@ e.g.:
 </section>
 <section id="analysis" class="level1">
 <h1>Analysis</h1>
-<section id="evaluating-significant-differences-in-average-co2flux-between-average-treatment-and-control-plots" class="level2">
-<h2 class="anchored" data-anchor-id="evaluating-significant-differences-in-average-co2flux-between-average-treatment-and-control-plots">Evaluating significant differences in average CO2flux between average treatment and control plots</h2>
+<section id="evaluating-significant-differences-in-average-co2-flux-between-average-treatment-and-control-plots" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-significant-differences-in-average-co2-flux-between-average-treatment-and-control-plots">Evaluating significant differences in average CO2 flux between average treatment and control plots</h2>
 <p>We have an overall idea how yearly vs monthly averaging affects the distribution of the dataset, now let’s test it using regression.</p>
 <p><strong><em>Single variable, categorical model for yearly averaging</em></strong></p>
 <div class="cell">
@@ -646,7 +646,7 @@ F-statistic: 0.3612 on 1 and 216 DF,  p-value: 0.5485</code></pre>
 </section>
 <section id="defining-a-regression-model" class="level1">
 <h1>Defining a regression model</h1>
-<p>Once again, let’s define a single variable categorical regression model with just monthly averages data. We regress Co2 flux on treatment.</p>
+<p>Once again, let’s define a single variable categorical regression model with just monthly averages data. We regress CO2 flux on treatment type.</p>
 <section id="model-0-single-variable-categorical-regression" class="level2">
 <h2 class="anchored" data-anchor-id="model-0-single-variable-categorical-regression">Model 0) Single variable, categorical regression</h2>
 <p>We first establish that our null hypothesis (what we aim to reject based on the results of the regression) is that there is no difference in mean monthly carbon flux between the control and heat treated plots. This is a good moment to define both our null and alternative hypotheses:</p>
