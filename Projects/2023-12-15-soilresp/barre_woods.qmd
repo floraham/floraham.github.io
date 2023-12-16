@@ -16,15 +16,15 @@ draft: false
 
 ![](images/Screenshot%202023-12-15%20at%209.26.16%20AM.png)
 
-*Does a soil warming effect have influence on monthly average respiration rates in a different way than an untreated plot?*
+*What effect does soil warming have on monthly average respiration rates?*
 
 # Background:
 
-The Intergovernmental Panel on Climate Change (IPCC)'s AR6 report published in August, 2021 projects that the world will likely reach or exceed 1.5 degrees C (2.7 degrees F) of warming within the next two decades [\[1\]](https://www.wri.org/insights/ipcc-climate-report). Under these circumstances, preserving soil health will be evermore important. Soil respiration, or "carbon flux," plays a significant role in soil health and the global carbon and nutrient cycles, and can be considered the "vitality" of the soil, as it an indicator of microbial activity and the content and decomposition of soil organic matter. Carbon flux is measured as the rate of carbon dioxide released from the soil by microbes decomposing soil organic matter and from the respiration of plant roots, in units of micromoles of CO2 per meter squared, per second.
+The Intergovernmental Panel on Climate Change (IPCC)'s AR6 report published in August, 2021 projects that the world will likely reach or exceed 1.5 degrees C (2.7 degrees F) of warming within the next two decades [\[1\]](https://www.wri.org/insights/ipcc-climate-report). Under these circumstances, preserving soil health will be evermore important. Soil respiration, or "carbon flux," plays a significant role in soil health and the global carbon and nutrient cycles, and can be considered the "vitality" of the soil, as it is an indicator of microbial activity and the content and decomposition of soil organic matter. Carbon flux is measured as the rate of carbon dioxide released from the soil by microbes decomposing soil organic matter and from the respiration of plant roots, in units of micromoles of CO2 per meter squared, per second.
 
-Importantly, the Harvard Forest LTER (Long Term Ecological Research) station has been "examining ecological dynamics in the New England region resulting from natural disturbances, environmental change, and human impacts" since the early 1990's [\[2\]](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-hfr.18.34). One of their main focuses is studying the effects of soil warming on soil respiration, nutrient availbility, carbon sequestration, and other ecoystemic factors impacted by global warming.
+The Harvard Forest LTER (Long Term Ecological Research) station has been "examining ecological dynamics in the New England region resulting from natural disturbances, environmental change, and human impacts" since the early 1990's [\[2\]](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-hfr.18.34). One of their main focuses is studying the effects of soil warming on soil respiration, nutrient availbility, carbon sequestration, and other ecoystemic factors impacted by global warming.
 
-One of its most important research findings is that soil respiration is also a driver for and associated with positive feedback with global climate change \[[3](https://harvardforest.fas.harvard.edu/news/results-20-year-soil-warming-experiment)\]. To arrive at this conclusion, the researchers designated control and temperature-treated plots of soil, maintaining soil temperatures at 5°C above ambient levels via hot wires running underneath the soil surface, at three replicated sites [\[4\]](https://harvardforest.fas.harvard.edu/soil-warming-experiment).
+One of its most important research findings is that soil respiration is also a driver for, and thus associated with, positive feedback with global climate change \[[3](https://harvardforest.fas.harvard.edu/news/results-20-year-soil-warming-experiment)\]. To arrive at this conclusion, the researchers designated control and temperature-treated plots of soil, maintaining soil temperatures at 5°C above ambient levels via hot wires running underneath the soil surface, at three replicated sites [\[4\]](https://harvardforest.fas.harvard.edu/soil-warming-experiment).
 
 While these research findings have been formalized by the studies' scientists, I would like to better understand the relationship between soil warming and soil respiration for myself by applying hypothesis testing and linear regression, using the data from the Barre Woods site to evaluate changes of carbon flux based on differences in soil temperature and soil moisture.
 
@@ -297,7 +297,7 @@ box_vio <- ggplot(data=co2flux_avgs, aes(x = treatment, y = avg_co2, col = treat
 
 ![](images/Screenshot%202023-12-15%20at%201.34.36%20PM.png)
 
-The box-violin plot reveals that our data is a little bit right skewed, but
+The box-violin plot reveals that our data is a little bit right skewed, but mostly normal. 
 
 Joining soil temperature and moisture data to the co2flux daily averages
 
@@ -320,7 +320,8 @@ head(daily_avgs, 6)
 
 ### Averaging by month or year?
 
-Averaging over different time scales makes a big impact on what is interpreted. While yearly averages are probably most accurate in terms of smoothing out seasonal variability, the trade-off is the small sample size. Taking monthly averages, on the other-hand, would give us a bigger sample to work with, but much more variability. We group data by month and average, then plot.
+
+While taking averages over time will be necessary, it is important to consider which time scale will be most appropriate. While yearly averages are most accurate in terms of smoothing out seasonal variability, the trade-off is the small sample size. Taking monthly averages, on the other-hand, will give a larger sample to work with at the manageable cost of higher variability. We first group data by month and average, then plot.
 
 ```{r results = FALSE, message = FALSE, warnings = FALSE}
 #grouping data by month
@@ -336,7 +337,7 @@ ggplot(data=monthly_avgs, aes(x = treatment, y = avg_co2_mo, color = treatment))
 
 ```
 
-Grouping by year, on the other hand:
+Alternatively, grouping by year:
 
 ```{r results = FALSE, message = FALSE, warnings = FALSE}
 yearly_avgs <- daily_avgs %>% group_by(year, treatment) %>%  summarise(avg_co2_yr = mean(avg_co2), avg_moisture_yr = mean(avg_moisture),  avg_temp_yr = mean(avg_temp)) 
@@ -349,9 +350,10 @@ ggplot(data=yearly_avgs, aes(x = treatment, y = avg_co2_yr, color = treatment)) 
 
 # Analysis
 
-## Evaluating significant differences in average CO2 flux between average treatment and control plots
+## Evaluating significant differences in average CO2 flux between treatment and control plots
 
-We have an overall idea how yearly vs monthly averaging affects the distribution of the dataset, now let's test it using regression.
+
+The plots above give an intuitive idea about how yearly vs. monthly averaging affects the distribution of the dataset, so let's test it using regression.
 
 ***Single variable, categorical model for yearly averaging***
 
@@ -360,7 +362,7 @@ single_ct_lm <- lm (avg_co2_yr ~ treatment, data = yearly_avgs)
 summary(single_ct_lm)
 ```
 
-The results of an adjusted R Squared of -0.04507 and p value (equivalent to that of a two tailed t-test) of 0.9295 reveal that there was no significant change in carbon flux between heated and treated plots. There was likely still too much variability between the seasons and soil conditions to determine a significant effect of the treatment. Let's repeat this with monthly average data.
+The results of an adjusted $R^2  = -0.04507$ and $p = 0.9295$ (equivalent to that of a two tailed t-test) reveal that there was no significant change in carbon flux between heated and treated plots. There is likely still too much variability, due to factors such as seasons and soil conditions, to determine a significant effect of the treatment. Let's repeat this with monthly average data.
 
 ***Single variable, categorical model for monthly averaging***
 
@@ -369,17 +371,15 @@ single_ct_lm <- lm (avg_co2_mo ~ treatment, data = monthly_avgs)
 summary(single_ct_lm)
 ```
 
-Averaging variables by month yields a better (albeit, still poor) R squared value and p-value. Yearly averaging reduces the seasonal variability and tells us the overall long term effect of temperature on carbon flux, while monthly averaging gives us the option of considering the effects of seasonality on our data. For the purposes of finding a linear regression to describe the data, we will choose the dataset with variables averaged monthly.
-
-I'll use this model for my single variable, categorical regression.
+Averaging by month yields better (albeit, still poor) $R^2$ and $p$ values. Yearly averaging reduces the seasonal variability and tells us the overall long term effect of temperature on carbon flux, while monthly averaging give us the option of considering the effects of seasonality on our data. For the purposes of finding a linear regression to describe the data, we will choose the dataset with variables averaged monthly and will run a single variable, categorical regression.
 
 # Defining a regression model
 
-Once again, let's define a single variable categorical regression model with just monthly averages data. We regress CO2 flux on treatment type.
+Once again, we will define a single variable categorical regression model with only monthly average data. We regress CO2 flux on treatment type.
 
 ## Model 0) Single variable, categorical regression
 
-We first establish that our null hypothesis (what we aim to reject based on the results of the regression) is that there is no difference in mean monthly carbon flux between the control and heat treated plots. This is a good moment to define both our null and alternative hypotheses:
+Our null hypothesis (what we aim to reject based on the results of the regression) is based on the possibility that heat treatment has no effect on mean monthly carbon flux as compared to a control plot. This is a good moment to define both our null and alternative hypotheses:
 
 -   **Null hypothesis:** there is no significant difference in mean monthly carbon flux between control and heat-applied (treatment) plots.
 
@@ -405,13 +405,13 @@ print(summary(model_0))
 
 ![](images/Screenshot%202023-12-15%20at%2012.58.52%20PM.png){width="432"}
 
-In summary, this single variable, categorical regression model regressing the average monthly carbon flux on plot type reveals:
+In summary, this single variable, categorical regression model regressing monthly carbon flux on treatment type reveals:
 
--   ....a p-value of 0.548, suggesting that there is not enough evidence to conclude that there is a significant relationship between plot type and carbon flux.
+-   ....a p-value of 0.548, suggesting that there is not enough evidence to conclude that there is a significant relationship between treatment type and carbon flux.
 
--   .... an adjusted R-squared of -0.0029, suggesting that the model, with plot type as the predictor, is not explaining much of the variability in carbon flux, and the model may not be a good fit.
+-   .... an adjusted R-squared of -0.0029, suggesting that the model, with treatment type as the predictor, is not explaining much of the variability in carbon flux, and the model may not be a good fit.
 
--   .... that the application of 5 degrees Celcius of heat increases the carbon flux by 5 umol/meters\^2 per second.
+-   .... that the application of 5 degrees Celsius of heat increases the carbon flux by $5 \dfrac{umol CO_2}{m^2 * s}$.
 
 ## Model 1) multiple regression
 
@@ -421,19 +421,19 @@ model_1 <- lm(avg_co2_mo ~ treatment + month + avg_temp_mo + avg_moisture_mo , d
 summary(model_1)
 ```
 
-This multiple variable regression model regressing the average monthly carbon flux on plot type, month, average monthly temperature, and average moisture reveals:
+This multiple variable regression model regressing the average monthly carbon flux on treatment type, month, average monthly temperature, and average moisture reveals:
 
--   .... a p-value of \<2.2e-16, suggesting that there is enough evidence to conclude that there is a significant relationship between carbon flux and the regressed variables.
+-   .... a p-value of $< 2.2*10^{-16}$, suggesting that there is enough evidence to conclude that there is a significant relationship between carbon flux and the regressed variables.
 
--   .... an adjusted R-squared of 0.79, suggesting that the model, with plot type as the predictor, is explaining much (79.75%) of the variability in carbon flux, and the model may be a good fit!
+-   .... an adjusted R-squared of 0.79, suggesting that the model, with treatment type as the predictor, is explaining much (79.75) of the variability in carbon flux, and the model may be a good fit!
 
--   .... that treatment, three months, average monthly temperature, and average monthly moisture are variables that contribute significantly (p \< 0.05) to the model.
+-   .... that treatment, three months, average monthly temperature, and average monthly moisture are variables that contribute significantly (p $< 0.05$) to the model.
 
 ## Addressing ommited variables bias
 
-Before we move on, we need to ask if there are any omitted variables to avoid omitted variable bias.
+Before we move on, we need to consider the possibility of omitted variables, so as to avoid omitted variable bias.
 
-My guess is that there is some sort of dependency between moisture and temperature. Let's plot moisture and temperature first to see if there's a possibility for dependency between them.
+My guess is that there exists dependency between moisture and temperature. Let's plot moisture and temperature to see if there's a possibility of dependency between them.
 
 ```{r}
 
@@ -456,13 +456,13 @@ summary(model_2)
 
 ```
 
-With an adjusted R squared of 0.8134, and a p-value of \<2.2e-16, this model is looking pretty good! Coefficients that are significant are: treatment type, three months of the year, average monthly temperature, and the interaction between average monthly moisture and average monthly temperature. We see that when all independent variables are equal, the average monthly carbon flux on the control plot is 3.69 carbon flux units (umol/(meter squared \* sec) )
+With an adjusted $R^2 =  0.8134$, and a p-value of $< 2.2 * 10^{-16}$, this model is looking pretty good! Coefficients that are significant are: treatment type, three months of the year, average monthly temperature, and the interaction between average monthly moisture and average monthly temperature. We see that when all independent variables are equal, the average monthly carbon flux on the control plot is $3.69 \dfrac{umol CO_2}{m^2 * s}$.
 
-Breaking this down, we can say that this model explains 81.34% of the variation in carbon flux, and that there is an almost zero % chance that the observed carbon flux data occurred by random chance alone, assuming the null hypothesis is true. However, this model simultaneously suggests that the addition of treatment reduces the average carbon flux by -37 units. This is a little counter-intuitive, since in our single variable, categorical model we had already seen that it has an overall positive effect. This suggests that the addition of more variables may explain our model better, mathematically, but some more work needs to be done to evaluate the scientific robustness of this model.
+Breaking this down, we can say that this model explains 81.34% of the variation in carbon flux, and that there is an almost zero probability that the observed carbon flux data occurred by random chance alone, assuming the null hypothesis is true. However, this model simultaneously suggests that the addition of treatment reduces the average carbon flux by $ -37  \dfrac{umol CO_2}{m^2 * s}$. This value being negative is a little counter-intuitive, since in our single variable, categorical model demonstrates an overall positive effect. This suggests that the addition of more variables may explain our model better mathematically, but more work needs to be done to evaluate the scientific robustness of this model.
 
 ## Limitations + next steps
 
-This statistical analysis was limited by a variety of factors, including periodic sampling gaps during the winter months, which accounts for a quarter of the year. This gap significantly introduces biases into our results. To adjust for this bias, the study by Dr. Jerry Melillo et Al. fills in the gaps based on a model that derives estimated carbon flux with sampled ambient air temperature as inputs. Unfortunately, the scope of this project did not encompass statistical data modeling. Due to these gaps, I was unable to perform a time series analysis, that would have helped decompose seasonality effects in our data. It would be interesting to perform such a process and rerun these models to see what difference adding in winter data could bring. Additionally, I would be interested to incorporate more parameters into the model such as nitrogen availability, leaf-litter composition, and plant-root density into the regression.
+This statistical analysis was limited by a variety of factors, including periodic sampling gaps during the winter months, which accounts for a quarter of the year. These gaps significantly introduced biases into our results. To adjust for this bias, the study by Dr. Jerry Melillo et Al. fills in the gaps by leveraging a model that estimates carbon flux based on sampled ambient air temperature. Unfortunately, the scope of this project did not encompass statistical data modeling. Due to these gaps, I was unable to perform a time series analysis that would have helped decompose seasonality effects in the data. It would be interesting to perform such a process to see what difference including winter data could bring. Additionally, I would be interested to incorporate more parameters into the model, such as nitrogen availability, leaf-litter composition, and plant-root density.
 
 ## References
 
