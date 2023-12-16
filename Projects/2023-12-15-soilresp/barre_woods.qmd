@@ -297,7 +297,7 @@ box_vio <- ggplot(data=co2flux_avgs, aes(x = treatment, y = avg_co2, col = treat
 
 ![](images/Screenshot%202023-12-15%20at%201.34.36%20PM.png)
 
-The box-violin plot reveals that our data is a little bit right skewed, but mostly normal. 
+The box-violin plot reveals that our data is a little bit right skewed, but mostly normal.
 
 Joining soil temperature and moisture data to the co2flux daily averages
 
@@ -319,7 +319,6 @@ head(daily_avgs, 6)
 ```
 
 ### Averaging by month or year?
-
 
 While taking averages over time will be necessary, it is important to consider which time scale will be most appropriate. While yearly averages are most accurate in terms of smoothing out seasonal variability, the trade-off is the small sample size. Taking monthly averages, on the other-hand, will give a larger sample to work with at the manageable cost of higher variability. We first group data by month and average, then plot.
 
@@ -352,7 +351,6 @@ ggplot(data=yearly_avgs, aes(x = treatment, y = avg_co2_yr, color = treatment)) 
 
 ## Evaluating significant differences in average CO2 flux between treatment and control plots
 
-
 The plots above give an intuitive idea about how yearly vs. monthly averaging affects the distribution of the dataset, so let's test it using regression.
 
 ***Single variable, categorical model for yearly averaging***
@@ -362,7 +360,7 @@ single_ct_lm <- lm (avg_co2_yr ~ treatment, data = yearly_avgs)
 summary(single_ct_lm)
 ```
 
-The results of an adjusted $R^2  = -0.04507$ and $p = 0.9295$ (equivalent to that of a two tailed t-test) reveal that there was no significant change in carbon flux between heated and treated plots. There is likely still too much variability, due to factors such as seasons and soil conditions, to determine a significant effect of the treatment. Let's repeat this with monthly average data.
+The results of an adjusted $R^2 = -0.04507$ and $p = 0.9295$ (equivalent to that of a two tailed t-test) reveal that there was no significant change in carbon flux between heated and treated plots. There is likely still too much variability, due to factors such as seasons and soil conditions, to determine a significant effect of the treatment. Let's repeat this with monthly average data.
 
 ***Single variable, categorical model for monthly averaging***
 
@@ -456,9 +454,9 @@ summary(model_2)
 
 ```
 
-With an adjusted $R^2 =  0.8134$, and a p-value of $< 2.2 * 10^{-16}$, this model is looking pretty good! Coefficients that are significant are: treatment type, three months of the year, average monthly temperature, and the interaction between average monthly moisture and average monthly temperature. We see that when all independent variables are equal, the average monthly carbon flux on the control plot is $3.69 \dfrac{umol CO_2}{m^2 * s}$.
+With an adjusted $R^2 = 0.8134$, and a p-value of $< 2.2 * 10^{-16}$, this model is looking pretty good! Coefficients that are significant are: treatment type, three months of the year, average monthly temperature, and the interaction between average monthly moisture and average monthly temperature. We see that when all independent variables are equal, the average monthly carbon flux on the control plot is $3.69 \dfrac{umol CO_2}{m^2 * s}$.
 
-Breaking this down, we can say that this model explains 81.34% of the variation in carbon flux, and that there is an almost zero probability that the observed carbon flux data occurred by random chance alone, assuming the null hypothesis is true. However, this model simultaneously suggests that the addition of treatment reduces the average carbon flux by $ -37  \dfrac{umol CO_2}{m^2 * s}$. This value being negative is a little counter-intuitive, since in our single variable, categorical model demonstrates an overall positive effect. This suggests that the addition of more variables may explain our model better mathematically, but more work needs to be done to evaluate the scientific robustness of this model.
+Breaking this down, we can say that this model explains 81.34% of the variation in carbon flux, and that there is an almost zero probability that the observed carbon flux data occurred by random chance alone, assuming the null hypothesis is true. However, this model simultaneously suggests that the addition of treatment reduces the average carbon flux by \$ -37 \dfrac{umol CO_2}{m^2 * s}\$. This value being negative is a little counter-intuitive, since in our single variable, categorical model demonstrates an overall positive effect. This suggests that the addition of more variables may explain our model better mathematically, but more work needs to be done to evaluate the scientific robustness of this model.
 
 ## Limitations + next steps
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Flora Hamilton">
-<meta name="dcterms.date" content="2022-10-26">
+<meta name="dcterms.date" content="2023-10-26">
 <meta name="description" content="Analyzing affected areas &amp; socioeconomic factors that influenced recovery">
 
 <title>2021 Texas Blackout</title>
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 26, 2022</p>
+        <p class="date">October 26, 2023</p>
       </div>
     </div>
     
@@ -187,9 +187,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#texas-blackouts" id="toc-texas-blackouts" class="nav-link active" data-scroll-target="#texas-blackouts">Texas Blackouts</a>
   <ul class="collapse">
-  <li><a href="#analyzing-the-effects-of-the-texas-february-2021-storm-on-the-houston-metropolitan-area" id="toc-analyzing-the-effects-of-the-texas-february-2021-storm-on-the-houston-metropolitan-area" class="nav-link" data-scroll-target="#analyzing-the-effects-of-the-texas-february-2021-storm-on-the-houston-metropolitan-area">Analyzing the Effects of the Texas February 2021 Storm on the Houston metropolitan Area</a></li>
-  <li><a href="#project-context" id="toc-project-context" class="nav-link" data-scroll-target="#project-context">Project Context</a></li>
-  <li><a href="#the-objectives-and-methods" id="toc-the-objectives-and-methods" class="nav-link" data-scroll-target="#the-objectives-and-methods">The objectives and methods</a></li>
+  <li><a href="#how-did-socioeconomic-factors-influence-community-recovery-from-2021-power-outages-in-houston" id="toc-how-did-socioeconomic-factors-influence-community-recovery-from-2021-power-outages-in-houston" class="nav-link" data-scroll-target="#how-did-socioeconomic-factors-influence-community-recovery-from-2021-power-outages-in-houston"><strong><em>How did socioeconomic factors influence community recovery from 2021 power outages in Houston?</em></strong></a>
+  <ul class="collapse">
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
+  <li><a href="#project-objectives-and-methods" id="toc-project-objectives-and-methods" class="nav-link" data-scroll-target="#project-objectives-and-methods">Project objectives and methods</a></li>
+  </ul></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#project-roadmap" id="toc-project-roadmap" class="nav-link" data-scroll-target="#project-roadmap">Project Roadmap</a></li>
   <li><a href="#importing-necessary-libraries-and-functions" id="toc-importing-necessary-libraries-and-functions" class="nav-link" data-scroll-target="#importing-necessary-libraries-and-functions">Importing necessary libraries and functions</a></li>
@@ -200,6 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status" id="toc-evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status" class="nav-link" data-scroll-target="#evaluate-the-distribution-of-median-incomes-of-homes-by-blackout-status"><strong>Evaluate the distribution of median incomes of homes by blackout status</strong></a>
   <ul class="collapse">
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -213,19 +216,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/Screenshot 2023-12-14 at 12.03.11 AM.png" class="img-fluid"></p>
 <section id="texas-blackouts" class="level1">
 <h1>Texas Blackouts</h1>
-<section id="analyzing-the-effects-of-the-texas-february-2021-storm-on-the-houston-metropolitan-area" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-the-effects-of-the-texas-february-2021-storm-on-the-houston-metropolitan-area">Analyzing the Effects of the Texas February 2021 Storm on the Houston metropolitan Area</h3>
+<section id="how-did-socioeconomic-factors-influence-community-recovery-from-2021-power-outages-in-houston" class="level2">
+<h2 class="anchored" data-anchor-id="how-did-socioeconomic-factors-influence-community-recovery-from-2021-power-outages-in-houston"><strong><em>How did socioeconomic factors influence community recovery from 2021 power outages in Houston?</em></strong></h2>
 <p>📦 repo link | https://github.com/floraham/texas-blackout</p>
+<section id="context" class="level3">
+<h3 class="anchored" data-anchor-id="context">Context</h3>
+<p>The 2021 Texas blackout was a result of an arctic blast that led to the freezing of a significant portion of the state’s power generation capacity. The blackout was not solely due to one type of energy source, as every electricity source—natural gas, coal, nuclear, wind, and solar—fell short during the extreme weather conditions. Many components of energy plants froze with the vast majority of these plants being powered by natural gas, leading to widespread outage. The blackout highlighted the vulnerability of the U.S. electric grid to extreme weather events and the need for prioritizing energy infrastructure to prevent similar crises in the future [<a href="https://www.texasmonthly.com/news-politics/texas-blackout-preventable/">1</a>][<a href="https://yaleclimateconnections.org/2021/02/why-the-power-is-out-in-texas-and-why-other-states-are-vulnerable-too/">2</a>][<a href="https://www.vox.com/22308149/texas-blackout-power-outage-winter-uri-grid-ercot">3</a>].</p>
+<p>The blackout also disproportionately affected communities of color, with approximately 70% of Texans losing electrical power at some point between February 14th and 20th. The recovery from the loss of health and property damage became less likely for those most severely affected, making them more vulnerable to future crises. This highlighted the need for the prioritization of these communities through direct investment and focused attention from local and state governments in coordination with utility providers [<a href="https://ncdp.columbia.edu/ncdp-perspectives/disaster-response-and-equity-texas-power-outrages/">4</a>].</p>
 </section>
-<section id="project-context" class="level2">
-<h2 class="anchored" data-anchor-id="project-context">Project Context</h2>
-<p>“In February 2021, Texas faced a significant power crisis resulting from three severe winter storms that swept across the United States on February 10–11, 13–17, and 15–20.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> For additional insights, explore these <a href="https://www.youtube.com/watch?v=08mwXICY4JM&amp;ab_channel=PracticalEngineering">engineering</a> and <a href="https://www.youtube.com/watch?v=Zcrsgdl_hP0&amp;ab_channel=Vox">political</a> perspectives.</p>
-</section>
-<section id="the-objectives-and-methods" class="level2">
-<h2 class="anchored" data-anchor-id="the-objectives-and-methods">The objectives and methods</h2>
+<section id="project-objectives-and-methods" class="level3">
+<h3 class="anchored" data-anchor-id="project-objectives-and-methods">Project objectives and methods</h3>
 <p>This project aims to estimate the number of households in Houston that experienced power loss due to the initial two storms. To determine the count of homes affected by power outages, we will spatially join these areas with data on buildings and roads.</p>
 <p>This project also investigates whether socioeconomic factors serve as predictors of community recovery from a power outage. For the exploration of potential socioeconomic factors influencing recovery, the analysis will be linked with data from the US Census Bureau.</p>
 <p>This analysis will rely on remotely-sensed night lights data acquired from the <a href="https://en.wikipedia.org/wiki/Visible_Infrared_Imaging_Radiometer_Suite">Visible Infrared Imaging Radiometer Suite (VIIRS)</a> aboard the Suomi satellite. Specifically, we will use the VNP46A1 to identify variations in night lights before and after the storms as a method to identify areas that lost electrical power.</p>
+</section>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
@@ -584,18 +588,19 @@ Projected CRS: NAD83 / Texas Centric Albers Equal Area
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
 <p>We found that 778 census tracts had been affected by Texas’s 2021 energy crisis, amounting to 164,867 total homes experiencing power outage between the studied dates (Feb 07, 2021 to Feb 16, 2021).</p>
 <p>The average median income for homes that experienced a blackout was $70,939, slightly higher than the average median income for homes that didn’t experience a blackout, which was $67,859. It is important to note that 1) our factor of interest was median income within census tracts and that other socioeconomic factors could reveal unexplored spatial patterns, and that 2) weather conditions were not normalized to conduct this exercise, variable that could cause a different outcome.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>[1] Ball, J. (Feb, 2021). The Texas Blackout is the Story of a Disaster Foretold. Texas Monthly. URL: <a href="https://www.texasmonthly.com/news-politics/texas-blackout-preventable/" class="uri">https://www.texasmonthly.com/news-politics/texas-blackout-preventable/</a></p>
+<p>[2] Henson, Bob. (Feb, 2021). Why the power is out in Texas… and why other states are vulnerable too. Yale Climate Connections. URL: <a href="https://yaleclimateconnections.org/2021/02/why-the-power-is-out-in-texas-and-why-other-states-are-vulnerable-too/" class="uri">https://yaleclimateconnections.org/2021/02/why-the-power-is-out-in-texas-and-why-other-states-are-vulnerable-too/</a></p>
+<p>[3] Irfan, U. (Mar, 2021). Why every state is vulnerable to a Texas-style power crisis. Vox. URL: <a href="https://www.vox.com/22308149/texas-blackout-power-outage-winter-uri-grid-ercot" class="uri">https://www.vox.com/22308149/texas-blackout-power-outage-winter-uri-grid-ercot</a></p>
+<p>[4] National Center for Disaster Preparedness (NCDP). (Mar, 2023). Disaster Response and Equity: Reflecting on the Racial Disparities in Texas Power Outages. URL: <a href="https://ncdp.columbia.edu/ncdp-perspectives/disaster-response-and-equity-texas-power-outrages/" class="uri">https://ncdp.columbia.edu/ncdp-perspectives/disaster-response-and-equity-texas-power-outrages/</a>&nbsp;</p>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Wikipedia. 2021. “2021 Texas power crisis.” Last modified October 2, 2021. <a href="https://en.wikipedia.org/wiki/2021_Texas_power_crisis" class="uri">https://en.wikipedia.org/wiki/2021_Texas_power_crisis</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

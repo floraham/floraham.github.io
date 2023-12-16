@@ -2,7 +2,7 @@
 title: '2021 Texas Blackout'
 description: 'Analyzing affected areas & socioeconomic factors that influenced recovery'
 author: "Flora Hamilton"
-date: "2022-10-26"
+date: "2023-10-26"
 code-fold: true 
 toc: true
 output:
@@ -22,17 +22,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Texas Blackouts
 
-### Analyzing the Effects of the Texas February 2021 Storm on the Houston metropolitan Area
+## ***How did socioeconomic factors influence community recovery from 2021 power outages in Houston?***
 
 📦 repo link \| https://github.com/floraham/texas-blackout
 
-## Project Context
+### Context
 
-"In February 2021, Texas faced a significant power crisis resulting from three severe winter storms that swept across the United States on February 10--11, 13--17, and 15--20."[^1] For additional insights, explore these [engineering](https://www.youtube.com/watch?v=08mwXICY4JM&ab_channel=PracticalEngineering) and [political](https://www.youtube.com/watch?v=Zcrsgdl_hP0&ab_channel=Vox) perspectives.
+The 2021 Texas blackout was a result of an arctic blast that led to the freezing of a significant portion of the state's power generation capacity. The blackout was not solely due to one type of energy source, as every electricity source---natural gas, coal, nuclear, wind, and solar---fell short during the extreme weather conditions. Many components of energy plants froze with the vast majority of these plants being powered by natural gas, leading to widespread outage. The blackout highlighted the vulnerability of the U.S. electric grid to extreme weather events and the need for prioritizing energy infrastructure to prevent similar crises in the future \[[1](https://www.texasmonthly.com/news-politics/texas-blackout-preventable/)\]\[[2](https://yaleclimateconnections.org/2021/02/why-the-power-is-out-in-texas-and-why-other-states-are-vulnerable-too/)\]\[[3](https://www.vox.com/22308149/texas-blackout-power-outage-winter-uri-grid-ercot)\].
 
-[^1]: Wikipedia. 2021. "2021 Texas power crisis." Last modified October 2, 2021. <https://en.wikipedia.org/wiki/2021_Texas_power_crisis>.
+The blackout also disproportionately affected communities of color, with approximately 70% of Texans losing electrical power at some point between February 14th and 20th. The recovery from the loss of health and property damage became less likely for those most severely affected, making them more vulnerable to future crises. This highlighted the need for the prioritization of these communities through direct investment and focused attention from local and state governments in coordination with utility providers \[[4](https://ncdp.columbia.edu/ncdp-perspectives/disaster-response-and-equity-texas-power-outrages/ )\].
 
-## The objectives and methods
+### Project objectives and methods
 
 This project aims to estimate the number of households in Houston that experienced power loss due to the initial two storms. To determine the count of homes affected by power outages, we will spatially join these areas with data on buildings and roads.
 
@@ -74,7 +74,7 @@ Below is an outline of the steps taken to achieve the objectives.
 
 4\) Leverage the results for a summary and discussion
 
-## Importing necessary libraries and functions 
+## Importing necessary libraries and functions
 
 ```{r, warning=FALSE, message=FALSE}
 library(sf)
@@ -378,7 +378,7 @@ tm_shape(census_income_geom_cropped) +
 tm_shape(census_income_geom_cropped) + tm_polygons("median_income", palette= "viridis") + tm_shape(census_blackout) + tm_dots(size = 0.4, alpha = 0.5)
 ```
 
-# **Evaluate the distribution of median incomes of homes by blackout status** 
+# **Evaluate the distribution of median incomes of homes by blackout status**
 
 Plot a histogram of median income for blackout or non-blackout regions.
 
@@ -423,3 +423,13 @@ census_Y_N_houston %>%
 We found that 778 census tracts had been affected by Texas's 2021 energy crisis, amounting to 164,867 total homes experiencing power outage between the studied dates (Feb 07, 2021 to Feb 16, 2021).
 
 The average median income for homes that experienced a blackout was \$70,939, slightly higher than the average median income for homes that didn't experience a blackout, which was \$67,859. It is important to note that 1) our factor of interest was median income within census tracts and that other socioeconomic factors could reveal unexplored spatial patterns, and that 2) weather conditions were not normalized to conduct this exercise, variable that could cause a different outcome.
+
+## References 
+
+\[1\] Ball, J. (Feb, 2021). The Texas Blackout is the Story of a Disaster Foretold. Texas Monthly. URL: <https://www.texasmonthly.com/news-politics/texas-blackout-preventable/>
+
+\[2\] Henson, Bob. (Feb, 2021). Why the power is out in Texas... and why other states are vulnerable too. Yale Climate Connections. URL: <https://yaleclimateconnections.org/2021/02/why-the-power-is-out-in-texas-and-why-other-states-are-vulnerable-too/>
+
+\[3\] Irfan, U. (Mar, 2021). Why every state is vulnerable to a Texas-style power crisis. Vox. URL: <https://www.vox.com/22308149/texas-blackout-power-outage-winter-uri-grid-ercot>
+
+\[4\] National Center for Disaster Preparedness (NCDP). (Mar, 2023). Disaster Response and Equity: Reflecting on the Racial Disparities in Texas Power Outages. URL: <https://ncdp.columbia.edu/ncdp-perspectives/disaster-response-and-equity-texas-power-outrages/> 
