@@ -64,8 +64,6 @@ For enhanced visibility, I opted for high-contrast colors of dark grey and white
 
 The predominantly monochrome palette ensures color-blind friendliness, and I used online colorblind simulators to confirm the graphic's accessibility. To address the topic on level of individual agency, I incorporated a graphic detailing Taiwan's per capita emissions. Additionally, I provided a concise blurb to contextualize the significance of the topic, ensuring that viewers grasp its importance.
 
-[![Simulating Red-Green colorblindness with Pilestone\'s colorblindness tool](Desktop/Screenshot%202024-03-11%20at%208.01.23%20PM.png){fig-align="center" width="497"}](https://pilestone.com/pages/color-blindness-simulator-1#)
-
 ## Limitations
 
 This visualization falls short of directly engaging with the critical aspects surrounding the feasibility of decarbonization in Taiwan. It does not delve into the economic, socioeconomic, and environmental repercussions associated with such a transition. Furthermore, it does not offer actionable suggestions. Instead, the visualization primarily serves as an overview of Taiwan's current carbon emissions landscape.
