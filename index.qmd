@@ -23,9 +23,11 @@ html:
 toc: false
 ---
 
-## Hello, I'm Flora
+## Hello, I'm Flora!
 
-I'm a current masters student at UCSB's Bren School of Environmental Science and Management, pursuing a degree in Environmental Data Science. I draw from a breadth of disciplines to understand and solve problems pertaining to the carbon economy and GHG's. When not thinking about data science I'm reading, playing board games, or recharging in the outdoors.
+I'm an environmental data analyst. 
+
+I recently graduated with a masters of Environmental Data Science from UCSB's Bren School of Environmental Science and Management. I draw from a breadth of disciplines to understand and solve problems pertaining to environmental issues, and I'm particularly interested in greenhouse gas management, the carbon economy, and leveraging geospatial technology to solve environmental problems. When not thinking about these seemingly impossible challenges, I'm reading, playing board games, or recharging in the outdoors.
 
 ------------------------------------------------------------------------
 
@@ -38,6 +40,9 @@ I'm a current masters student at UCSB's Bren School of Environmental Science and
 ------------------------------------------------------------------------
 
 ## Experience
+> GIS & Remote Sensing Analyst \| NASA DEVELOP, Fort Collins Node \| Jun 2024 - Present 
+
+> Carbon Data Analyst \| Darn Tough, VT \| Jan 2024 - Jan 2024 
 
 > Data Jam Data Intern \| Cary Institute of Ecosystems Studies \| Dec 2022 - Jun 2023
 
