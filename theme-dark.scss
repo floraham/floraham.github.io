@@ -1,26 +1,27 @@
 /*-- scss:defaults --*/
 // Base document colors
-$body-bg: #181818;
-$body-color: slategrey;
-$link-color: #75AADB;
+$body-bg: #121212; // Slightly darker background for better contrast
+$body-color: #D3D3D3; // Lighter text color for better readability
+$link-color: #1E90FF; // Bright blue for links
+$navbar-bg:  #434C56; //navbar // Keeping nav-bar consistent
 
 // Code blocks
-$code-block-bg-alpha: -.8;
+$code-block-bg-alpha: -.8; // Semi-transparent dark background for code blocks
 
 /*-- scss:rules --*/
 
 h1, h2, h3 {
   letter-spacing: 5px;
   font-weight: 700;
-  color: white;
+  color: #FFFFFF; // Pure white for headers
 }
 
 .title {
-  color: #75AADB;
+  color: #FFFFFF; // Same bright blue as links
 }
 
 .custom-subtitle {
   font-size: 22px;
   font-style: italic;
-  color: #74AADB;
+  color: #1E90FF; // Consistent bright blue for subtitles
 }
