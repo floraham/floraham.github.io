@@ -6,12 +6,14 @@
 $steal-blue: #6082B6;
 $deep-navy-blue: #0437F2;
 $black: #000000;
-$slate-grey: #434C56;
+$slate-grey: #708090;
 $white: #ffffff;
 $WhiteSmoke: #F5F5F5;
 $blue: #0000FF ;
 $coral-pink: #F88379;
 $light-green: #8FED92;
+$light-blue: #B0E0E6;
+$code-chunk-yellow: #F5F2D0;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display#=swap');
@@ -35,7 +37,7 @@ $code-bg: $white; // inline code background color
 $code-color: $black; // inline code text color
 
 // Code blocks
-$code-block-bg: $white; // code block background color
+$code-block-bg: $code-chunk-yellow; // code block background color
 
 /*-- scss:rules --*/
 
