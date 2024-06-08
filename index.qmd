@@ -4,8 +4,8 @@ subtitle: "洪書琪 (Hong Shu-Qi)"
 image: IMG_2339.jpg
 about: 
   template: trestles
-  image-shape: round
-  image-width: 9em
+  image-shape: rectangle
+  image-width: 15em
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/flora-hamilton-946980122/
@@ -20,22 +20,14 @@ about:
       
 html:
   page-layout: full
-toc: false
+toc: true
 ---
 
 ## Hello, I'm Flora!
 
 I'm an environmental data analyst. 
 
-I recently graduated with a masters of Environmental Data Science from UCSB's Bren School of Environmental Science and Management. I draw from a breadth of disciplines to understand and solve problems pertaining to environmental issues, and I'm particularly interested in greenhouse gas management, the carbon economy, and leveraging geospatial technology to solve environmental problems. When not thinking about these seemingly impossible challenges, I'm reading, playing board games, or recharging in the outdoors.
-
-------------------------------------------------------------------------
-
-## Education
-
-> **Bren School of Environmental Science & Management, University of California Santa Barbara** \| Master of Environmental Data Science \| Expected June 2024
-
-> **Bowdoin College** \| Brunswick, ME \| BA in Mathematics and Environmental Studies, Economics Minor \| Aug 2014 - May 2021
+I recently graduated with a masters of Environmental Data Science from UCSB's Bren School of Environmental Science and Management. I take a multidisciplinary approach to understand and solve problems pertaining to environmental issues, and I'm particularly interested in greenhouse gas management, the carbon economy, and leveraging geospatial technology to solve environmental problems. When not thinking about these seemingly impossible challenges, I'm reading, playing board games, or recharging in the outdoors.
 
 ------------------------------------------------------------------------
 
@@ -47,3 +39,13 @@ I recently graduated with a masters of Environmental Data Science from UCSB's Br
 > Data Jam Data Intern \| Cary Institute of Ecosystems Studies \| Dec 2022 - Jun 2023
 
 > Investment Specialist \| SOSV \| Jul 2021 - April 2022
+
+
+------------------------------------------------------------------------
+
+## Education
+
+> **Bren School of Environmental Science & Management, University of California Santa Barbara** \| Master of Environmental Data Science \| Expected June 2024
+
+> **Bowdoin College** \| Brunswick, ME \| BA in Mathematics and Environmental Studies, Economics Minor \| Aug 2014 - May 2021
+

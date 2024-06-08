@@ -4,14 +4,14 @@
 // Colors
 
 $steal-blue: #6082B6;
-$light-green: #a1d28e;
-$mint-cream: #F5FFFA;
 $deep-navy-blue: #0437F2;
 $black: #000000;
+$slate-grey: #434C56;
 $white: #ffffff;
 $WhiteSmoke: #F5F5F5;
-$electric-blue: #7DF9FF;
+$blue: #0000FF ;
 $coral-pink: #F88379;
+$light-green: #8FED92;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display#=swap');
@@ -20,13 +20,13 @@ $coral-pink: #F88379;
 
 // Base Document Colors 
 
-$navbar-bg: $steal-blue; //navbar
+$navbar-bg: $slate-grey; //navbar
 $navbar-fg: $WhiteSmoke; // navbar foreground elements
 $navbar-hl: $white; // highlight color when hovering over navbar links
-$body-bg: $WhiteSmoke; // page background 
+$body-bg: $white; // page background 
 $body-color: $black; // page text 
-$footer-bg: $steal-blue; // footer 
-$link-color: $black; // hyperlinks 
+$footer-bg: $slate-grey; // footer 
+$link-color: $blue;// hyperlinks 
 
 
 
@@ -41,7 +41,7 @@ $code-block-bg: $white; // code block background color
 
 h1, h2, h3 {
   letter-spacing: 5px;
-  font-weight: 700;
+  font-weight: 900;
   color: $black;
 }
 

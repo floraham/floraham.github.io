@@ -1,6 +1,6 @@
 ---
 title: "Visualizing the current standing of CO2e's in Taiwan"
-subtitle: "Understanding Taiwan's emissions trends through emission per capita, contributing fuel sources, and sector-specific emissions"
+description: "Understanding Taiwan's emissions trends through emission per capita, contributing fuel sources, and sector-specific emissions"
 author: "Flora Hamilton"
 image: preview-image.png
 date: 2024-03-12
