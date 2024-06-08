@@ -14,7 +14,7 @@ output:
       toc: yes
       toc_depth: 4
       toc_float: yes
-draft: true
+image: preview-image.png
 toc: true
 ---
 
