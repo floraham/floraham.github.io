@@ -15,8 +15,6 @@ about:
     - icon: link-45deg
       text: bren
       href: https://bren.ucsb.edu/people/flora-hamilton
-    - icon: envelope
-      href: mailto:flora_hamilton@ucsb.edu
       
 html:
   page-layout: full
@@ -25,9 +23,13 @@ toc: true
 
 ## Hello, I'm Flora!
 
-I'm an environmental data analyst. 
+I'm an environmental data scientist. I use data science to understand and solve environmental problems. 
 
-I recently graduated with a masters of Environmental Data Science from UCSB's Bren School of Environmental Science and Management. I take a multidisciplinary approach to understand and solve problems pertaining to environmental issues, and I'm particularly interested in greenhouse gas management, the carbon economy, and leveraging geospatial technology to solve environmental problems. When not thinking about these seemingly impossible challenges, I'm reading, playing board games, or recharging in the outdoors.
+I'm particularly interested in greenhouse gas management, the carbon economy, and leveraging geospatial technology to solve environmental problems.
+
+Currently, I'm at NASA DEVELOP researching wildfire effects on snowpack in Colorado. Recently, I graduated with a Masters of Environmental Data Science from UCSB's Bren School of Environmental Science and Management. 
+
+Outside of work, you can find me reading, playing the piano, or on a hike with people I love. 
 
 ------------------------------------------------------------------------
 
