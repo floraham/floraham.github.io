@@ -258,7 +258,7 @@ stacked_area <- emissions_df_subsector_unique %>%
 
  stacked_area <- stacked_area + scale_y_continuous(labels = function(x) format(x / 1e8, scientific = FALSE, big.mark = ","),  name = "CO2e (100yr) in Billions of MT")
  
-ggsave(plot = stacked_area, filename = "/Documents/2_Areas/Areas_MEDS/Winter_Quarter/Data_Viz_240/HWs/hamilton-eds240-HW4/final_work/stacked_area.png", height = 10, width = 16)
+ggsave(plot = stacked_area, filename = "~/Documents/2_Areas/Areas_MEDS/Winter_Quarter/Data_Viz_240/HWs/hamilton-eds240-HW4/final_work/stacked_area.png", height = 10, width = 16)
 
 knitr::include_graphics("~/Documents/2_Areas/Areas_MEDS/Winter_Quarter/Data_Viz_240/HWs/hamilton-eds240-HW4/final_work/stacked_area.png")
 ```
