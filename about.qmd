@@ -4,7 +4,7 @@ title: "About"
 
 ## Currently
 
-🚀🌎 I'm a data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues.
+🚀🌎 I'm a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing, data science, and machine learning to address environmental issues.
 
 ❄️🔥 My latest project through NASA DEVELOP is titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
 
