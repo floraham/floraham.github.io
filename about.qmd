@@ -2,16 +2,18 @@
 title: "About"
 ---
 
+## Currently
 
-## Background 
+🚀🌎 I'm a data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues.
+
+❄️🔥 My latest project through NASA DEVELOP is titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
+
+## Bio 
+
 I grew up playing in streams and hiking through tropical forests with my family in Taiwan. These experiences fostered a deep appreciation for the natural world and a desire to understand the complex interactions between humans and the environment.\
 
 I graduated Bowdoin College in 2021 with bachelor's degrees in mathematics and environmental studies, and a minor in economics. With a liberal arts philosophy in mind, I took my quantitative foundations to Taipei where I gained exposure to the workings of mobile technology startups in Southeast Asia and early-stage investing at SOSV, a multinational venture capital firm. This time abroad kindled my interest in applying science and technology to solving environmental issues at scale.\
 \
-In 2022, I returned to Oregon, where I applied my knowledge of geospatial and remote-sensing methods to support pollinator habitat restoration in agricultural landscapes of the Willamette Valley. Interested in pursuing further work in the environmental sciences, I worked with ecologists at Cary Institute of Ecosystem Studies, a nonprofit environmental science research center in Millbrook, NY, to source long-term environmental datasets for its state-funded science education program. I then obtained a masters degree from the Bren School of Environmental Science and Management with a degree in Environmental Data Science in 2024, culminating in the development of a reproducible emissions model for Darn Tough, Vermont. \
+In 2022, I returned to Oregon, where I applied my knowledge of geospatial and remote-sensing methods to support pollinator habitat restoration in agricultural landscapes of the Willamette Valley. Interested in pursuing further work in the environmental sciences, I worked with ecologists at Cary Institute of Ecosystem Studies, a nonprofit environmental science research center in Millbrook, NY, to source long-term environmental datasets for its state-funded science education program. I then obtained a masters degree from the Bren School of Environmental Science and Management with a degree in Environmental Data Science in 2024, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.\
 \
 With exposure to a variety of organizational structures, I'm excited to take my knowledge of environmental data science forward. Through NASA's DEVELOP projects, I want to apply machine-learning, remote-sensing methods, and my geoprogramming skillset to advance scientific knowledge and extract value from data to support and manage carbon dependent systems.
-
-## Currently 
-Currently, I'm a geospatial analyst at NASA DEVELOP, working on projects that leverage remote sensing and machine learning to address environmental issues. Specifically, I'm working on a project "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
-

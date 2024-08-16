@@ -2,7 +2,7 @@
 title: "Projects"
 listing:
   contents: Projects
-  type: grid
+  type: default
   sort: "date desc"
   categories: true
 ---

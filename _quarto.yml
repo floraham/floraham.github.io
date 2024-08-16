@@ -10,12 +10,11 @@ website:
       text: Home
     - href: about.qmd
       text: About
-    - CV.qmd
     - Projects.qmd
   page-footer:
     background: light # or dark 
     left: 
-      - "Copyright 2023, Flora Hamilton"
+      - "Copyright 2024, Flora Hamilton"
     right: 
       - icon: github
     

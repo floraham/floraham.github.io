@@ -1,9 +1,12 @@
 /*-- scss:defaults --*/
 // Base document colors
-$body-bg: #121212; // Slightly darker background for better contrast
-$body-color:  #BEBEBE; // Lighter text color for better readability
+$body-bg: #478778; // Slightly darker background for better contrast
+$body-color:  #FFFFFF; // Lighter text color for better readability
 $link-color: #1E90FF; // Bright blue for links
-$navbar-bg:  #434C56; //navbar // Keeping nav-bar consistent
+$navbar-bg:  #023020; //navbar // quarKeeping nav-bar consistent
+$footer-bg:  #023020; // Keeping footer consistent
+$footer-color: #FFFFFF; // Light text color for footer
+
 
 // Code blocks
 $code-block-bg-alpha: -.8; // Semi-transparent dark background for code blocks
@@ -17,7 +20,7 @@ h1, h2, h3 {
 }
 
 .title {
-  color: #FFFFFF; // Same bright blue as links
+  color: #FFFFFF; // 
 }
 
 .custom-subtitle {

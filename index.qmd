@@ -21,22 +21,25 @@ html:
 toc: true
 ---
 
-## Hello, I'm Flora!
+## Hello! I'm Flora 🌿 
 
-I'm an environmental data scientist. I use data science to understand and solve environmental problems. 
+I'm an environmental data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project is titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
 
-I'm particularly interested in greenhouse gas management, the carbon economy, and leveraging geospatial technology to solve environmental problems.
+I'm a recent graduate of the Masters of Environmental Data Science program, from UCSB's Bren School of Environmental Science and Management. 
 
-Currently, I'm at NASA DEVELOP researching wildfire effects on snowpack in Colorado. Recently, I graduated with a Masters of Environmental Data Science from UCSB's Bren School of Environmental Science and Management. 
-
-Outside of work, you can find me reading, playing the piano, or on a hike with people I love. 
+Outside of work, you can expect to find me reading, playing the piano, or on a hike! 
 
 ------------------------------------------------------------------------
 
 ## Experience
-> GIS & Remote Sensing Analyst \| NASA DEVELOP, Fort Collins Node \| Jun 2024 - Present 
 
-> Carbon Data Analyst \| Darn Tough, VT \| Jan 2024 - Jan 2024 
+> Environmental Data Analyst \| Natural Resource Ecology Lab (NREL) \| Sept 2024 - Nov 2024 
+
+> Geospatial Data Analyst \| NASA DEVELOP, Goddard Space Flight Center \| Sept 2024 - Nov 2024 
+
+> Geospatial Data Analyst \| NASA DEVELOP, Fort Collins Node \| Jun 2024 - Aug 2024 
+
+> Carbon Data Analyst \| Darn Tough, VT \| Jan 2024 - Jun 2024 
 
 > Data Jam Data Intern \| Cary Institute of Ecosystems Studies \| Dec 2022 - Jun 2023
 

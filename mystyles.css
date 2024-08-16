@@ -6,7 +6,7 @@
 $steal-blue: #6082B6;
 $deep-navy-blue: #0437F2;
 $black: #000000;
-$slate-grey: #708090;
+$jade-green: #8A9A5B;
 $white: #ffffff;
 $WhiteSmoke: #F5F5F5;
 $blue: #0000FF ;
@@ -22,12 +22,12 @@ $code-chunk-yellow: #F5F2D0;
 
 // Base Document Colors 
 
-$navbar-bg: $slate-grey; //navbar
-$navbar-fg: $WhiteSmoke; // navbar foreground elements
-$navbar-hl: $white; // highlight color when hovering over navbar links
+$navbar-bg: $jade-green; //navbar
+$navbar-fg: $white; // navbar foreground elements
+$navbar-hl: $light-blue; // highlight color when hovering over navbar links
 $body-bg: $white; // page background 
 $body-color: $black; // page text 
-$footer-bg: $slate-grey; // footer 
+$footer-bg: $jade-green; // footer 
 $link-color: $blue;// hyperlinks 
 
 
@@ -41,7 +41,7 @@ $code-block-bg: $code-chunk-yellow; // code block background color
 
 /*-- scss:rules --*/
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   letter-spacing: 5px;
   font-weight: 900;
   color: $black;
