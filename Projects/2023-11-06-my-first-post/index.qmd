@@ -1,5 +1,5 @@
 ---
-title: "My first blog post"
+title: "Making this website"
 description: "A short intro"
 author:
   - name: Flora Hamilton 
@@ -7,19 +7,20 @@ author:
     affiliation: Master of Environmental Data Science Program 
     affiliation-url: https://ucsb-meds.github.io
     
-date: 11-6-2023
+date: 03-06-2023
 categories: [Quarto, R, MEDS]
 citation:
   url: https://floraham.github.io/Projects/2023-11-06-my-first-post
 image: preview-image.png
 ---
 
-### **Welcome to my first blog post**
+### **Making this website**
 
-If you're reading this, thanks for stopping by! I am currently learning data science through the Masters of Environmental Data Science program at the Bren School of Environmental Science & Management at UC Santa Barbara.
+If you're reading this, thanks for stopping by! 
 
-This blog space will be used as a space to showcase & keep track of my data science projects, and practice my data communication skills. I also hope to make these blog posts informative, accessible, and friendly.
+This blog space will be used as a space to showcase & keep track of my data science projects. I also hope to make these blog posts informative, accessible, and interesting to read. 
 
-In my senior spring at Bowdoin College, I did what every liberal arts STEM student must do to remedy a bad case of Senioritis: take a course from a subject as unrelated to their major as possible. In my case, I took a course cross registered under the English, Italian, and Religion departments: Dante's Divine Comedy. The next-to-final assignment in the course was to do a formal, close-reading of any Canto of our choice. When I got my paper comments back, the professor critiqued in red text (endearingly) that I should get into..... blogging.
+I built this website using the Quarto framework, which is a static site generator that allows me to write in markdown and R using the resources provided by the UCSB Master of Environmental Data Science program. Check out this amazing resource, curated by the amazing Sam Csik here: [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and here: [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/). 
 
-I hope that this blog will be useful to you. 
+
+I'm excited to share my projects and thoughts with you here.
