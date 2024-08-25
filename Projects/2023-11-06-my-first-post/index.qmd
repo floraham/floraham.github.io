@@ -23,4 +23,4 @@ This blog space will be used as a space to showcase & keep track of my data scie
 I built this website using the Quarto framework, which is a static site generator that allows me to write in markdown and R using the resources provided by the UCSB Master of Environmental Data Science program. Check out this amazing resource, curated by the amazing Sam Csik here: [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and here: [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/). 
 
 
-I'm excited to share my projects and thoughts with you here.
+I'm excited to share my projects and thoughts with you here. 
