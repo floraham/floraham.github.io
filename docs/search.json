@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I’m an environmental data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”\nI’m a recent graduate of the Masters of Environmental Data Science program, from UCSB’s Bren School of Environmental Science and Management.\nOutside of work, you can expect to find me reading, playing the piano, or on a hike!"
+    "text": "🌎 I’m a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing and machine learning to understand vegetative landscapes. Currently, I’m investigating oak tree decline in Illinois and contributing to a project utilizing virtual fencing for rangeland management in Northern Colorado.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
   },
   {
     "objectID": "index.html#hello-im-flora",
@@ -18,7 +18,7 @@
     "href": "index.html#education",
     "title": "Flora Hamilton",
     "section": "Education",
-    "text": "Education\n\nBren School of Environmental Science & Management, University of California Santa Barbara | Master of Environmental Data Science | Expected June 2024\n\n\nBowdoin College | Brunswick, ME | BA in Mathematics and Environmental Studies, Economics Minor | Aug 2014 - May 2021"
+    "text": "Education\n\nBren School of Environmental Science & Management, UCSB | Master of Environmental Data Science | June 2024\n\n\nBowdoin College | Brunswick, ME | BA in Mathematics and Environmental Studies, Economics Minor | Aug 2014 - May 2021"
   },
   {
     "objectID": "index.html#experience",
@@ -32,7 +32,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "🚀🌎 I’m a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing, data science, and machine learning to address environmental issues.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
+    "text": "Currently, I’m an environmental data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”\nI’m a recent graduate of the Masters of Environmental Data Science program, from UCSB’s Bren School of Environmental Science and Management.\nOutside of work, you can expect to find me reading, playing the piano, or on a hike!"
   },
   {
     "objectID": "blog.html",
@@ -599,7 +599,7 @@
     "href": "about.html#currently",
     "title": "About",
     "section": "",
-    "text": "🚀🌎 I’m a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing, data science, and machine learning to address environmental issues.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
+    "text": "I’m an environmental data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”\nI’m a recent graduate of the Masters of Environmental Data Science program, from UCSB’s Bren School of Environmental Science and Management.\nOutside of work, you can expect to find me reading, playing the piano, or on a hike!"
   },
   {
     "objectID": "Projects/2024-03-15-fire-tree-mortality/index.html",
@@ -641,6 +641,20 @@
     "href": "about.html#bio",
     "title": "About",
     "section": "Bio",
-    "text": "Bio\nI grew up playing in streams and hiking through tropical forests with my family in Taiwan. These experiences fostered a deep appreciation for the natural world and a desire to understand the complex interactions between humans and the environment.\n\nI graduated Bowdoin College in 2021 with bachelor’s degrees in mathematics and environmental studies, and a minor in economics. With a liberal arts philosophy in mind, I took my quantitative foundations to Taipei where I gained exposure to the workings of mobile technology startups in Southeast Asia and early-stage investing at SOSV, a multinational venture capital firm. This time abroad kindled my interest in applying science and technology to solving environmental issues at scale.\n\nIn 2022, I returned to Oregon, where I applied my knowledge of geospatial and remote-sensing methods to support pollinator habitat restoration in agricultural landscapes of the Willamette Valley. Interested in pursuing further work in the environmental sciences, I worked with ecologists at Cary Institute of Ecosystem Studies, a nonprofit environmental science research center in Millbrook, NY, to source long-term environmental datasets for its state-funded science education program. I then obtained a masters degree from the Bren School of Environmental Science and Management with a degree in Environmental Data Science in 2024, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.\n\nWith exposure to a variety of organizational structures, I’m excited to take my knowledge of environmental data science forward. Through NASA’s DEVELOP projects, I want to apply machine-learning, remote-sensing methods, and my geoprogramming skillset to advance scientific knowledge and extract value from data to support and manage carbon dependent systems."
+    "text": "Bio\nI grew up playing in streams and hiking through tropical forests with my family in Taiwan. These experiences fostered a deep appreciation for the natural world and a desire to understand the complex interactions between humans and the environment.\nI graduated Bowdoin College in 2021 with bachelor’s degrees in mathematics and environmental studies, and a minor in economics. With a liberal arts philosophy in mind, I took my quantitative foundations to Taipei where I gained exposure to the workings of mobile technology startups in Southeast Asia and early-stage investing at SOSV, a multinational venture capital firm. This time abroad kindled my interest in applying science and technology to solving environmental issues at scale.\n\nIn 2022, I returned to Oregon, where I applied my knowledge of geospatial and remote-sensing methods to support pollinator habitat restoration in agricultural landscapes of the Willamette Valley. Interested in pursuing further work in the environmental sciences, I worked with ecologists at Cary Institute of Ecosystem Studies, a nonprofit environmental science research center in Millbrook, NY, to source long-term environmental datasets for its state-funded science education program. I then obtained a masters degree from the Bren School of Environmental Science and Management with a degree in Environmental Data Science in 2024, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.\n\nWith exposure to a variety of organizational structures, I’m excited to take my knowledge of environmental data science forward. Through NASA’s DEVELOP projects, I am applying machine-learning, remote-sensing methods, and my geoprogramming skillset to advance scientific knowledge and extract value from data to support the management of critical environmental systems."
+  },
+  {
+    "objectID": "index.html#im-flora-an-environmental-data-scientist-who-is-enthuastic-about-leveraging-data-at-scale-to-provide-insights-for-thoughtful-environmental-management.",
+    "href": "index.html#im-flora-an-environmental-data-scientist-who-is-enthuastic-about-leveraging-data-at-scale-to-provide-insights-for-thoughtful-environmental-management.",
+    "title": "Flora Hamilton",
+    "section": "",
+    "text": "🚀🌎 I’m a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing and machine learning to understand vegetative landscapes. Currently, I’m investigating oak tree decline in Illinois and contributing to a project utilizing virtual fencing for rangeland management in Northern Colorado.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
+  },
+  {
+    "objectID": "index.html#im-flora-an-environmental-data-scientist-who-is-enthusiastic-about-leveraging-data-at-scale-to-provide-insights-for-thoughtful-environmental-management.",
+    "href": "index.html#im-flora-an-environmental-data-scientist-who-is-enthusiastic-about-leveraging-data-at-scale-to-provide-insights-for-thoughtful-environmental-management.",
+    "title": "Flora Hamilton",
+    "section": "",
+    "text": "🌎 I’m a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing and machine learning to understand vegetative landscapes. Currently, I’m investigating oak tree decline in Illinois and contributing to a project utilizing virtual fencing for rangeland management in Northern Colorado.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
   }
 ]
