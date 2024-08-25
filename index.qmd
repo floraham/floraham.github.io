@@ -21,7 +21,7 @@ html:
 toc: true
 ---
 
-## I'm Flora, an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management. 
+#### I'm Flora, an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management. 
 
 🌎 I'm a data analyst at NASA DEVELOP and National Resource and Ecology Laboratory (NREL), working on projects that leverage remote sensing and machine learning to understand vegetative landscapes. Currently, I'm investigating oak tree decline in Illinois and contributing to a project utilizing virtual fencing for rangeland management in Northern Colorado. 
 
