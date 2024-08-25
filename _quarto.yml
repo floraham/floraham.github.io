@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  back-to-top-navigation: true
   navbar:
     title: "floraham.github.io"
     right:
