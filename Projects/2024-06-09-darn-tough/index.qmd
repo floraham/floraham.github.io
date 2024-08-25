@@ -7,7 +7,7 @@ author:
     affiliation: Bren School of Environmental Science and Management
     affiliation-url: https://ucsb-meds.github.io
 date: "June 10, 2024"
-categories: [R, MEDS, Carbon accounting]
+categories: [R, Carbon Accounting, Data Visualization, Interactive Applications, Analytical Workflows, Corporate Sustainability]
 output:
     html_document:
       print_df: paged
