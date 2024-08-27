@@ -12,7 +12,7 @@ website:
     - href: about.qmd
       text: About
     - Projects.qmd
-    - href: FH_resume_Aug27_2024.pdf
+    - href: Hamilton_resume_1page_aug27.pdf
       text: Resume
   page-footer:
     background: light # or dark 
