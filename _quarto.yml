@@ -12,6 +12,8 @@ website:
     - href: about.qmd
       text: About
     - Projects.qmd
+    - href: FH_resume_Aug27_2024.pdf
+      text: Resume
   page-footer:
     background: light # or dark 
     left: 
