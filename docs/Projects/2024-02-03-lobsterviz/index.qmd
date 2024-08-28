@@ -1,0 +1,253 @@
+---
+title: "Homework Assignment #2"
+subtitle: "Part I"
+author: "Flora Hamilton"
+date: 2024-02-03
+toc: true
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+# Visualizing lobster size differences across five SBC LTER sites (2012, when IVEE and NAPL were established as MPAs, and 2022).
+
+
+
+## Background / Context:
+
+*About the Data:* This dataset contains two tables 1) Abundance and size data, and fishing pressure (number of trap floats)
+
+1\) Abundance and size data collected annually by divers in late summer before the start of the fishing season at five SBC LTER long term kelp forest study sites: two within MPAs (Naples and Isla Vista) and three outside (Arroyo Quemado, Mohawk and Carpinteria).
+
+2)  Fishing pressure, as determined by counting the number of commercial trap floats. Data are collected every two to four weeks during the lobster fishing season (October to March) at nine sites along the mainland, eight of which are also SBC LTER long-term kelp forest study reefs
+
+## Data Citation:
+
+Reed, D, R. Miller. 2023. SBC LTER: Reef: Abundance, size and fishing effort for California Spiny Lobster (*Panulirus interruptus*), ongoing since 2012 ver 9. Environmental Data Initiative. <https://doi.org/10.6073/pasta/3595322687af94cd532620ad9db94c77>.
+
+## **Objective:**
+
+I want to create a visualization that explores how lobster size differs across each of the five coastal rocky reef SBC LTER sites for the years 2012 (when IVEE and NAPL were established as MPAs) and 2022 (10 years later).
+
+## Setup
+
+```{r}
+#| eval: true
+#| echo: true
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                                load packages                             ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(janitor)
+library(ggdist)
+library(see)
+library(ggridges)
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                                import data                               ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+lobster_data <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-sbc.77.9&entityid=f32823fba432f58f66c06b589b7efac6")
+
+```
+
+basic data exploration (e.g. using `str()` / `glimpse()` / `View()`, looking for unique factor levels, etc.). 
+
+```{r}
+#| eval: false
+#| echo: true
+
+glimpse(lobster_data) ##look at the data 
+View(lobster_data)
+unique(lobster_data$REPLICATE) # Just A-D
+names(lobster_data) #return all column names 
+
+```
+
+## Data wrangling
+
+```{r}
+#| eval: true
+#| echo: true
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                          data cleaning & wrangling                       ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##########################Instructor Notes#####################################
+# I love starting all my cleaning pipelines with janitor::clean_names() to convert column headers into lowercase snake_case
+
+# keep just the years of interest. Missing size measurements are denoted with -99999 – do not want to leave those values as-is (what’s a lobster with -9999 mm carapace length?? ); 
+
+# Each row is not always a single observation, but rather summed lobster counts at each size observed within a site / transect / replicate. Wrangle the data such that each row represents a single lobster observation. You may need to do some Googling to figure out a solution for this (HINT: you’re looking to perform the opposite of count()).
+#I often find that I’ll need to return to my data wrangling pipeline again after I start plotting my data – it’s at this stage that I’ll often catch variables that are the wrong data type (e.g. numeric, factor, character) for plotting and need to make the appropriate updates.
+############################################################################
+
+# Wrangling Plan: 
+# keep years of interest 
+# deal with -9999 mm missing size measurements...... maybe it's best to mark as NA 
+# Wrangle the data such that each row represents a single lobster observation (opposite of count() )
+# It looks like Year, Month, Date should probably be converted to datetime
+# Transect might be factor? 
+
+#########
+
+lobster_df <- lobster_data %>%  
+  filter(YEAR %in% c(2012, 2022)) %>%  #select years 2012 and 2022 
+  mutate(year = year(DATE),
+         month = month(DATE, label = TRUE, abbr = TRUE),
+         day = day(DATE)) %>% 
+ select(c(-"YEAR", -"MONTH"))  
+
+# UPDATE A FEW COLUMNS TO INTEGER VALUES 
+lobster_df$TRANSECT <- as.integer(lobster_df$TRANSECT)
+lobster_df$COUNT <- as.integer(lobster_df$COUNT)
+lobster_df$NUM_AO <- as.integer(lobster_df$NUM_AO)
+lobster_df$year <- as.factor(lobster_df$year)
+## deal with -9999 mm, turn to NA 
+lobster_df$SIZE_MM <- na_if(lobster_df$SIZE_MM, -99999) 
+
+#now, we can clean names :) 
+lobster_df <- lobster_df %>% janitor::clean_names()
+
+#Wrangle the data such that each row represents a single lobster observation. I found a function upon googling called "uncount()"
+lobster_df_unpacked <- lobster_df %>%  uncount(weights = count)
+
+# View the resulting dataframe
+View(lobster_df_unpacked)
+
+### CHECKING WORK 
+print(sum(lobster_df$count) == nrow(lobster_df_unpacked)) 
+```
+
+## From this step, I can see a few things: 
+    My variables of interested are:
+    - site: character (chr)
+    - size_mm: numeric (num)
+    - year: numeric (num)
+
+
+It may be important to show sample size, because just looking at the data, I am able to see that the CARP site in 2022 has a much bigger range in count than other sites. This may show not only stronger evidence of a change in size, but also count, possibly due to the establishment of MPAs. This visualization might be a bit tricky, due to the number of dimensions and factors of each dimension we're dealing with -- time, 5 different sites, lobster length, potential need to demonstrate sample size, etc. It might also be important to distinguish MPA's from non-MPA's somehow.
+
+## Data visualization
+
+I ended up doing the following to update my plot: 
+
+-   updated axis text
+-   removed minor and major grid-lines
+-   adjusted histogram color, position
+-   re-centered x and y axis titles
+-   Got rid of trailing lines in plot
+-   Bolded MPA sites in Y axis, adjusted colors of individual labels
+-   Adjusted X axis scale breaks
+-   removed extra ink in plot panel and plot axis text
+-   Added data citation + positioned it
+-   set x axis limits
+-   adjusted line width of density plot
+-   Added alt text
+-   Adjusted all text color and size, including legend
+-   Added margins to the right hand side of the graph
+-   Took out the bottom space with coord expand = false
+
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+#| fig-cap: "'Lobster Size, Abundance, and Density at MPA and Non-MPA Santa Barbara Coastal LTER Sites in 2012 (MPA est.) & 2022', captures the shifts in median lobster size a decade after the establishment of two MPAs (NAPL & IVEE) in 2012. Data Source: https://doi.org/10.6073/pasta/3595322687af94cd532620ad9db94c77."
+#| fig-alt: "A ridge + bee-swarm plot illustrating median lobster sizes across five sites, highlighting significant differences over 10 years. MPA sites (NAPL and IVEE), established in 2012, show distinct changes. Non-MPA sites (CARP and MOHK) exhibit minimal differences, while AQUE sees a moderate increase, albeit less pronounced than MPA sites." 
+
+
+# defining order of sites
+site_order <- c("CARP", "MOHK", "IVEE", "NAPL", "AQUE")
+
+# Convert the site variable to a factor with the desired order
+lobster_df_unpacked$site <-
+  factor(lobster_df_unpacked$site, levels = site_order)
+
+# defining color patch color
+color_manual = c("darkblue", "lightblue3")
+fill_manual = c("blue2", "lightblue")
+
+
+# Ridgeline plots for each site
+ridgeline_plots <- ggplot(lobster_df_unpacked,
+                          aes(
+                            x = size_mm,
+                            y = site,
+                            fill = year,
+                            color = year
+                          )) +
+  geom_density_ridges(
+    scale = 0.7,
+    alpha = 0.5,
+    quantile_lines = TRUE,
+    quantiles = 2,
+    jittered_points = FALSE,
+    point_size = 0.8,
+    aes(alpha = 0.9),
+    rel_min_height = 0.002,
+    lwd = 0.75
+  ) +
+  scale_fill_manual(values = fill_manual, limits = rev(levels(lobster_df_unpacked$year))) +
+  scale_color_manual(values = color_manual, limits = rev(levels(lobster_df_unpacked$year))) +
+  scale_x_continuous(breaks = seq(0, 200, by = 25)) +
+  theme_ridges() +
+  ggtitle("Lobster Size, Abundance, and Density at MPA and Non-MPA \nSanta Barbara Coastal LTER Sites in 2012 & 2022") +
+  labs(
+    caption = "Data Source: Reed, D, R. Miller. 2023. SBC LTER: \n Reef: Abundance, size and fishing effort for California Spiny Lobster \nOngoing since 2012 ver 9. Environmental Data Initiative",
+    x = "Size (mm)",
+    y = "Site Name (MPA's in bold)",
+    fill = "Year",
+    color = "Year"
+  ) +
+  guides(fill = guide_legend(
+    override.aes = list(
+      color = color_manual,
+      fill = fill_manual,
+      alpha = 1,
+      direction = "horizontal",
+      box.just = "top",
+      title.position = "top",
+      title.hjust = 0.5
+    )
+  )) +
+  theme(
+    plot.margin = margin(t = 5, r = 40, l = 10),
+    panel.grid.major.x = element_blank(),
+    strip.background = element_rect(fill = "#EEEEEE"),
+    axis.title.y = element_text(
+      vjust = 0.5,
+      hjust = 0.5,
+      color = "darkslategrey"
+    ),
+    axis.title.x = element_text(
+      vjust = 0.5,
+      hjust = 0.5,
+      color = "darkslategrey"
+    ),
+    plot.caption = element_text(size = 8, color = "#757B82"),
+    plot.title =  element_text(hjust = 0, size = 13),
+    legend.position = c(1, 0.98),
+    # Adjust coordinates as needed
+    legend.justification = c("right", "top"),
+    # Adjust justification as needed
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 10),
+    legend.box = "horizontal",
+    axis.text.y = element_text(
+      face = c('plain', 'plain', 'bold', 'bold', 'plain'),
+      color = c('slategrey', 'slategrey', 'black', 'black', 'slategrey')
+    )
+  ) + # Adjust the right margin to move the legend further to the right  # display legend horizontally
+  # coord_cartesian(expand = FALSE) + ## this gets rid of the gap at the bottom between the x axis scale and the graph
+  coord_cartesian(expand = FALSE,
+                  ylim = c(NA, 5.8),
+                  xlim = c(NA, 160))
+
+# Display the plot
+print(ridgeline_plots)
+```
+
+
