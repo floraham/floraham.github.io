@@ -86,12 +86,13 @@ names(lobster_data) #return all column names
 ##                          data cleaning & wrangling                       ----
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-##########################Instructor Notes#####################################
+###############################################################
 # I love starting all my cleaning pipelines with janitor::clean_names() to convert column headers into lowercase snake_case
 
 # keep just the years of interest. Missing size measurements are denoted with -99999 – do not want to leave those values as-is (what’s a lobster with -9999 mm carapace length?? ); 
 
-# Each row is not always a single observation, but rather summed lobster counts at each size observed within a site / transect / replicate. Wrangle the data such that each row represents a single lobster observation. You may need to do some Googling to figure out a solution for this (HINT: you’re looking to perform the opposite of count()).
+# Each row is not always a single observation, but rather summed lobster counts at each size observed within a site / transect / replicate. Wrangle the data such that each row represents a single lobster observation.
+
 #I often find that I’ll need to return to my data wrangling pipeline again after I start plotting my data – it’s at this stage that I’ll often catch variables that are the wrong data type (e.g. numeric, factor, character) for plotting and need to make the appropriate updates.
 ############################################################################
 
