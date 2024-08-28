@@ -400,7 +400,6 @@ Notably, we see that Taiwan's emissions are now higher than that of most high-in
 # Assembling an Infographic
 
 ```{r message = FALSE, warning = FALSE}
-
 # 🔡 text ---------------------------------------------------
 quotes <- c("Taiwan's current carbon emissions standing is significant, with the country being among the top 25 largest carbon emitters globally. In recent years, Taiwan has been taking steps towards reducing its carbon footprint and transitioning to cleaner energy sources to achieve net-zero emissions by 2050. The country has set ambitious goals, such as investing in renewable energy technologies and implementing a carbon fee system for large emitters to incentivize emission reduction. In order to understand how these plans can change Taiwan’s carbon footprint in the long-term, we need to first understand the country’s current baseline in terms of carbon emissions. 
 ", 
@@ -455,8 +454,10 @@ g_final <- g_base +
       
     )
   )
+```
 
 
+```{r message = FALSE, warning = FALSE, include = FALSE}
 ggsave(plot = g_final, filename = "~/Documents/2_Areas/Areas_MEDS/Winter_Quarter/Data_Viz_240/HWs/hamilton-eds240-HW4/final_work/pre_final.png", height = 10, width = 16)
 
 
