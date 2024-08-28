@@ -1,0 +1,18 @@
+---
+title: "Understanding the Impacts of Wildfires on Snow Characteristics in Colorado's Northern Range"
+author:
+  - name: Flora Hamilton
+    url: https://floraham.github.io/
+    affiliation: NASA DEVELOP
+    affiliation-url: 
+categories: [Visualization, R, NASA DEVELOP]
+date: 2024-08-28
+toc: true
+format: html
+editor_options: 
+  chunk_output_type: console
+citation:
+  url: https://floraham.github.io/Projects/2024-08-28-Snow-Fire/
+image: preview-image.png
+draft: TRUE
+---
