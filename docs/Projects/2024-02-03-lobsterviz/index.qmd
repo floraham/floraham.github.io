@@ -1,6 +1,5 @@
 ---
-title: "Homework Assignment #2"
-subtitle: "Part I"
+title: "Visualizing lobster size differences"
 author: "Flora Hamilton"
 date: 2024-02-03
 toc: true
