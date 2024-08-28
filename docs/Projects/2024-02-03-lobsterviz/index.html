@@ -9,7 +9,7 @@
 <meta name="author" content="Flora Hamilton">
 <meta name="dcterms.date" content="2024-02-03">
 
-<title>Visualizing lobster size differences across MPA and Non-MPA sites</title>
+<title>Visualizing lobster size differences across MPA (Marine Protected Areas) and Non-MPA sites</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -146,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Visualizing lobster size differences across MPA and Non-MPA sites</h1>
+      <h1 class="title">Visualizing lobster size differences across MPA (Marine Protected Areas) and Non-MPA sites</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Visualization</div>
                 <div class="quarto-category">R</div>
@@ -220,9 +220,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="background-context">Background / Context:</h2>
 <p><em>About the Data:</em> This dataset contains two tables 1) Abundance and size data, and fishing pressure (number of trap floats)</p>
 <p>1) Abundance and size data collected annually by divers in late summer before the start of the fishing season at five SBC LTER long term kelp forest study sites: two within MPAs (Naples and Isla Vista) and three outside (Arroyo Quemado, Mohawk and Carpinteria).</p>
-<ol start="2" type="1">
-<li>Fishing pressure, as determined by counting the number of commercial trap floats. Data are collected every two to four weeks during the lobster fishing season (October to March) at nine sites along the mainland, eight of which are also SBC LTER long-term kelp forest study reefs</li>
-</ol>
+<p><img src="spatial-coverage.png" class="img-fluid"> Caption: Unlabeled spatial coverage of the five SBC LTER sites where lobster size and abundance data were collected. Two sites (NAPL and IVEE) are within Marine Protected Areas (MPAs) established in 2012, while three sites (CARP, MOHK, AQUE) are outside of MPAs.</p>
+<p>2) Fishing pressure, as determined by counting the number of commercial trap floats. Data are collected every two to four weeks during the lobster fishing season (October to March) at nine sites along the mainland, eight of which are also SBC LTER long-term kelp forest study reefs</p>
 </section>
 <section id="data-citation" class="level2">
 <h2 class="anchored" data-anchor-id="data-citation">Data Citation:</h2>
@@ -323,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 - site: character (chr)
 - size_mm: numeric (num)
 - year: numeric (num)</code></pre>
-<p>It may be important to show sample size, because just looking at the data, I am able to see that the CARP site in 2022 has a much bigger range in count than other sites. This may show not only stronger evidence of a change in size, but also count, possibly due to the establishment of MPAs. This visualization might be a bit tricky, due to the number of dimensions and factors of each dimension we’re dealing with – time, 5 different sites, lobster length, potential need to demonstrate sample size, etc. It might also be important to distinguish MPA’s from non-MPA’s somehow.</p>
+<p>It may be important to show sample size, because looking at the data, I see that the CARP site in 2022 has a bigger range in count than other sites. This may show not only stronger evidence of a change in size, but also count, possibly due to the establishment of MPAs. The design of this graphic will have to intentionally incorporate the dimensions and factors of each dimension in play – time, 5 different sites, lobster length, potential need to demonstrate sample size, etc. It will also be important to distinguish MPA’s from non-MPA’s.</p>
 </section>
 <section id="data-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="data-visualization">Data visualization</h2>
@@ -367,15 +366,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{hamilton2024,
   author = {Hamilton, Flora},
-  title = {Visualizing Lobster Size Differences Across {MPA} and
-    {Non-MPA} Sites},
+  title = {Visualizing Lobster Size Differences Across {MPA} {(Marine}
+    {Protected} {Areas)} and {Non-MPA} Sites},
   date = {2024-02-03},
   url = {https://floraham.github.io/Projects/2024-03-15-fire-tree-mortality/},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-hamilton2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Hamilton, Flora. 2024. <span>“Visualizing Lobster Size Differences
-Across MPA and Non-MPA Sites.”</span> February 3, 2024. <a href="https://floraham.github.io/Projects/2024-03-15-fire-tree-mortality/">https://floraham.github.io/Projects/2024-03-15-fire-tree-mortality/</a>.
+Across MPA (Marine Protected Areas) and Non-MPA Sites.”</span> February
+3, 2024. <a href="https://floraham.github.io/Projects/2024-03-15-fire-tree-mortality/">https://floraham.github.io/Projects/2024-03-15-fire-tree-mortality/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
