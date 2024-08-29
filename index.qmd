@@ -33,26 +33,28 @@ html:
 
 ## Experience
 
-> **Environmental Data Analyst**  \| Sept 2024 - Present \
+ **Environmental Data Analyst**  \| Sept 2024 - Present \
 Natural Resource Ecology Lab (NREL), Colorado State University
 
-> **Geospatial Data Analyst**  \| Jun 2024 - Nov 2024 \
+ **Geospatial Data Analyst**  \| Jun 2024 - Nov 2024 \
 NASA DEVELOP, Goddard Space Flight Center & Colorado Node
 
-> **Carbon Data Analyst** \| Jan 2024 - Jun 2024 \
+ **Carbon Data Analyst** \| Jan 2024 - Jun 2024 \
 Darn Tough, VT 
 
-> **Data Jam Data Intern** \| Dec 2022 - Jun 2023 \
+ **Data Jam Data Intern** \| Dec 2022 - Jun 2023 \
 Cary Institute of Ecosystems Studies, NY
 
-> **Investment Specialist** \| Jul 2021 - April 2022 \
+ **Investment Specialist** \| Jul 2021 - April 2022 \
 Orbit Startups @ SOSV, Taipei, Taiwan
 
 ------------------------------------------------------------------------
 
 ## Education
 
-> **Bren School of Environmental Science & Management, UCSB** \| Master of Environmental Data Science \| June 2024
+**Master of Environmental Data Science** | June 2024 \
+**Bren School of Environmental Science & Management, UCSB** \
 
-> **Bowdoin College** \| Brunswick, ME \| BA in Mathematics and Environmental Studies, Economics Minor \| Aug 2014 - May 2021
+**BA in Mathematics and Environmental Studies, Economics Minor** | May 2021 \
+Bowdoin College, Brunswick, ME 
 
