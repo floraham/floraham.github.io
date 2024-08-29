@@ -74,17 +74,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">floraham.github.io</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
@@ -95,12 +90,31 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+ <span class="menu-text">Projects &amp; Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Hamilton_resume_1page_aug27.pdf" rel="" target="">
  <span class="menu-text">Resume</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-get-in-touch" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Get in Touch!</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-get-in-touch">    
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/in/flora-hamilton-946980122/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="dropdown-text">LinkedIn</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/floraham" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="dropdown-text">GitHub</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -166,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#geospatial-visualization" id="toc-geospatial-visualization" class="nav-link" data-scroll-target="#geospatial-visualization">Geospatial visualization</a>
   <ul class="collapse">
-  <li><a href="#visualizing-oyster-habitat-suitability-on-the-west-coast-us" id="toc-visualizing-oyster-habitat-suitability-on-the-west-coast-us" class="nav-link" data-scroll-target="#visualizing-oyster-habitat-suitability-on-the-west-coast-us">Visualizing Oyster Habitat Suitability on the West Coast US</a></li>
+  <li><a href="#visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo" id="toc-visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo" class="nav-link" data-scroll-target="#visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo">Visualizing Oyster Habitat Suitability on the West Coast US | Repo</a></li>
   <li><a href="#visualizing-texas-blackout-of-2021-blog" id="toc-visualizing-texas-blackout-of-2021-blog" class="nav-link" data-scroll-target="#visualizing-texas-blackout-of-2021-blog">Visualizing Texas Blackout of 2021 | Blog</a></li>
   <li><a href="#cartography-land-for-maines-future-conservation-grant-proposal" id="toc-cartography-land-for-maines-future-conservation-grant-proposal" class="nav-link" data-scroll-target="#cartography-land-for-maines-future-conservation-grant-proposal">Cartography: Land for Maine’s Future: Conservation Grant Proposal</a></li>
   </ul></li>
@@ -221,8 +235,8 @@ Frequent Updates
 </section>
 <section id="geospatial-visualization" class="level1">
 <h1>Geospatial visualization</h1>
-<section id="visualizing-oyster-habitat-suitability-on-the-west-coast-us" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-oyster-habitat-suitability-on-the-west-coast-us">Visualizing Oyster Habitat Suitability on the West Coast US</h2>
+<section id="visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo">Visualizing Oyster Habitat Suitability on the West Coast US | <a href="https://github.com/floraham/aquaculture-eez">Repo</a></h2>
 <p><img src="oysters-eez-viz.jpg" class="img-fluid"> <strong>Caption:</strong> Geospatial visualization of oyster habitat suitability on the West Coast of the US. The map shows the total area and % of oyster habitat based on sea surface temperature and depth. Data Source: NOAA, USGS. Visualization created in R.</p>
 </section>
 <section id="visualizing-texas-blackout-of-2021-blog" class="level2">
@@ -602,9 +616,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-      <i class="bi bi-github" role="img">
-</i> 
+    <li class="nav-item">
+ This website was built with Quarto
   </li>  
 </ul>
     </div>

@@ -50,7 +50,7 @@ I will be updating this page with new visualizations as I create them. Stay tune
 **Caption:** Facet plots showing the impact of burn severity on snow depth in Colorado's Northern Range. The plots show the relationship between snow depth and burn severity for each snow melt season. Data Source: Airborne Snow Observatories, LANDSAT8. Visualization created in R.
 
 # Geospatial visualization 
-## Visualizing Oyster Habitat Suitability on the West Coast US
+## Visualizing Oyster Habitat Suitability on the West Coast US | [Repo](https://github.com/floraham/aquaculture-eez)
 ![](oysters-eez-viz.jpg)
 **Caption:** Geospatial visualization of oyster habitat suitability on the West Coast of the US. The map shows the total area and % of oyster habitat based on sea surface temperature and depth. Data Source: NOAA, USGS. Visualization created in R. 
 

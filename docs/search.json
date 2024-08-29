@@ -873,5 +873,12 @@
     "title": "Visualization Work Highlights",
     "section": "Cartography: Land for Maine’s Future: Conservation Grant Proposal",
     "text": "Cartography: Land for Maine’s Future: Conservation Grant Proposal\n Caption: Map created for Land for Maine’s Future grant proposal. The map shows the location of the proposed land acquisition in relation to other protected lands and geographic features, as well as the proposed land’s ecological features. Map Created in ArcGIS Pro and presented with Google Suites.\nStay tuned for more!"
+  },
+  {
+    "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo",
+    "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo",
+    "title": "Visualization Work Highlights",
+    "section": "Visualizing Oyster Habitat Suitability on the West Coast US | Repo",
+    "text": "Visualizing Oyster Habitat Suitability on the West Coast US | Repo\n Caption: Geospatial visualization of oyster habitat suitability on the West Coast of the US. The map shows the total area and % of oyster habitat based on sea surface temperature and depth. Data Source: NOAA, USGS. Visualization created in R."
   }
 ]
