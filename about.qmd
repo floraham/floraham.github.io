@@ -2,13 +2,13 @@
 title: "About"
 ---
 
+## {{< fa code >}} Currently
+
 **Currently**, I'm an environmental data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project is titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
 
 I'm a recent graduate of the Masters of Environmental Data Science program, from UCSB's Bren School of Environmental Science and Management.
 
-Outside of work, you can expect to find me reading, playing the piano, or on a hike!
-
-## Bio
+## {{< fa clock-rotate-left >}}
 
 I grew up playing in streams and hiking through tropical forests with my family in Taiwan. These experiences fostered a deep appreciation for the natural world and a desire to understand the complex interactions between humans and the environment.
 
@@ -17,3 +17,11 @@ I graduated Bowdoin College in 2021 with bachelor's degrees in mathematics and e
 In 2022, I returned to Oregon, where I applied my knowledge of geospatial and remote-sensing methods to support pollinator habitat restoration in agricultural landscapes of the Willamette Valley. Interested in pursuing further work in the environmental sciences, I worked with ecologists at Cary Institute of Ecosystem Studies, a nonprofit environmental science research center in Millbrook, NY, to source long-term environmental datasets for its state-funded science education program. I then obtained a masters degree from the Bren School of Environmental Science and Management with a degree in Environmental Data Science in 2024, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.\
 \
 With exposure to a variety of organizational structures, I'm excited to take my knowledge of environmental data science forward. Through NASA's DEVELOP projects, I am applying machine-learning, remote-sensing methods, and my geoprogramming skillset to advance scientific knowledge and extract value from data to support the management of critical environmental systems.
+
+## {{< fa shuttle-space >}} /Misc/
+Outside of work, you can most likely find me reading, playing the piano, or on a hike!
+
+
+
+
+
