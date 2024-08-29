@@ -22,6 +22,8 @@ I will be updating this page with new visualizations as I create them. Stay tune
 
 :::
 
+![](preview-image.jpg)
+
 # Infographics
 
 ## Visualizing Taiwan's CO2e standing | [Blog](https://floraham.github.io/Projects/2024-03-11-TaiwanCO2/)
