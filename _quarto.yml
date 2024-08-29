@@ -4,6 +4,7 @@ project:
 
 website:
   back-to-top-navigation: true
+  favicon: 🌿
   navbar:
     title: false
     left:

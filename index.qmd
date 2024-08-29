@@ -9,7 +9,6 @@ about:
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/flora-hamilton-946980122/
-      
     - icon: github
       href: https://github.com/floraham
     - icon: link-45deg
