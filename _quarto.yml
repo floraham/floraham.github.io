@@ -5,21 +5,34 @@ project:
 website:
   back-to-top-navigation: true
   navbar:
-    title: "floraham.github.io"
-    right:
+    title: false
+    left:
     - href: index.qmd
       text: Home
     - href: about.qmd
       text: About
-    - Projects.qmd
+    - href: Projects.qmd
+      text: Projects & Blog
     - href: Hamilton_resume_1page_aug27.pdf
       text: Resume
+      
+    right: 
+    - text: Get in Touch!
+      menu: 
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/flora-hamilton-946980122/
+      - icon: github
+        text: GitHub
+        href: https://github.com/floraham
+    
+      
   page-footer:
     background: light # or dark 
     left: 
       - "Copyright 2024, Flora Hamilton"
     right: 
-      - icon: github
+      - This website was built with Quarto
     
 
 

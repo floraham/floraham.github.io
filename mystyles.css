@@ -24,11 +24,11 @@ $code-chunk-yellow: #F5F2D0;
 
 $navbar-bg: $jade-green; //navbar
 $navbar-fg: $white; // navbar foreground elements
-$navbar-hl: $light-blue; // highlight color when hovering over navbar links
+$navbar-hl: $code-chunk-yellow; // highlight color when hovering over navbar links
 $body-bg: $white; // page background 
 $body-color: $black; // page text 
 $footer-bg: $jade-green; // footer 
-$link-color: $blue;// hyperlinks 
+$link-color: $jade-green;// hyperlinks 
 
 
 

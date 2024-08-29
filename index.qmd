@@ -13,7 +13,7 @@ about:
     - icon: github
       href: https://github.com/floraham
     - icon: link-45deg
-      text: bren
+      text: Bren profile
       href: https://bren.ucsb.edu/people/flora-hamilton
       
 html:
