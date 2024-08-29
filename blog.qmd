@@ -1,8 +1,0 @@
----
-title: "blog"
-listing: 
-  contents: blog
-  type: default
-  sort: "date desc"
-  categories: true
----
