@@ -18,7 +18,6 @@ about:
       
 html:
   page-layout: full
-toc: true
 ---
 
 ## I'm Flora 🌿
