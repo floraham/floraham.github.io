@@ -1,0 +1,66 @@
+---
+title: 'Visualization Work Highlights'
+description: ' A few cherry picked visualizations from my work over the years 🍒'
+author: "Flora Hamilton"
+date: "2024-08-28"
+code-fold: true 
+toc: true
+output:
+    html_document:
+      print_df: paged
+      toc: yes
+      toc_depth: 4
+      toc_float: yes
+draft: false
+callout-appearance: simple
+---
+
+::: {.callout-note appearance="simple"}
+
+## Frequent Updates
+I will be updating this page with new visualizations as I create them. Stay tuned for more!
+
+:::
+
+# Infographics
+
+## Visualizing Taiwan's CO2e standing | [Blog](https://floraham.github.io/Projects/2024-03-11-TaiwanCO2/)
+![](taiwan-viz.png)
+**Caption:** Infographic of Taiwan's current standing of carbon emissions. Graph types used include line, bar, and pie charts. Data Source: Climate Trace, OurWorldInData. Visualization created in R. 
+
+![](line-graph-taiwan-viz.png)
+**Caption:** A closer look at Taiwan's carbon emissions over time. Data Source: Climate Trace, OurWorldInData. Visualization created in R.
+
+## Visualizing MPA impact on lobster size | [Blog](https://floraham.github.io/Projects/2024-02-03-lobsterviz/)
+![](lobster-plot.jpg)
+**Caption:** Infographic displaying the shifts in median lobster size in Marine Protected Areas (MPA's) and Non-MPA SB Coastal LTER Sites between 2012 & 2022. Data Source: Santa Barbara Coastal LTER. Visualization created in R and Google Suites. 
+
+# Interactive Dashboard Visualization Plots 
+## Interactive Sunburst Plot for Darn Tough, VT | [Blog](https://floraham.github.io/Projects/2024-03-11-DarnTough/)
+
+![](sunburst-plot.jpg)
+**Caption:** Interactive sunburst plot created for Darn Tough, VT allows users to analyze emissions in terms of Scope, Category (for Scope 3), and input variables (e.g., Wool Fiber). By clicking on a segment of the plot, users can more easily see the granular data. In addition, the user can hover over a segment to access exact values for emissions and percent of total emissions (Note: Fake Data). Visualization created in R and D3.js. 
+
+# Scientific Plots
+## Facet Plots of Burn Severity Impacts on Snow Depth in Colorado's Northern Range 
+
+![](snow-fire-facet-plots.png)
+**Caption:** Facet plots showing the impact of burn severity on snow depth in Colorado's Northern Range. The plots show the relationship between snow depth and burn severity for each snow melt season. Data Source: Airborne Snow Observatories, LANDSAT8. Visualization created in R.
+
+# Geospatial visualization 
+## Visualizing Oyster Habitat Suitability on the West Coast US
+![](oysters-eez-viz.jpg)
+**Caption:** Geospatial visualization of oyster habitat suitability on the West Coast of the US. The map shows the total area and % of oyster habitat based on sea surface temperature and depth. Data Source: NOAA, USGS. Visualization created in R. 
+
+## Visualizing Texas Blackout of 2021 | [Blog](https://floraham.github.io/Projects/2023-12-08-texas/)
+![](texas-blackout-viz.png)
+**Caption:** Interactive plot created in R's tmap package to visualize the Texas Blackout of 2021. The plot shows the number of households affected and median income level of census tract.
+
+## Cartography: Land for Maine's Future: Conservation Grant Proposal 
+![](land-for-maine.png)
+**Caption:** Map created for Land for Maine's Future grant proposal. The map shows the location of the proposed land acquisition in relation to other protected lands and geographic features, as well as the proposed land's ecological features. Map Created in ArcGIS Pro and presented with Google Suites. 
+
+Stay tuned for more!
+
+
+
