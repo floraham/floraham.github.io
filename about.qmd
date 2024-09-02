@@ -4,7 +4,7 @@ title: "About"
 
 ## {{< fa code >}} Currently
 
-**Currently**, I'm an environmental data analyst at NASA DEVELOP and National Resources and Ecology Lab, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project is titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
+**Currently**, I'm an environmental data analyst at NASA DEVELOP and Natural Resource and Ecology Laboratory at Colorado State University, working on projects that leverage remote sensing, data science, and machine learning to address environmental issues at scale. My latest project with DEVELOP is titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management."
 
 I'm a recent graduate of the Masters of Environmental Data Science program, from UCSB's Bren School of Environmental Science and Management.
 
