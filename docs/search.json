@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I’m an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management.\n🌎🛰️ Currently, I’m at NASA DEVELOP and the Natural Resource Ecology Laboratory (NREL) at Colorado State University, working on projects that leverage remote sensing and machine learning to understand vegetative landscapes. At DEVELOP, I’m investigating oak tree decline in Illinois, and at NREL, I’m involved in projects that study the use of virtual fencing for rangeland management.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
+    "text": "I’m an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management.\n🌎🛰️ Currently, I’m a Research Associate at Colorado State Univeiisty’s Natural Resource Ecology Laboratory (NREL), working on projects that leverage ecological data, remote sensing and machine learning to understand vegetative landscapes. At NREL, I’m involved in projects that study the use of virtual fencing for rangeland management.\n❄️️🌳🔥 My latest projects through NASA DEVELOP are titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management” and “Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors”"
   },
   {
     "objectID": "index.html#hello-im-flora",
@@ -25,7 +25,7 @@
     "href": "index.html#experience",
     "title": "Flora Hamilton",
     "section": "Experience",
-    "text": "Experience\nEnvironmental Data Analyst | Sept 2024 - Present\nNatural Resource Ecology Lab (NREL), Colorado State University\nGeospatial Data Analyst | Jun 2024 - Nov 2024\nNASA DEVELOP, Goddard Space Flight Center & Colorado Node\nCarbon Data Analyst | Jan 2024 - Jun 2024\nDarn Tough, VT\nData Jam Data Intern | Dec 2022 - Jun 2023\nCary Institute of Ecosystems Studies, NY\nInvestment Specialist | Jul 2021 - April 2022\nOrbit Startups @ SOSV, Taipei, Taiwan"
+    "text": "Experience\nResearch Associate | Sept 2024 - Present\nNatural Resource Ecology Lab (NREL), Colorado State University\nGeospatial Data Analyst | Jun 2024 - Nov 2024\nNASA DEVELOP, Goddard Space Flight Center & Colorado Node\nCarbon Data Analyst | Jan 2024 - Jun 2024\nDarn Tough, VT\nData Jam Data Intern | Dec 2022 - Jun 2023\nCary Institute of Ecosystems Studies, NY\nInvestment Specialist | Jul 2021 - April 2022\nOrbit Startups @ SOSV, Taipei, Taiwan"
   },
   {
     "objectID": "about.html",
@@ -662,7 +662,7 @@
     "href": "index.html#im-flora",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I’m an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management.\n🌎🛰️ Currently, I’m at NASA DEVELOP and the Natural Resource Ecology Laboratory (NREL) at Colorado State University, working on projects that leverage remote sensing and machine learning to understand vegetative landscapes. At DEVELOP, I’m investigating oak tree decline in Illinois, and at NREL, I’m involved in projects that study the use of virtual fencing for rangeland management.\n❄️🔥 My latest project through NASA DEVELOP is titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management.”"
+    "text": "I’m an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management.\n🌎🛰️ Currently, I’m a Research Associate at Colorado State Univeiisty’s Natural Resource Ecology Laboratory (NREL), working on projects that leverage ecological data, remote sensing and machine learning to understand vegetative landscapes. At NREL, I’m involved in projects that study the use of virtual fencing for rangeland management.\n❄️️🌳🔥 My latest projects through NASA DEVELOP are titled, “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management” and “Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors”"
   },
   {
     "objectID": "Projects/2024-02-03-lobsterviz/index.html",
@@ -844,7 +844,7 @@
     "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#visualizing-taiwans-co2e-standing-blog",
     "title": "Visualization Work Highlights",
     "section": "Visualizing Taiwan’s CO2e standing | Blog",
-    "text": "Visualizing Taiwan’s CO2e standing | Blog\n Caption: Infographic of Taiwan’s current standing of carbon emissions. Graph types used include line, bar, and pie charts. Data Source: Climate Trace, OurWorldInData. Visualization created in R.\n Caption: A closer look at Taiwan’s carbon emissions over time. Data Source: Climate Trace, OurWorldInData. Visualization created in R."
+    "text": "Visualizing Taiwan’s CO2e standing | Blog\n Caption: Infographic of Taiwan’s current standing of carbon emissions. Graph types used include line, bar, and pie charts. Data Source: Climate Trace, OurWorldInData. Visualization created in R.\n Caption: A closer look at Taiwan’s carbon emissions over time. Data Source: Climate Trace, OurWorldInData. Visualization created in R.\nStay tuned for more!"
   },
   {
     "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#visualizing-mpa-impact-on-lobster-size-blog",
@@ -872,7 +872,7 @@
     "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#cartography-land-for-maines-future-conservation-grant-proposal",
     "title": "Visualization Work Highlights",
     "section": "Cartography: Land for Maine’s Future: Conservation Grant Proposal",
-    "text": "Cartography: Land for Maine’s Future: Conservation Grant Proposal\n Caption: Map created for Land for Maine’s Future grant proposal. The map shows the location of the proposed land acquisition in relation to other protected lands and geographic features, as well as the proposed land’s ecological features. Map Created in ArcGIS Pro and presented with Google Suites.\nStay tuned for more!"
+    "text": "Cartography: Land for Maine’s Future: Conservation Grant Proposal\n Caption: Map created for Land for Maine’s Future grant proposal. The map shows the location of the proposed land acquisition in relation to other protected lands and geographic features, as well as the proposed land’s ecological features. Map Created in ArcGIS Pro and presented with Google Suites."
   },
   {
     "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#visualizing-oyster-habitat-suitability-on-the-west-coast-us-repo",
@@ -901,5 +901,26 @@
     "title": "About",
     "section": " /Misc/",
     "text": "/Misc/\nOutside of work, you can most likely find me reading, playing the piano, or on a hike!"
+  },
+  {
+    "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#time-series-plots-of-climate-variables-in-southern-illinois",
+    "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#time-series-plots-of-climate-variables-in-southern-illinois",
+    "title": "Visualization Work Highlights",
+    "section": "Time Series Plots of Climate Variables in Southern Illinois",
+    "text": "Time Series Plots of Climate Variables in Southern Illinois\n Caption: As part of my DEVELOP project with NASA, I created time series plots of climate variables in Southern Illinois (temperature, drought, precipitation). The plots show the spring/winter trends in drought stress. Data Source: GridMET 4km Daily SPI (90 day). Visualization created in R."
+  },
+  {
+    "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#white-oak-mortality-risk-map-for-southern-illinois",
+    "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#white-oak-mortality-risk-map-for-southern-illinois",
+    "title": "Visualization Work Highlights",
+    "section": "White Oak Mortality Risk Map for Southern Illinois",
+    "text": "White Oak Mortality Risk Map for Southern Illinois\n Caption: As part of my DEVELOP project with NASA, my team and I developed a map of white oak mortality risk in Southern Illinois to support the Morton Arboretum. The map shows the risk of white oak mortality based on climate variables, topographic conditions, vegetation change, and proximity to commercial croplands. This map is meant to be viewed in a GeoPDF format. Visualization created in ArcGIS."
+  },
+  {
+    "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#land-for-maines-future-conservation-grant-proposal",
+    "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#land-for-maines-future-conservation-grant-proposal",
+    "title": "Visualization Work Highlights",
+    "section": "Land for Maine’s Future: Conservation Grant Proposal",
+    "text": "Land for Maine’s Future: Conservation Grant Proposal\n Caption: Map created for Land for Maine’s Future grant proposal. The map shows the location of the proposed land acquisition in relation to other protected lands and geographic features, as well as the proposed land’s ecological features. Map Created in ArcGIS Pro and presented with Google Suites."
   }
 ]
