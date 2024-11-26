@@ -50,7 +50,7 @@ I will be updating this page with new visualizations as I create them. Stay tune
 
 
 ![](time-series-climate.png)
-**Caption:** As part of my DEVELOP project with NASA, I created time series plots of climate variables in Southern Illinois (temperature, drought, precipitation). The plots show the spring/winter trends in drought stress. Data Source: GridMET 4km Daily SPI (90 day). Visualization created in R.
+**Caption:** As part of my DEVELOP project with NASA, I created time series plots of climate variables in Southern Illinois (temperature, drought, precipitation). The plots show the average maximum summer drought stress across time. Data Source: GridMET 4km Daily SPI (90 day). Visualization created in R, data acquired from ClimateEngine. 
 
 ## White Oak Mortality Risk Map for Southern Illinois 
 

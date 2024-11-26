@@ -907,7 +907,7 @@
     "href": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#time-series-plots-of-climate-variables-in-southern-illinois",
     "title": "Visualization Work Highlights",
     "section": "Time Series Plots of Climate Variables in Southern Illinois",
-    "text": "Time Series Plots of Climate Variables in Southern Illinois\n Caption: As part of my DEVELOP project with NASA, I created time series plots of climate variables in Southern Illinois (temperature, drought, precipitation). The plots show the spring/winter trends in drought stress. Data Source: GridMET 4km Daily SPI (90 day). Visualization created in R."
+    "text": "Time Series Plots of Climate Variables in Southern Illinois\n Caption: As part of my DEVELOP project with NASA, I created time series plots of climate variables in Southern Illinois (temperature, drought, precipitation). The plots show the average maximum summer drought stress across time. Data Source: GridMET 4km Daily SPI (90 day). Visualization created in R, data acquired from ClimateEngine."
   },
   {
     "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#white-oak-mortality-risk-map-for-southern-illinois",
