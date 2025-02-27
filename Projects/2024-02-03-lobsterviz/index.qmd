@@ -26,8 +26,7 @@ image: preview-image.png
 
 1\) Abundance and size data collected annually by divers in late summer before the start of the fishing season at five SBC LTER long term kelp forest study sites: two within MPAs (Naples and Isla Vista) and three outside (Arroyo Quemado, Mohawk and Carpinteria).
 
-![](spatial-coverage)
-Caption: Unlabeled spatial coverage of the five SBC LTER sites where lobster size and abundance data were collected. Two sites (NAPL and IVEE) are within Marine Protected Areas (MPAs) established in 2012, while three sites (CARP, MOHK, AQUE) are outside of MPAs.
+![](spatial-coverage) Caption: Unlabeled spatial coverage of the five SBC LTER sites where lobster size and abundance data were collected. Two sites (NAPL and IVEE) are within Marine Protected Areas (MPAs) established in 2012, while three sites (CARP, MOHK, AQUE) are outside of MPAs.
 
 2\) Fishing pressure, as determined by counting the number of commercial trap floats. Data are collected every two to four weeks during the lobster fishing season (October to March) at nine sites along the mainland, eight of which are also SBC LTER long-term kelp forest study reefs
 
@@ -64,14 +63,13 @@ lobster_data <- read_csv("https://portal.edirepository.org/nis/dataviewer?packag
 
 ```
 
-basic data exploration (e.g. using `str()` / `glimpse()` / `View()`, looking for unique factor levels, etc.). 
+basic data exploration (e.g. using `str()` / `glimpse()` / `View()`, looking for unique factor levels, etc.).
 
 ```{r, message = FALSE}
 #| eval: false
 #| echo: true
 
 glimpse(lobster_data) ##look at the data 
-View(lobster_data)
 unique(lobster_data$REPLICATE) # Just A-D
 names(lobster_data) #return all column names 
 
@@ -133,18 +131,20 @@ View(lobster_df_unpacked)
 print(sum(lobster_df$count) == nrow(lobster_df_unpacked)) 
 ```
 
-## From this step, I can see a few things: 
-    My variables of interested are:
-    - site: character (chr)
-    - size_mm: numeric (num)
-    - year: numeric (num)
+## From this step, I can see a few things:
 
+```         
+My variables of interested are:
+- site: character (chr)
+- size_mm: numeric (num)
+- year: numeric (num)
+```
 
-It may be important to show sample size, because looking at the data, I see that the CARP site in 2022 has a bigger range in count than other sites. This may show not only stronger evidence of a change in size, but also count, possibly due to the establishment of MPAs. The design of this graphic will have to intentionally incorporate the dimensions and factors of each dimension in play -- time, 5 different sites, lobster length, potential need to demonstrate sample size, etc. It will also be important to distinguish MPA's from non-MPA's. 
+It may be important to show sample size, because looking at the data, I see that the CARP site in 2022 has a bigger range in count than other sites. This may show not only stronger evidence of a change in size, but also count, possibly due to the establishment of MPAs. The design of this graphic will have to intentionally incorporate the dimensions and factors of each dimension in play -- time, 5 different sites, lobster length, potential need to demonstrate sample size, etc. It will also be important to distinguish MPA's from non-MPA's.
 
 ## Data visualization
 
-I ended up doing the following to update my plot: 
+I ended up doing the following to update my plot:
 
 -   updated axis text
 -   removed minor and major grid-lines
@@ -263,7 +263,6 @@ print(ridgeline_plots)
 
 # Presenting the visualization
 
-I finalized my work by highlighting the key points of interest and adding graphics to enhance viewer understanding. This step could have also been done in R, but for the sake of time, I chose to do it in an image editing software! 
+I finalized my work by highlighting the key points of interest and adding graphics to enhance viewer understanding. This step could have also been done in R, but for the sake of time, I chose to do it in an image editing software!
 
 ![](lobster-final.png)
-
