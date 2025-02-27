@@ -25,7 +25,7 @@ html:
 
 🐄 Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My work integrates datasets from varied sources, remote sensing technology, and machine learning to analyze landscape patterns and support evidence-based management strategies.
 
-🛰️ In 2024, I worked on two NASA DEVELOP papers: ["Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management"](https://ntrs.nasa.gov/citations/20240009568) and "Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors" (review pending).
+🛰️ Previous to my current position, I authored two NASA DEVELOP papers in 2024: ["Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management"](https://ntrs.nasa.gov/citations/20240009568) and "Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors" (review pending). I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.
 
 💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling
 
