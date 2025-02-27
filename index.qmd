@@ -21,39 +21,39 @@ html:
 
 ## I'm Flora 🌿
 
-**I'm an environmental data scientist who is enthusiastic about leveraging data at scale to provide insights for thoughtful environmental management.**
+**I transform geospatial and ecological data into actionable insights for environmental decision-making.**
 
-🌎🛰️ Currently, I'm a Research Associate at Colorado State Univeiisty's Natural Resource Ecology Laboratory (NREL), working on projects that leverage ecological data, remote sensing and machine learning to understand vegetative landscapes. At NREL, I'm involved in projects that study the use of virtual fencing for rangeland management. 
+🐄 Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My work integrates datasets from varied sources, remote sensing technology, and machine learning to analyze landscape patterns and support evidence-based management strategies.
 
-❄️️🌳🔥 My latest projects through NASA DEVELOP are titled, "Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management" and "Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors" 
+🛰️ In 2024, I worked on two NASA DEVELOP papers: ["Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management"](https://ntrs.nasa.gov/citations/20240009568) and "Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors" (review pending).
 
+💻 \*\*Technical Skills\*\*: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling
 
 ------------------------------------------------------------------------
 
 ## Experience
 
- **Research Associate**  \| Sept 2024 - Present \
+**Research Associate** \| Sept 2024 - Present\
 Natural Resource Ecology Lab (NREL), Colorado State University
 
- **Geospatial Data Analyst**  \| Jun 2024 - Nov 2024 \
+**Geospatial Data Analyst** \| Jun 2024 - Nov 2024\
 NASA DEVELOP, Goddard Space Flight Center & Colorado Node
 
- **Carbon Data Analyst** \| Jan 2024 - Jun 2024 \
-Darn Tough, VT 
+**Carbon Data Analyst** \| Jan 2024 - Jun 2024\
+Darn Tough, VT
 
- **Data Jam Data Intern** \| Dec 2022 - Jun 2023 \
+**Data Jam Data Intern** \| Dec 2022 - Jun 2023\
 Cary Institute of Ecosystems Studies, NY
 
- **Investment Specialist** \| Jul 2021 - April 2022 \
-Orbit Startups @ SOSV, Taipei, Taiwan
+**Investment Specialist** \| Jul 2021 - April 2022\
+Orbit Startups \@ SOSV, Taipei, Taiwan
 
 ------------------------------------------------------------------------
 
 ## Education
 
-**Master of Environmental Data Science** | June 2024 \
-**Bren School of Environmental Science & Management, UCSB** \
+**Master of Environmental Data Science** \| June 2024\
+**Bren School of Environmental Science & Management, UCSB**\
 
-**BA in Mathematics and Environmental Studies, Economics Minor** | May 2021 \
-Bowdoin College, Brunswick, ME 
-
+**BA in Mathematics and Environmental Studies, Economics Minor** \| May 2021\
+Bowdoin College, Brunswick, ME
