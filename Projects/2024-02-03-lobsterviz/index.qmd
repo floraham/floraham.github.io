@@ -125,7 +125,6 @@ lobster_df <- lobster_df %>% janitor::clean_names()
 lobster_df_unpacked <- lobster_df %>%  uncount(weights = count)
 
 # View the resulting dataframe
-View(lobster_df_unpacked)
 
 ### CHECKING WORK 
 print(sum(lobster_df$count) == nrow(lobster_df_unpacked)) 
