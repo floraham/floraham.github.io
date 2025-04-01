@@ -456,7 +456,6 @@ g_final <- g_base +
   )
 ```
 
-
 ```{r message = FALSE, warning = FALSE, include = FALSE}
 ggsave(plot = g_final, filename = "~/Documents/2_Areas/Areas_MEDS/Winter_Quarter/Data_Viz_240/HWs/hamilton-eds240-HW4/final_work/pre_final.png", height = 10, width = 16)
 
