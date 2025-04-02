@@ -8,9 +8,9 @@ Curently, I'm an environmental data analyst at CSU's Natural Resource and Ecolog
 
 ## {{< fa clock-rotate-left >}}
 
-I grew up in Taiwan, where on weekends, my family would take adventures through the island's deep mountains. Taiwan's mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. My early acquaintance with beetles, cicada, shy grass ([Mimosa pudica](https://en.wikipedia.org/wiki/Mimosa_pudica)), and monkeys fostered a life-long appreciation for productive ecosystems and the natural world.
+I grew up in Taiwan, where on weekends, my family would take adventures through the island's deep mountains. Taiwan's mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. My early acquaintance with beetles, cicada, shy grass ([Mimosa pudica](https://en.wikipedia.org/wiki/Mimosa_pudica)), and Formosan Rock Macaques monkeys fostered a life-long appreciation for productive ecosystems and the natural world.
 
-I graduated from Bowdoin College in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path then took me back to Taipei, where I worked with tech startups through SOSV, a venture capital, developing an interest in using technology to solve problems at scale. In 2024, I completed my master's in Environmental Data Science from the Bren School, culminating in the development of an emissions model for Darn Tough, Vermont.\
+I graduated from Bowdoin College in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path then took me back to Taipei, where I worked with tech startups through SOSV, a venture capital, developing an interest in using technology to problem solve at scale. In 2024, I completed my master's in Environmental Data Science from the Bren School, culminating in the development of an emissions model for Darn Tough, Vermont.\
 \
 Building on this foundation, I joined NASA's DEVELOP program, where I applied machine-learning, remote-sensing methods, and my geoprogramming skillset to advance scientific knowledge and extract value from data. This work directly supported the management of critical environmental systems.
 
