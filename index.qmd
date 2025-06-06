@@ -23,9 +23,9 @@ html:
 
 **I transform geospatial and ecological data into actionable insights for environmental decision-making.**
 
-🐄 Currently, I'm a Research Analyst at Colorado State University's Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My current work integrates datasets from varied sources, remote sensing technology, and machine learning to analyze landscape patterns and support evidence-based management strategies.
+🐄 Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My current work integrates datasets from field samples, remote sensing technology, and other sources to analyze landscape patterns and support evidence-based management strategies.
 
-🛰️ Previous to my current position, I authoredin  two NASA DEVELOP papers in 2024: ["Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management"](https://ntrs.nasa.gov/citations/20240009568) and "Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors" (review pending). I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.
+🛰️ Previous to my current position, I authored in two NASA DEVELOP papers in 2024: ["Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management"](https://ntrs.nasa.gov/citations/20240009568) and "[Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors](https://ntrs.nasa.gov/api/citations/20250004216/downloads/2024Fall_GSFC_IllinoisEco_TechPaper_FD-final.pdf)." I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.
 
 💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
 
@@ -33,8 +33,10 @@ html:
 
 ## Experience
 
-**Research Analyst** \| Sept 2024 - Present\
+**Research Associate** \| June 2025 - Present\
 Natural Resource Ecology Lab (NREL), Colorado State University
+
+-   **Research Analyst** \| Sept 2024 - May 2025
 
 **Geospatial Data Analyst** \| Jun 2024 - Nov 2024\
 NASA DEVELOP, Goddard Space Flight Center & Colorado Node
@@ -45,6 +47,9 @@ Darn Tough, VT
 **Data Jam Data Intern** \| Dec 2022 - Jun 2023\
 Cary Institute of Ecosystems Studies, NY
 
+**Environmental Analyst (Contract)** \| Aug 2022 - Oct 2022\
+Open Sensory LLC, Portland, OR
+
 **Investment Specialist** \| Jul 2021 - April 2022\
 Orbit Startups \@ SOSV, Taipei, Taiwan
 
@@ -53,7 +58,7 @@ Orbit Startups \@ SOSV, Taipei, Taiwan
 ## Education
 
 **Master of Environmental Data Science** \| June 2024\
-**Bren School of Environmental Science & Management, UCSB**\
+**Bren School of Environmental Science & Management, UCSB**
 
 **BA in Mathematics and Environmental Studies, Economics Minor** \| May 2021\
 Bowdoin College, Brunswick, ME

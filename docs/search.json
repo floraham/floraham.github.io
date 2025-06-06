@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I transform geospatial and ecological data into actionable insights for environmental decision-making.\n🐄 Currently, I’m a Research Analyst at Colorado State University’s Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My current work integrates datasets from varied sources, remote sensing technology, and machine learning to analyze landscape patterns and support evidence-based management strategies.\n🛰️ Previous to my current position, I authoredin two NASA DEVELOP papers in 2024: “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management” and “Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors” (review pending). I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.\n💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
+    "text": "I transform geospatial and ecological data into actionable insights for environmental decision-making.\n🐄 Currently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My current work integrates datasets from field samples, remote sensing technology, and other sources to analyze landscape patterns and support evidence-based management strategies.\n🛰️ Previous to my current position, I authored in two NASA DEVELOP papers in 2024: “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management” and “Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors.” I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.\n💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
   },
   {
     "objectID": "index.html#hello-im-flora",
@@ -18,21 +18,21 @@
     "href": "index.html#education",
     "title": "Flora Hamilton",
     "section": "Education",
-    "text": "Education\nMaster of Environmental Data Science | June 2024\nBren School of Environmental Science & Management, UCSB\n\nBA in Mathematics and Environmental Studies, Economics Minor | May 2021\nBowdoin College, Brunswick, ME"
+    "text": "Education\nMaster of Environmental Data Science | June 2024\nBren School of Environmental Science & Management, UCSB\nBA in Mathematics and Environmental Studies, Economics Minor | May 2021\nBowdoin College, Brunswick, ME"
   },
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
     "title": "Flora Hamilton",
     "section": "Experience",
-    "text": "Experience\nResearch Analyst | Sept 2024 - Present\nNatural Resource Ecology Lab (NREL), Colorado State University\nGeospatial Data Analyst | Jun 2024 - Nov 2024\nNASA DEVELOP, Goddard Space Flight Center & Colorado Node\nCarbon Data Analyst | Jan 2024 - Jun 2024\nDarn Tough, VT\nData Jam Data Intern | Dec 2022 - Jun 2023\nCary Institute of Ecosystems Studies, NY\nInvestment Specialist | Jul 2021 - April 2022\nOrbit Startups @ SOSV, Taipei, Taiwan"
+    "text": "Experience\nResearch Associate | June 2025 - Present\nNatural Resource Ecology Lab (NREL), Colorado State University\n\nResearch Analyst | Sept 2024 - May 2025\n\nGeospatial Data Analyst | Jun 2024 - Nov 2024\nNASA DEVELOP, Goddard Space Flight Center & Colorado Node\nCarbon Data Analyst | Jan 2024 - Jun 2024\nDarn Tough, VT\nData Jam Data Intern | Dec 2022 - Jun 2023\nCary Institute of Ecosystems Studies, NY\nEnvironmental Analyst (Contract) | Aug 2022 - Oct 2022\nOpen Sensory LLC, Portland, OR\nInvestment Specialist | Jul 2021 - April 2022\nOrbit Startups @ SOSV, Taipei, Taiwan"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Curently, I’m an environmental data analyst at CSU’s Natural Resource and Ecology Laboratory, contributing to rangeland management projects that leverage virtual fencing technology. I leverage data science and statistical modeling to analyze integrated remotely sensed and field sampled datasets, evaluating the ecological impacts of virtual fencing initiatives across Colorado landscapes. Previous to NREL, I completed two NASA DEVELOP projects following the completion of my masters in environmental data science at the Bren School."
+    "text": "Curently, I’m an Ecological Research Associate at CSU’s Natural Resource and Ecology Laboratory, contributing to rangeland management projects. I use data science and statistical modeling to analyze integrated remotely sensed and field sampled datasets, evaluating the ecological impacts of ecosystem management initiatives across Colorado landscapes. Previous to NREL, I completed two NASA DEVELOP projects following the completion of my masters in environmental data science at the Bren School."
   },
   {
     "objectID": "blog.html",
@@ -662,7 +662,7 @@
     "href": "index.html#im-flora",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I transform geospatial and ecological data into actionable insights for environmental decision-making.\n🐄 Currently, I’m a Research Analyst at Colorado State University’s Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My current work integrates datasets from varied sources, remote sensing technology, and machine learning to analyze landscape patterns and support evidence-based management strategies.\n🛰️ Previous to my current position, I authoredin two NASA DEVELOP papers in 2024: “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management” and “Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors” (review pending). I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.\n💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
+    "text": "I transform geospatial and ecological data into actionable insights for environmental decision-making.\n🐄 Currently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL), supporting rangeland management projects. My current work integrates datasets from field samples, remote sensing technology, and other sources to analyze landscape patterns and support evidence-based management strategies.\n🛰️ Previous to my current position, I authored in two NASA DEVELOP papers in 2024: “Using Satellite Observations to Assess Relationships between Snowpack and Wildfires in Colorado for Land and Water Utility Management” and “Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors.” I also earned a Master of Environmental Data Science in 2024, culminating my degree in launching a reproducible carbon emissions accounting tool for Darn Tough, Vermont.\n💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
   },
   {
     "objectID": "Projects/2024-02-03-lobsterviz/index.html",
@@ -886,21 +886,21 @@
     "href": "about.html#fa-code-currently",
     "title": "About",
     "section": "",
-    "text": "Curently, I’m an environmental data analyst at CSU’s Natural Resource and Ecology Laboratory, contributing to rangeland management projects that leverage virtual fencing technology. I leverage data science and statistical modeling to analyze integrated remotely sensed and field sampled datasets, evaluating the ecological impacts of virtual fencing initiatives across Colorado landscapes. Previous to NREL, I completed two NASA DEVELOP projects following the completion of my masters in environmental data science at the Bren School."
+    "text": "Curently, I’m an Ecological Research Associate at CSU’s Natural Resource and Ecology Laboratory, contributing to rangeland management projects. I use data science and statistical modeling to analyze integrated remotely sensed and field sampled datasets, evaluating the ecological impacts of ecosystem management initiatives across Colorado landscapes. Previous to NREL, I completed two NASA DEVELOP projects following the completion of my masters in environmental data science at the Bren School."
   },
   {
     "objectID": "about.html#fa-clock-rotate-left",
     "href": "about.html#fa-clock-rotate-left",
     "title": "About",
     "section": "",
-    "text": "I grew up in Taiwan, where on weekends, my family would take adventures through the island’s deep mountains. Taiwan’s mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. My early acquaintance with beetles, cicada, shy grass (Mimosa pudica), and Formosan Rock Macaques monkeys fostered a life-long appreciation for productive ecosystems and the natural world.\nI graduated from Bowdoin College in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path then took me back to Taipei, where I worked with tech startups through SOSV, a venture capital, developing an interest in using technology to problem solve at scale. In 2024, I completed my master’s in Environmental Data Science from the Bren School, culminating in the development of an emissions model for Darn Tough, Vermont.\n\nBuilding on this foundation, I joined NASA’s DEVELOP program, where I applied machine-learning, remote-sensing methods, and my geoprogramming skillset to advance scientific knowledge and extract value from data. This work directly supported the management of critical environmental systems."
+    "text": "I grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan’s mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon’s high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — cicada, banyan trees, and Formosan Rock Macaques monkeys in Taiwan— and redwoods, salmon berries, and Columbia Sturgeon (to name a few) in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world.\nI graduated from Maine’s Bowdoin College in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path first took me back to Taipei, where I worked with tech startups through SOSV, a venture capital, developing an interest in applying technology to problem solve at scale. In 2024, I completed my master’s in Environmental Data Science from the Bren School in Santa Barbara, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.\n\nBuilding on this foundation, I joined NASA’s DEVELOP program, where I applied machine-learning, remote-sensing methods, and my geoprogramming skillset to support the understanding and management of critical environmental systems. Now, you can find me contributing to research and supporting the partners of the Natural Resource Ecology Laboratory."
   },
   {
     "objectID": "about.html#fa-shuttle-space-misc",
     "href": "about.html#fa-shuttle-space-misc",
     "title": "About",
     "section": " /Misc/",
-    "text": "/Misc/\nOutside of work, you can most likely find me reading science fiction and history, playing the piano, or volunteering."
+    "text": "/Misc/\nOutside of work, you can most likely find me reading science fiction and history, playing the piano, or on a hike."
   },
   {
     "objectID": "Projects/2024-08-29-best-of-viz/best-of-vizualizations.html#time-series-plots-of-climate-variables-in-southern-illinois",
