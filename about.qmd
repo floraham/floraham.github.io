@@ -4,16 +4,18 @@ title: "About"
 
 ## {{< fa code >}} Currently...
 
-Curently, I'm an Ecological Research Associate at CSU's Natural Resource and Ecology Laboratory, contributing to rangeland management projects. I use data science and statistical modeling to analyze integrated remotely sensed and field sampled datasets, evaluating the ecological impacts of ecosystem management initiatives across Colorado landscapes. Previous to NREL, I completed two NASA DEVELOP projects following the completion of my masters in environmental data science at the Bren School.
+Curently, I'm an Ecological Research Associate at CSU's Natural Resource and Ecology Laboratory, contributing to rangeland management projects and more. I use data science methods, geoprogramming, and machine learning to synthesize both remotely sensed and field sampled datasets, evaluating field conditions and management project impacts.
 
-## {{< fa clock-rotate-left >}}
+I am passionate about technical research, bridging data science to stakeholders, and exploring the vast world of quantitative ecology.
 
-I grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan's mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon's high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — cicada, banyan trees, and Formosan Rock Macaques monkeys in Taiwan— and redwoods, salmon berries, and Columbia Sturgeon (to name a few) in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world.
+{{< fa clock-rotate-left >}}
 
-I graduated from Maine's Bowdoin College in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path first took me back to Taipei, where I worked with tech startups through SOSV, a venture capital, developing an interest in applying technology to problem solve at scale. In 2024, I completed my master's in Environmental Data Science from the Bren School in Santa Barbara, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.\
-\
-Building on this foundation, I joined NASA's DEVELOP program, where I applied machine-learning, remote-sensing methods, and my geoprogramming skillset to support the understanding and management of critical environmental systems. Now, you can find me contributing to research and supporting the partners of the Natural Resource Ecology Laboratory.
+I grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan's mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon's high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — mangrove forests, banyan trees, and Formosan Rock Macaques monkeys in Taiwan— and redwoods, salmon berries, and Columbia Sturgeon (to name a few) in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world.
+
+I graduated from Maine's Bowdoin College in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path first took me back to Taipei, where I worked with tech startups through SOSV, a multinational venture capital, developing an interest in applying technology to problem solve at scale. In 2024, I completed my master's in Environmental Data Science from the Bren School in Santa Barbara, culminating in the development of a reproducible emissions model for Darn Tough, Vermont. After graduation, I joined NASA's DEVELOP program to support the understanding and management of critical environmental systems, like alpine forests in the Rocky Mountains and oak stands in the Midwest, and met the team at NREL.
 
 ## {{< fa shuttle-space >}} /Misc/
 
-Outside of work, you can most likely find me reading science fiction and history, playing the piano, or on a hike.
+Outside of work, you can most likely find me reading science fiction, tangled up in music theory, or on a hike!
+
+## 
