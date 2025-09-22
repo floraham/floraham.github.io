@@ -19,17 +19,13 @@ html:
   page-layout: full
 ---
 
-##  
-
 #### **Hello! I'm Flora 🌾**
 
 **I'm an environmental data scientist supporting science-based management of environmental systems using geoprogramming, data analysis, and data science.**
 
-Currently, I'm a Research Associate at Colorado State University's [Natural Resource Ecology Laboratory (NREL)](https://www.nrel.colostate.edu/), supporting rangeland management research. My current work integrates datasets from field samples, remote sensing technology, and other sources to analyze landscape patterns and support evidence-based management strategies.
+Currently, I'm a Research Associate at Colorado State University's [Natural Resource Ecology Laboratory (NREL)](https://www.nrel.colostate.edu/), supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), and other sources to analyze ecological patterns and support evidence-based landscape management strategies.
 
-How did I get here? My interest in quantitative environmental research began at Bowdoin College, where I earned a B.A. in environmental studies and mathematics, and discovered geospatial and remote sensing methods. My experiences on the investment team at SOSV, my data analyst internship with Cary Institute of Ecosystem Studies, and short term contracts with Open Sensory led me to unite my various experiences through a Master's in Environmental Data Science at the Bren School in 2024. This culminated in contributing to two terms of NASA DEVELOP – check out my papers ❄️[here](https://ntrs.nasa.gov/citations/20240009568) and 🪾[here](https://ntrs.nasa.gov/api/citations/20250004216/downloads/2024Fall_GSFC_IllinoisEco_TechPaper_FD-final.pdf), and was also how I got to know the research team at NREL.
-
-💻 Technical Skills: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
+💻 🧰 🔧: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
 
 ------------------------------------------------------------------------
 
