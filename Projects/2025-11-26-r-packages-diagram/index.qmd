@@ -17,7 +17,7 @@ format: html
 
 With thousands of packages to choose from in a constantly changing landscape, choosing the right R package can often feel pretty dizzying.
 
-To make sense and help navigate the complexity of this rich "toolbox-ecosystem", I've created a static network diagram that organizes some of the common data science and analytics themes that I encounter frequently, and packages that support them. There are parts of the diagram that are more familiar to me, and others less so, but I've tried to capture some of the most used and popular packages for those purposes as well.
+To make sense and help navigate the complexity of this rich "toolbox-ecosystem", I've created a static network diagram that organizes some of the common data science and analytics themes that I encounter frequently, and packages that support them. There are parts of the diagram that are more familiar to me, and others less so, but in general I've tried to capture some of the most used and popular packages.
 
 ## Complexity of Choice
 
@@ -47,7 +47,7 @@ Packages like `httr`, `jsonlite`, and `readxl` enable data retrieval from divers
 
 Tools like `tidyr`, `janitor`, and `recipes` help clean and prepare data, ensuring quality and reliability before deeper analysis.
 
-#### Exploration & Analysis 
+#### Exploration & Analysis
 
 The `dplyr` and `ggplot2` ecosystem forms the core of data manipulation and visualization. These packages allow data scientists to explore, understand, and communicate data narratives effectively.
 
@@ -71,7 +71,7 @@ Clusters of statistical packages demonstrate R's analytical depth. From `BayesFa
 
 By organizing my mental map of the R landscape and putting it on digital paper, this project serves as my future reference guide, as well as a motivation to reflect on the various packages I've encountered over the years. I also wanted to share this diagram with the world since I couldn't really find any resources like this one on the internet and would've appreciated one earlier!
 
-Also, this idea is still seedling. I would love to expand on this project and create a dynamic diagram. In a future iteration, I can imagine the following things:
+Also, this idea is still a seedling. I would love to expand on this project and create a dynamic diagram. In a future iteration, I can imagine the following things:
 
 -   Clicking into each node and checking out the summary and resources associated with the package or method
 
