@@ -1,0 +1,544 @@
+{
+  "nodes": [
+    {
+      "id": "MODELING & MACHINE LEARNING"
+    },
+    {
+      "id": "REPORTING & COMMUNICATION"
+    },
+    {
+      "id": "FEATURE ENGINEERING"
+    },
+    {
+      "id": "MODEL DEPLOYMENT"
+    },
+    {
+      "id": "DATA EXPLORATION & ANALYSIS (EDA)"
+    },
+    {
+      "id": "DATA MANAGEMENT & ORGANIZATION"
+    },
+    {
+      "id": "MODEL EVALUATION"
+    },
+    {
+      "id": "GENERAL MODELING FRAMEWORKS/ML MODELING"
+    },
+    {
+      "id": "REPRODUCIBILITY/DEBUGGING"
+    },
+    {
+      "id": "REPRODUCIBILITY/REPRODUCIBILITY"
+    },
+    {
+      "id": "REPRODUCIBILITY/renv"
+    },
+    {
+      "id": "Data Cleaning/DATA CLEANING"
+    },
+    {
+      "id": "Geospatial Data Analysis/SPATIAL MAPPING"
+    },
+    {
+      "id": "Geospatial Data Analysis/SPATIAL STRUCTURES"
+    },
+    {
+      "id": "Geospatial Data Analysis/SPATIAL ANALYSIS"
+    },
+    {
+      "id": "Geospatial Data Analysis/GEOSPATIAL DATA ANALYSIS"
+    },
+    {
+      "id": "Data Importing & Acquisition/flat files"
+    },
+    {
+      "id": "Data Importing & Acquisition/web scraping & API"
+    },
+    {
+      "id": "Data Importing & Acquisition/DATA ACQUISITION"
+    },
+    {
+      "id": "STATISTICAL MODELING/STATISTICAL MODELING"
+    },
+    {
+      "id": "STATISTICAL MODELING/MIXED-EFFECTS MODELS"
+    },
+    {
+      "id": "STATISTICAL MODELING/TIME SERIES ANALYSIS"
+    },
+    {
+      "id": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS"
+    },
+    {
+      "id": "STATISTICAL MODELING/BAYESIAN STATISTICS"
+    },
+    {
+      "id": "STATISTICAL MODELING/STATS & INFERENCE"
+    },
+    {
+      "id": "STATISTICAL MODELING/MULTIVARIATE STATISTICS"
+    }
+  ],
+  "links": [
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "ML MODELING"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "SPECIFIC ML ALGORITHMS"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "randomForest"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "ranger"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "xgboost"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "lightgbm"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "glmnet"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "torch"
+    },
+    {
+      "source": "MODELING & MACHINE LEARNING",
+      "target": "forecast"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "REPRODUCIBILITY"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "rmarkdown"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "quarto"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "knitr"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "shiny"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "ggplot2"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "patchwork"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "kableExtra"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "tables"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "bookdown"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "here"
+    },
+    {
+      "source": "REPORTING & COMMUNICATION",
+      "target": "projecttemplate"
+    },
+    {
+      "source": "FEATURE ENGINEERING",
+      "target": "recipes"
+    },
+    {
+      "source": "FEATURE ENGINEERING",
+      "target": "tidytext"
+    },
+    {
+      "source": "FEATURE ENGINEERING",
+      "target": "text2vec"
+    },
+    {
+      "source": "MODEL DEPLOYMENT",
+      "target": "plumber"
+    },
+    {
+      "source": "MODEL DEPLOYMENT",
+      "target": "shiny"
+    },
+    {
+      "source": "MODEL DEPLOYMENT",
+      "target": "vetiver"
+    },
+    {
+      "source": "DATA EXPLORATION & ANALYSIS (EDA)",
+      "target": "ggplot2"
+    },
+    {
+      "source": "DATA EXPLORATION & ANALYSIS (EDA)",
+      "target": "rcolorbrewer"
+    },
+    {
+      "source": "DATA EXPLORATION & ANALYSIS (EDA)",
+      "target": "corrplot"
+    },
+    {
+      "source": "DATA EXPLORATION & ANALYSIS (EDA)",
+      "target": "dplyr"
+    },
+    {
+      "source": "DATA EXPLORATION & ANALYSIS (EDA)",
+      "target": "ggfortify"
+    },
+    {
+      "source": "DATA EXPLORATION & ANALYSIS (EDA)",
+      "target": "plotly"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "tidyverse"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "dplyr"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "visdat"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "tibble"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "janitor"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "lubridate"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "anytime"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "stringr"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "forcats"
+    },
+    {
+      "source": "DATA MANAGEMENT & ORGANIZATION",
+      "target": "reclin"
+    },
+    {
+      "source": "MODEL EVALUATION",
+      "target": "yardstick"
+    },
+    {
+      "source": "MODEL EVALUATION",
+      "target": "performance"
+    },
+    {
+      "source": "MODEL EVALUATION",
+      "target": "vip"
+    },
+    {
+      "source": "MODEL EVALUATION",
+      "target": "DALEX"
+    },
+    {
+      "source": "MODEL EVALUATION",
+      "target": "pROC"
+    },
+    {
+      "source": "GENERAL MODELING FRAMEWORKS/ML MODELING",
+      "target": "tidymodels"
+    },
+    {
+      "source": "GENERAL MODELING FRAMEWORKS/ML MODELING",
+      "target": "parsnip"
+    },
+    {
+      "source": "GENERAL MODELING FRAMEWORKS/ML MODELING",
+      "target": "workflows"
+    },
+    {
+      "source": "GENERAL MODELING FRAMEWORKS/ML MODELING",
+      "target": "tune"
+    },
+    {
+      "source": "GENERAL MODELING FRAMEWORKS/ML MODELING",
+      "target": "rsample"
+    },
+    {
+      "source": "GENERAL MODELING FRAMEWORKS/ML MODELING",
+      "target": "yardstick"
+    },
+    {
+      "source": "REPRODUCIBILITY/DEBUGGING",
+      "target": "REPRODUCIBILITY"
+    },
+    {
+      "source": "REPRODUCIBILITY/DEBUGGING",
+      "target": "testthat"
+    },
+    {
+      "source": "REPRODUCIBILITY/REPRODUCIBILITY",
+      "target": "renv"
+    },
+    {
+      "source": "REPRODUCIBILITY/REPRODUCIBILITY",
+      "target": "targets"
+    },
+    {
+      "source": "REPRODUCIBILITY/REPRODUCIBILITY",
+      "target": "usethis"
+    },
+    {
+      "source": "REPRODUCIBILITY/REPRODUCIBILITY",
+      "target": "roxygen2"
+    },
+    {
+      "source": "REPRODUCIBILITY/REPRODUCIBILITY",
+      "target": "rmarkdown"
+    },
+    {
+      "source": "REPRODUCIBILITY/REPRODUCIBILITY",
+      "target": "quarto"
+    },
+    {
+      "source": "Data Cleaning/DATA CLEANING",
+      "target": "janitor"
+    },
+    {
+      "source": "Data Cleaning/DATA CLEANING",
+      "target": "tidyverse"
+    },
+    {
+      "source": "Data Cleaning/DATA CLEANING",
+      "target": "assertthat"
+    },
+    {
+      "source": "Data Cleaning/DATA CLEANING",
+      "target": "recipes"
+    },
+    {
+      "source": "Data Cleaning/DATA CLEANING",
+      "target": "skimr"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL MAPPING",
+      "target": "GEOSPATIAL DATA ANALYSIS"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL MAPPING",
+      "target": "leaflet"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL MAPPING",
+      "target": "mapview"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL MAPPING",
+      "target": "tmap"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL STRUCTURES",
+      "target": "GEOSPATIAL DATA ANALYSIS"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL STRUCTURES",
+      "target": "terra"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL STRUCTURES",
+      "target": "sf"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL STRUCTURES",
+      "target": "stars"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL ANALYSIS",
+      "target": "GEOSPATIAL DATA ANALYSIS"
+    },
+    {
+      "source": "Geospatial Data Analysis/SPATIAL ANALYSIS",
+      "target": "spatstat"
+    },
+    {
+      "source": "Data Importing & Acquisition/flat files",
+      "target": "readxl"
+    },
+    {
+      "source": "Data Importing & Acquisition/flat files",
+      "target": "readr"
+    },
+    {
+      "source": "Data Importing & Acquisition/web scraping & API",
+      "target": "DATA ACQUISITION"
+    },
+    {
+      "source": "Data Importing & Acquisition/web scraping & API",
+      "target": "httr"
+    },
+    {
+      "source": "Data Importing & Acquisition/web scraping & API",
+      "target": "jsonlite"
+    },
+    {
+      "source": "Data Importing & Acquisition/DATA ACQUISITION",
+      "target": "flat files"
+    },
+    {
+      "source": "STATISTICAL MODELING/MIXED-EFFECTS MODELS",
+      "target": "STATISTICAL MODELING"
+    },
+    {
+      "source": "STATISTICAL MODELING/MIXED-EFFECTS MODELS",
+      "target": "lme4"
+    },
+    {
+      "source": "STATISTICAL MODELING/MIXED-EFFECTS MODELS",
+      "target": "glmmTMB"
+    },
+    {
+      "source": "STATISTICAL MODELING/MIXED-EFFECTS MODELS",
+      "target": "lmerTest"
+    },
+    {
+      "source": "STATISTICAL MODELING/TIME SERIES ANALYSIS",
+      "target": "STATISTICAL MODELING"
+    },
+    {
+      "source": "STATISTICAL MODELING/TIME SERIES ANALYSIS",
+      "target": "stats"
+    },
+    {
+      "source": "STATISTICAL MODELING/TIME SERIES ANALYSIS",
+      "target": "forecast"
+    },
+    {
+      "source": "STATISTICAL MODELING/TIME SERIES ANALYSIS",
+      "target": "tseries"
+    },
+    {
+      "source": "STATISTICAL MODELING/TIME SERIES ANALYSIS",
+      "target": "zoo"
+    },
+    {
+      "source": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS",
+      "target": "STATISTICAL MODELING"
+    },
+    {
+      "source": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS",
+      "target": "stats"
+    },
+    {
+      "source": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS",
+      "target": "car"
+    },
+    {
+      "source": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS",
+      "target": "lmtest"
+    },
+    {
+      "source": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS",
+      "target": "lme4"
+    },
+    {
+      "source": "STATISTICAL MODELING/LINEAR & GENERALIZED LINEAR MODELS",
+      "target": "autoplot"
+    },
+    {
+      "source": "STATISTICAL MODELING/BAYESIAN STATISTICS",
+      "target": "STATISTICAL MODELING"
+    },
+    {
+      "source": "STATISTICAL MODELING/BAYESIAN STATISTICS",
+      "target": "rstan"
+    },
+    {
+      "source": "STATISTICAL MODELING/BAYESIAN STATISTICS",
+      "target": "rstanarm"
+    },
+    {
+      "source": "STATISTICAL MODELING/BAYESIAN STATISTICS",
+      "target": "brms"
+    },
+    {
+      "source": "STATISTICAL MODELING/BAYESIAN STATISTICS",
+      "target": "BayesFactor"
+    },
+    {
+      "source": "STATISTICAL MODELING/BAYESIAN STATISTICS",
+      "target": "rethinking"
+    },
+    {
+      "source": "STATISTICAL MODELING/STATS & INFERENCE",
+      "target": "STATISTICAL MODELING"
+    },
+    {
+      "source": "STATISTICAL MODELING/STATS & INFERENCE",
+      "target": "stats"
+    },
+    {
+      "source": "STATISTICAL MODELING/STATS & INFERENCE",
+      "target": "car"
+    },
+    {
+      "source": "STATISTICAL MODELING/STATS & INFERENCE",
+      "target": "multcomp"
+    },
+    {
+      "source": "STATISTICAL MODELING/STATS & INFERENCE",
+      "target": "MASS"
+    },
+    {
+      "source": "STATISTICAL MODELING/STATS & INFERENCE",
+      "target": "infer"
+    },
+    {
+      "source": "STATISTICAL MODELING/MULTIVARIATE STATISTICS",
+      "target": "STATISTICAL MODELING"
+    },
+    {
+      "source": "STATISTICAL MODELING/MULTIVARIATE STATISTICS",
+      "target": "factoextra"
+    },
+    {
+      "source": "STATISTICAL MODELING/MULTIVARIATE STATISTICS",
+      "target": "FactoMineR"
+    },
+    {
+      "source": "STATISTICAL MODELING/MULTIVARIATE STATISTICS",
+      "target": "cluster"
+    },
+    {
+      "source": "STATISTICAL MODELING/MULTIVARIATE STATISTICS",
+      "target": "vegan"
+    }
+  ]
+}
