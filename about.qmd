@@ -14,8 +14,8 @@ I grew up in Taiwan and Oregon, two vastly different regions each with their uni
 
 My interest in quantitative environmental research began at Bowdoin College, where I earned a B.A. from Bowdoin College (in Maine) in 2021 with degrees in mathematics and environmental studies, plus an economics minor. My career path first took me back to Taipei, where I worked with tech start-ups through SOSV, a multinational venture capital, developing an interest in applying technology to problem solve at scale. My data analyst internship with Cary Institute of Ecosystem studies propelled me to pursue data science as a career, and in 2024, I completed my master's in Environmental Data Science from the Bren School in Santa Barbara, culminating in the development of a reproducible emissions model for Darn Tough, Vermont.
 
-::: {.column-margin}
-![Bren School MEDS '24 Cohort](images/ucsbgrad.jpeg){width=150px}
+::: column-margin
+![Bren School MEDS '24 Cohort](images/ucsbgrad.jpeg){width="150px"}
 :::
 
 After graduation, I joined NASA's DEVELOP program to support the understanding and management of critical environmental systems, like alpine forests in the Rocky Mountains and oak stands in the Midwest (check them out ❄️[here](https://ntrs.nasa.gov/citations/20240009568) and 🪾[here](https://ntrs.nasa.gov/api/citations/20250004216/downloads/2024Fall_GSFC_IllinoisEco_TechPaper_FD-final.pdf)) and met the team at NREL.
@@ -24,4 +24,4 @@ After graduation, I joined NASA's DEVELOP program to support the understanding a
 
 Outside of work, you can most likely find me reading science fiction, tangled up in music theory, or on a hike!
 
-## 
+##
