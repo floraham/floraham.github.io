@@ -4,7 +4,6 @@ project:
 
 website:
   back-to-top-navigation: true
-  favicon: 🌿
   navbar:
     title: false
     left:
@@ -31,7 +30,7 @@ website:
   page-footer:
     background: light # or dark 
     left: 
-      - "Copyright 2024, Flora Hamilton"
+      - "Copyright 2026, Flora Hamilton"
     right: 
       - This website was built with Quarto
     

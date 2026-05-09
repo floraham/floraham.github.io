@@ -1,7 +1,7 @@
 ---
 title: "Flora Hamilton"
 subtitle: "洪書琪 (Hong Shu-Qi)"
-image: IMG_2339.jpg
+image: images/prof_pic.jpeg
 about: 
   template: trestles
   image-shape: rectangle
@@ -15,17 +15,15 @@ about:
       text: Bren profile
       href: https://bren.ucsb.edu/people/flora-hamilton
       
-html:
-  page-layout: full
+page-layout: full
 ---
+## Welcome to my page! I'm Flora 
 
-#### **Hello! I'm Flora 🌾**
+**Environmental data scientist specializing in remote sensing, rangeland ecosystems, and geospatial analytics**
 
-**I'm an environmental data scientist supporting science-based management of environmental systems using geoprogramming, data analysis, and data science.**
+Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), and other sources to analyze ecological patterns and support evidence-based landscape management strategies.
 
-Currently, I'm a Research Associate at Colorado State University's [Natural Resource Ecology Laboratory (NREL)](https://www.nrel.colostate.edu/), supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), and other sources to analyze ecological patterns and support evidence-based landscape management strategies.
-
-💻 🧰 🔧: R, Python, Google Earth Engine, ArcGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
+Coding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
 
 ------------------------------------------------------------------------
 
