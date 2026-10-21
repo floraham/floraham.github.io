@@ -1,49 +1,61 @@
 
+
 /*-- scss:defaults --*/
 
 // Colors
-
-$steal-blue: #6082B6;
+$steel-blue: #6082B6;
 $deep-navy-blue: #0437F2;
 $black: #000000;
-$jade-green: 	#425635;
+$jade-green: #425635;
 $white: #ffffff;
 $WhiteSmoke: #F5F5F5;
-$blue: #0000FF ;
+$blue: #0000FF;
 $coral-pink: #F88379;
 $light-green: #8FED92;
 $light-blue: #B0E0E6;
 $code-chunk-yellow: #F5F2D0;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display#=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
-
-
-// Base Document Colors 
-
-$navbar-bg: $jade-green; //navbar
-$navbar-fg: $white; // navbar foreground elements
-$navbar-hl: $code-chunk-yellow; // highlight color when hovering over navbar links
-$body-bg: $white; // page background 
-$body-color: $black; // page text 
-$footer-bg: $jade-green; // footer 
-$link-color: $jade-green;// hyperlinks 
-
-
+// Base document colors
+$navbar-bg: $jade-green;
+$navbar-fg: $white;
+$navbar-hl: $code-chunk-yellow;
+$body-bg: $white;
+$body-color: $black;
+$footer-bg: $jade-green;
+$link-color: $jade-green;
 
 // Inline code
-$code-bg: $white; // inline code background color
-$code-color: $black; // inline code text color
+$code-bg: $white;
+$code-color: $black;
 
 // Code blocks
-$code-block-bg: $code-chunk-yellow; // code block background color
+$code-block-bg: $code-chunk-yellow;
+
 
 /*-- scss:rules --*/
 
+// GENERAL TYPOGRAPHY
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+main p,
+#quarto-document-content p {
+  font-size: 1rem;
+  font-weight: 400 !important;
+  line-height: 1.65;
+}
+
 h1, h2, h3, h4 {
-  letter-spacing: 5px;
-  font-weight: 900;
+  font-weight: 600;
+  letter-spacing: 0;
   color: $black;
 }
 
@@ -51,9 +63,78 @@ h1, h2, h3, h4 {
   color: $black;
 }
 
-.custom-subtitle {
-  font-size: 22px;
-  font-style: italic;
-  color: $light-green;
+
+// RESEARCH HIGHLIGHTS
+
+.research-highlights h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $jade-green;
+  letter-spacing: 0;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
 }
 
+// Dates
+.research-highlights h3 + p {
+  font-size: 0.85rem;
+  font-weight: 400 !important;
+  font-style: normal;
+  color: #777;
+  margin: 0 0 0.65rem;
+}
+
+// Research descriptions
+.research-highlights p {
+  font-size: 1rem;
+  font-weight: 400 !important;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+// ============================================================
+// PUBLICATIONS
+// ============================================================
+
+#selected-publications-technical-reports {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+// Publication subsection headings
+#selected-publications-technical-reports ~ h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+// Publication links
+main a {
+  text-underline-offset: 3px;
+}
+
+main a:hover {
+  color: $steel-blue;
+}
+
+
+// ============================================================
+// MOBILE
+// ============================================================
+
+@media (max-width: 768px) {
+  .research-highlights h3 {
+    font-size: 1.1rem;
+  }
+
+  .research-highlights p {
+    font-size: 0.95rem;
+  }
+
+  #research-highlights,
+  #selected-publications-technical-reports {
+    font-size: 1.35rem;
+  }
+}

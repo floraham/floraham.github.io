@@ -19,9 +19,9 @@ page-layout: full
 ---
 ## Welcome to my page! I'm Flora 
 
-**Environmental data scientist specializing in remote sensing, rangeland ecosystems, and geospatial analytics**
+**I'm an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes**
 
-Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), and other sources to analyze ecological patterns and support evidence-based landscape management strategies.
+Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management. 
 
 Coding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
 
@@ -35,7 +35,7 @@ Natural Resource Ecology Lab (NREL), Colorado State University
 -   **Research Analyst** \| Sept 2024 - May 2025
 
 **Geospatial Data Analyst** \| Jun 2024 - Nov 2024\
-NASA DEVELOP, Goddard Space Flight Center & Colorado Node
+NASA DEVELOP, Goddard Space Flight Center & Colorado State University
 
 **Carbon Data Analyst** \| Jan 2024 - Jun 2024\
 Darn Tough, VT

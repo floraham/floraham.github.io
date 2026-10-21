@@ -13,7 +13,7 @@ website:
       text: About
     - href: Projects.qmd #need to change this to Blog one day. and then a separate section to Projects (list of projects)
       text: Blog
-    - href: Hamilton_resume_1page_aug27.pdf
+    - href: Hamilton_resume_1page_website.pdf
       text: Resume
       
     right: 
@@ -30,7 +30,7 @@ website:
   page-footer:
     background: light # or dark 
     left: 
-      - "Copyright 2026, Flora Hamilton"
+      - "Copyright 2027, Flora Hamilton"
     right: 
       - This website was built with Quarto
     

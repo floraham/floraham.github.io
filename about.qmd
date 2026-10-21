@@ -4,16 +4,16 @@ title: "About"
 
 ## {{< fa code >}} Currently...
 
-Curently, I'm an Ecological Research Associate at Colorado State University's (CSU) Natural Resource and Ecology Laboratory (NREL), contributing to rangeland management projects and more. I use data science methods, geoprogramming, and machine learning to synthesize both remotely sensed and field sampled datasets, evaluating field conditions and management project impacts.
+Curently, I'm an Ecological Research Associate at Colorado State University's (CSU) Natural Resource and Ecology Laboratory (NREL), contributing to ecological management projects in Western landscapes, including grazelands and forests. I use data science methods, geoprogramming, and machine learning to synthesize remotely-sensed and field sampled datasets to evaluate field conditions and management impacts.
 
-I have varied professional experiences, from working with tech startups in venture capital, scoping and leading projects as a NASA contractor, working for academic research institutions, to classroom teaching.
+I have varied professional experiences, from working with tech startups in venture capital, leading contract projects, working for academic research institutions, to classroom teaching.
 
-I am passionate about technical research, bridging data science to stakeholders, and exploring the vast world of quantitative ecology.
+I am passionate about using data science to deepen our understanding of the natural world and translating those insights into more informed approaches for improving human interactions with natural systems.
 
 {{< fa clock-rotate-left >}}
 
-I grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan's mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon's high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — mangrove forests, banyan trees, and Formosan Rock Macaques monkeys in Taiwan— and redwoods, salmon berries, and Columbia Sturgeon in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world.
+I grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan's mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon's high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — mangrove forests, banyan trees, stag beetles, blue magpies, and Formosan Rock Macaques in Taiwan— and redwoods, salmon berries, and huge Columbia Sturgeon in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world.
 
 ## {{< fa shuttle-space >}} /Misc/
 
-Outside of work, I spend my time practicing classical and jazz piano, and making origami.
+Outside of work, I spend my time practicing classical and jazz piano, learning languages, exploring new hobbies, and reading.

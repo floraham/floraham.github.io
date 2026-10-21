@@ -1,10 +1,64 @@
+
 ---
-title: "Projects"
-listing:
-  contents: Projects
-  type: default
-  sort: "date desc"
-  categories: true
+title: "Research Projects"
+format:
+  html:
+    toc: false
 ---
 
-Big updates coming soon!
+My work spans remote sensing, spatial ecology, statistical modeling, and applied conservation science. Below are selected highlights of my research projects and technical publications.
+
+## Research Highlights
+
+### Post-fire snowpack dynamics
+2024–2026
+
+Wildfire can reshape how snow accumulates and melts across mountain landscapes, with implications for downstream water resources. This project examines snow-depth patterns across burn severities, snow zones, and seasons in Colorado's Front Range watersheds using airborne lidar, field observations, and terrain data. A manuscript exploring these relationships is currently in preparation.
+
+### Mapping quaking aspen after wildfire
+2025–2026
+
+Quaking aspen plays an important role in forest diversity and post-fire recovery, but its distribution can be difficult to map across large landscapes. This project combines optical satellite imagery, radar, and terrain data with random forest modeling to identify aspen occurrence in northern Colorado. Model predictions are evaluated using spatial validation and independent reference observations.
+
+### Cattle movement and rangeland use
+2024–Present
+
+How do cattle move through and use rangelands under different virtual fencing configurations? Using GPS-collar observations, this research examines livestock movement, grazing, resting, and spatial patterns of pasture use. The work explores how environmental conditions and management treatments relate to cattle behavior and landscape use.
+
+### Evaluating virtual fencing in rangelands
+2024–2026
+
+Virtual fencing offers new possibilities for managing livestock without conventional physical fences, but understanding its ecological implications requires long-term monitoring. This project synthesized four years of vegetation observations across 47 monitoring plots, using statistical analyses and climate data to examine vegetation conditions and trends associated with rangeland management.
+
+### Improving individual tree-crown mapping
+2025–Present
+
+Mapping individual tree crowns across large landscapes often requires processing imagery in overlapping tiles, which can introduce duplicate tree detections. This project develops spatial methods to identify and resolve overlapping crown polygons, improving the consistency of tree-crown datasets across the New Mexico Highlands.
+
+## Selected Publications & Technical Reports
+
+### NASA DEVELOP Technical Reports
+
+**Northern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management**
+
+Hondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024).
+
+*NASA DEVELOP National Program.*
+
+[Read technical paper](https://ntrs.nasa.gov/citations/20240010934)
+
+**Illinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors**
+
+Hamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024).
+
+*NASA DEVELOP National Program.*
+
+[Read technical paper](https://ntrs.nasa.gov/citations/20250004216)
+
+### Manuscript in Preparation
+
+**Landscape-Scale Patterns of Post-Fire Snow Depth Across Burn Severities, Snow Zones, and Seasons in Colorado Front Range Watersheds**
+
+*Manuscript in preparation.*
+
+Colorado State University, Natural Resource Ecology Laboratory.
