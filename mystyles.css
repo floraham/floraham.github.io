@@ -138,3 +138,237 @@ main a:hover {
     font-size: 1.35rem;
   }
 }
+
+
+
+// ============================================================
+// MY BOOKSHELF
+// ============================================================
+
+.bookshelf {
+  max-width: 650px;
+  margin: 1.5rem 0 3rem;
+  padding: 1.5rem 1.5rem 1rem;
+  background: #f8f5ed;
+}
+
+.books {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 200px;
+}
+
+.bookshelf .book {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 2px 3px 0 0;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.1;
+  text-align: center;
+  transition: translate 0.2s ease;
+}
+
+.bookshelf .book:hover {
+  translate: 0 -9px;
+}
+
+.bookshelf .book.selected {
+  translate: 0 -6px;
+}
+
+.bookshelf .book:focus-visible {
+  outline: 2px solid #425635;
+  outline-offset: 3px;
+}
+
+// Individual books
+
+/* Vintage literary book colors */
+
+.book-sage {
+  height: 145px;
+  background: #243F57; // Deep navy
+  color: #F7EAD4;
+}
+
+.book-clay {
+  height: 172px;
+  background: #A63D32; // Brick red
+  color: #FFF0D8;
+}
+
+.book-sand {
+  height: 160px;
+  background: #D5A13A; // Mustard
+  color: #29251F;
+}
+
+.book-blue {
+  height: 153px;
+  background: #334F38; // Forest green
+  color: #F7EAD4;
+}
+
+.book-green {
+  height: 180px;
+  background: #6B3547; // Burgundy
+  color: #F7EAD4;
+}
+
+.book-burgundy {
+  height: 190px;
+  background: #344C75; // Vintage blue
+  color: #F7EAD4;
+}
+
+.book-ochre {
+  height: 155px;
+  background: #B86A35; // Burnt orange
+  color: #FFF0D8;
+}
+
+.book-navy {
+  height: 175px;
+  background: #252D35; // Charcoal
+  color: #F7EAD4;
+}
+
+.book-ivory {
+  height: 185px;
+  width: 45px;
+  background: #E7D8B6; // Aged ivory
+  color: #3B3026;
+}
+
+
+.bookshelf .book:hover,
+.bookshelf .book:focus,
+.bookshelf .book.selected {
+  color: inherit;
+}
+
+// Wooden shelf
+.wood-shelf {
+  height: 13px;
+  background: #916c4b;
+  border-bottom: 4px solid #644832;
+  box-shadow: 0 5px 0 #b18a68;
+}
+
+// Selected book information
+.book-details {
+  margin-top: 1.5rem;
+  min-height: 65px;
+  text-align: center;
+}
+
+.book-details strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #425635;
+}
+
+.book-details p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #665e53;
+  margin: 0.35rem 0 0;
+}
+
+// Mobile responsiveness
+@media (max-width: 600px) {
+
+.bookshelf {
+  max-width: 700px;
+  background: transparent;
+  padding: 0;
+  margin: 2.5rem 0 3rem;
+}
+
+.books {
+  height: 220px;
+  gap: 3px;
+  padding: 18px 15px 0;
+  background: #F2F0EB;
+  border-bottom: 1px solid #D2C7B7;
+}
+
+.wood-shelf {
+  height: 15px;
+  background: #755238;
+  border-top: 3px solid #A57B55;
+  border-bottom: 3px solid #4E3628;
+  box-shadow: 0 5px 6px rgba(55, 40, 25, 0.12);
+}
+
+}
+
+
+// Chinese upside-down Fu decoration
+.bookshelf {
+  position: relative;
+}
+
+.fu-decoration {
+  position: absolute;
+  top: -8px;
+  right: 35px;
+  width: 65px;
+  height: 65px;
+  background: #B52B27;
+  border: 3px solid #D9B66F;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.fu-decoration span {
+  display: block;
+  font-family: "Noto Serif CJK TC", "Songti TC", serif;
+  font-size: 39px;
+  font-weight: 700;
+  color: #F3D28C;
+  transform: rotate(135deg);
+  line-height: 1;
+}
+
+
+// Keep books resting directly on the wooden shelf
+.bookshelf .books {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 220px;
+  padding: 18px 15px 0;
+  margin-bottom: 0;
+}
+
+.bookshelf .book {
+  transform: none;
+  writing-mode: vertical-rl;
+}
+
+.bookshelf .book span {
+  transform: rotate(180deg);
+}
+
+.bookshelf .wood-shelf {
+  margin-top: 0;
+}

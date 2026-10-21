@@ -82,5 +82,19 @@
     "title": "Research Projects",
     "section": "Selected Publications & Technical Reports",
     "text": "Selected Publications & Technical Reports\n\nNASA DEVELOP Technical Reports\nNorthern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management\nHondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024).\nNASA DEVELOP National Program.\nRead technical paper\nIllinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors\nHamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024).\nNASA DEVELOP National Program.\nRead technical paper\n\n\nManuscript in Preparation\nLandscape-Scale Patterns of Post-Fire Snow Depth Across Burn Severities, Snow Zones, and Seasons in Colorado Front Range Watersheds\nManuscript in preparation.\nColorado State University, Natural Resource Ecology Laboratory."
+  },
+  {
+    "objectID": "bookshelf.html",
+    "href": "bookshelf.html",
+    "title": "Bookshelf",
+    "section": "",
+    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Some science, literature, philosophy, and some music scores.\n\n\n  \n    福\n  \n\n  \n  \n    The Story of Birds\n  \n\n  \n    The Three-Body Problem\n  \n\n  Taiwan Travelogue\n  \n\n  \n    The Dispossessed\n  \n\n  \n    The Book of Why\n  \n\n  \n    Gödel, Escher, Bach\n  \n\n  \n    Dune\n  \n\n  \n    Moby-Dick\n  \n\n  \n    The Well-Tempered Clavier\n   \n  \n\n  \n\n  \n  Select a book\n  \n  \n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "bookshelf.html#my-bookshelf",
+    "href": "bookshelf.html#my-bookshelf",
+    "title": "Bookshelf",
+    "section": "",
+    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Mostly science, literature, philosophy, and a little music.\n\n\n&lt;button class=\"book book-sage\"\n  data-title=\"The Story of Birds\"\n  data-author=\"Nature and ornithology\"&gt;\n  &lt;span&gt;The Story of Birds&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-clay\"\n  data-title=\"The Three-Body Problem\"\n  data-author=\"Liu Cixin\"&gt;\n  &lt;span&gt;The Three-Body Problem&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-sand\"\n  data-title=\"Taiwan Travelogue\"\n  data-author=\"Yáng Shuāng-zǐ\"&gt;\n  &lt;span&gt;Taiwan Travelogue&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-blue\"\n  data-title=\"The Dispossessed\"\n  data-author=\"Ursula K. Le Guin\"&gt;\n  &lt;span&gt;The Dispossessed&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-green\"\n  data-title=\"The Book of Why\"\n  data-author=\"Judea Pearl & Dana Mackenzie\"&gt;\n  &lt;span&gt;The Book of Why&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-burgundy\"\n  data-title=\"Gödel, Escher, Bach\"\n  data-author=\"Douglas Hofstadter\"&gt;\n  &lt;span&gt;Gödel, Escher, Bach&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-ochre\"\n  data-title=\"Dune\"\n  data-author=\"Frank Herbert\"&gt;\n  &lt;span&gt;Dune&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-navy\"\n  data-title=\"Moby-Dick\"\n  data-author=\"Herman Melville\"&gt;\n  &lt;span&gt;Moby-Dick&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-ivory\"\n  data-title=\"The Well-Tempered Clavier\"\n  data-author=\"Johann Sebastian Bach\"&gt;\n  &lt;span&gt;The Well-Tempered Clavier&lt;/span&gt;\n&lt;/button&gt;\n\n\n\n\n\n&lt;strong id=\"selected-book-title\"&gt;Select a book&lt;/strong&gt;\n&lt;p id=\"selected-book-author\"&gt;\n  Click a spine to explore my bookshelf.\n&lt;/p&gt;"
   }
 ]

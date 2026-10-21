@@ -1,0 +1,105 @@
+---
+title: "Bookshelf"
+format:
+  html:
+    toc: false
+---
+
+A small collection of books I've been reading, revisiting, or thinking about lately. Some science, literature, philosophy, and some music scores. 
+
+```{=html}
+<div class="bookshelf">
+
+  <div class="fu-decoration" aria-label="Upside-down Chinese fu character for good fortune">
+    <span>福</span>
+  </div>
+
+  <div class="books">
+  <button class="book book-sage"
+    data-title="The Story of Birds"
+    data-author="Stephen Brusatte"
+    data-description="Changed how I see birds...  how they function to where they came from, to what they are.">
+    <span>The Story of Birds</span>
+  </button>
+
+  <button class="book book-clay"
+    data-title="The Three-Body Problem"
+    data-author="Liu Cixin"
+    data-description="Mind-blowing scientific ideas woven into a gripping story that crosses cultures and history, all while asking questions about humanity's fate.">
+    <span>The Three-Body Problem</span>
+  </button>
+
+  <button class="book book-sand"
+    data-title="Taiwan Travelogue"
+    data-author="Yáng Shuāng-zǐ"
+    data-description="Mouth watering descriptions of food from home"
+    <span>Taiwan Travelogue</span>
+  </button>
+
+  <button class="book book-blue"
+    data-title="The Dispossessed"
+    data-author="Ursula K. Le Guin">
+    <span>The Dispossessed</span>
+  </button>
+
+  <button class="book book-green"
+    data-title="The Book of Why"
+    data-author="Judea Pearl & Dana Mackenzie">
+    <span>The Book of Why</span>
+  </button>
+
+  <button class="book book-burgundy"
+    data-title="Gödel, Escher, Bach"
+    data-author="Douglas Hofstadter"
+    data-description="I'll probably never finish this tome. It sits on my shelf and stares at me every day.">
+    <span>Gödel, Escher, Bach</span>
+  </button>
+
+  <button class="book book-ochre"
+    data-title="Dune"
+    data-author="Frank Herbert">
+    <span>Dune</span>
+  </button>
+
+  <button class="book book-navy"
+    data-title="Moby-Dick"
+    data-author="Herman Melville">
+    <span>Moby-Dick</span>
+  </button>
+
+  <button class="book book-ivory"
+    data-title="The Well-Tempered Clavier"
+    data-author="Johann Sebastian Bach">
+    <span>The Well-Tempered Clavier</span>
+   </button>
+  </div>
+
+  <div class="wood-shelf"></div>
+
+  <div class="book-details" aria-live="polite">
+  <strong id="selected-book-title">Select a book</strong>
+  <p id="selected-book-author"></p>
+  <p id="selected-book-description"></p>
+</div>
+</div>
+```
+
+```{=html}
+<script>
+document.querySelectorAll('.bookshelf .book').forEach(book => {
+  book.addEventListener('click', () => {
+    document.getElementById('selected-book-title').textContent =
+      book.dataset.title;
+    document.getElementById('selected-book-author').textContent =
+      book.dataset.author;
+    document.getElementById('selected-book-description').textContent =
+      book.dataset.description || '';
+
+    document.querySelectorAll('.bookshelf .book').forEach(b =>
+      b.classList.remove('selected')
+    );
+    book.classList.add('selected');
+  });
+});
+</script>
+```
