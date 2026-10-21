@@ -1,7 +1,21 @@
 [
   {
+    "objectID": "bookshelf.html",
+    "href": "bookshelf.html",
+    "title": "Bookshelf",
+    "section": "",
+    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Some science, literature, philosophy, and some music scores.\n\n\n  \n    福\n  \n\n  \n  \n    The Story of Birds\n  \n\n  \n    The Three-Body Problem\n  \n\n  Taiwan Travelogue\n  \n\n  \n    The Dispossessed\n  \n\n  \n    The Book of Why\n  \n\n  \n    Gödel, Escher, Bach\n  \n\n  \n    Dune\n  \n\n  \n    Moby-Dick\n  \n\n  \n    The Well-Tempered Clavier\n   \n  \n\n  \n\n  \n  Select a book\n  \n  \n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
+    "title": "Flora Hamilton",
+    "section": "",
+    "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes\nCurrently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management.\nCoding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
+  },
+  {
+    "objectID": "index.html#welcome-to-my-page-im-flora",
+    "href": "index.html#welcome-to-my-page-im-flora",
     "title": "Flora Hamilton",
     "section": "",
     "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes\nCurrently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management.\nCoding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
@@ -19,6 +33,27 @@
     "title": "Flora Hamilton",
     "section": "Education",
     "text": "Education\nMaster of Environmental Data Science | June 2024\nBren School of Environmental Science & Management, UCSB\nBA in Mathematics and Environmental Studies, Economics Minor | May 2021\nBowdoin College, Brunswick, ME"
+  },
+  {
+    "objectID": "Projects.html",
+    "href": "Projects.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "My work spans remote sensing, spatial ecology, statistical modeling, and applied conservation science. Below are selected highlights of my research projects and technical publications."
+  },
+  {
+    "objectID": "Projects.html#research-highlights",
+    "href": "Projects.html#research-highlights",
+    "title": "Research Projects",
+    "section": "Research Highlights",
+    "text": "Research Highlights\n\nPost-fire snowpack dynamics\n2024–2026\nWildfire can reshape how snow accumulates and melts across mountain landscapes, with implications for downstream water resources. This project examines snow-depth patterns across burn severities, snow zones, and seasons in Colorado’s Front Range watersheds using airborne lidar, field observations, and terrain data. A manuscript exploring these relationships is currently in preparation.\n\n\nMapping quaking aspen after wildfire\n2025–2026\nQuaking aspen plays an important role in forest diversity and post-fire recovery, but its distribution can be difficult to map across large landscapes. This project combines optical satellite imagery, radar, and terrain data with random forest modeling to identify aspen occurrence in northern Colorado. Model predictions are evaluated using spatial validation and independent reference observations.\n\n\nCattle movement and rangeland use\n2024–Present\nHow do cattle move through and use rangelands under different virtual fencing configurations? Using GPS-collar observations, this research examines livestock movement, grazing, resting, and spatial patterns of pasture use. The work explores how environmental conditions and management treatments relate to cattle behavior and landscape use.\n\n\nEvaluating virtual fencing in rangelands\n2024–2026\nVirtual fencing offers new possibilities for managing livestock without conventional physical fences, but understanding its ecological implications requires long-term monitoring. This project synthesized four years of vegetation observations across 47 monitoring plots, using statistical analyses and climate data to examine vegetation conditions and trends associated with rangeland management.\n\n\nImproving individual tree-crown mapping\n2025–Present\nMapping individual tree crowns across large landscapes often requires processing imagery in overlapping tiles, which can introduce duplicate tree detections. This project develops spatial methods to identify and resolve overlapping crown polygons, improving the consistency of tree-crown datasets across the New Mexico Highlands."
+  },
+  {
+    "objectID": "Projects.html#selected-publications-technical-reports",
+    "href": "Projects.html#selected-publications-technical-reports",
+    "title": "Research Projects",
+    "section": "Selected Publications & Technical Reports",
+    "text": "Selected Publications & Technical Reports\n\nNASA DEVELOP Technical Reports\nNorthern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management\nHondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024).\nNASA DEVELOP National Program.\nRead technical paper\nIllinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors\nHamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024).\nNASA DEVELOP National Program.\nRead technical paper\n\n\nManuscript in Preparation\nLandscape-Scale Patterns of Post-Fire Snow Depth Across Burn Severities, Snow Zones, and Seasons in Colorado Front Range Watersheds\nManuscript in preparation.\nColorado State University, Natural Resource Ecology Laboratory."
   },
   {
     "objectID": "about.html",
@@ -40,61 +75,5 @@
     "title": "About",
     "section": " /Misc/",
     "text": "/Misc/\nOutside of work, I spend my time practicing classical and jazz piano, learning languages, exploring new hobbies, and reading."
-  },
-  {
-    "objectID": "Projects.html",
-    "href": "Projects.html",
-    "title": "Research Projects",
-    "section": "",
-    "text": "My work spans remote sensing, spatial ecology, statistical modeling, and applied conservation science. Below are selected highlights of my research projects and technical publications."
-  },
-  {
-    "objectID": "index.html#hello-im-flora",
-    "href": "index.html#hello-im-flora",
-    "title": "Flora Hamilton",
-    "section": "",
-    "text": "Environmental data scientist specializing in remote sensing, rangeland ecosystems, and geospatial analytics\nCurrently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), and other sources to analyze ecological patterns and support evidence-based landscape management strategies.\nCoding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
-  },
-  {
-    "objectID": "index.html#welcome-to-my-page-im-flora",
-    "href": "index.html#welcome-to-my-page-im-flora",
-    "title": "Flora Hamilton",
-    "section": "",
-    "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes\nCurrently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management.\nCoding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
-  },
-  {
-    "objectID": "Projects.html#selected-research-projects",
-    "href": "Projects.html#selected-research-projects",
-    "title": "Projects",
-    "section": "",
-    "text": "Geospatial modeling & analysis · Statistical modeling · Scientific writing\nAnalyze airborne lidar snow-depth observations, field measurements, burn severity, snow-zone classifications, and terrain to evaluate spatial and seasonal patterns in snowpack following large wildfires.\n\n\n\nSpecies distribution modeling · Remote sensing · Model evaluation\nIntegrate multispectral satellite imagery, SAR, and terrain predictors in random forest models of quaking aspen occurrence, with spatial validation and independent reference data used to evaluate model performance.\n\n\n\nMovement ecology · Spatial analysis · Statistical modeling\nAnalyze GPS-collar movement and activity data to characterize cattle behavior and spatiotemporal pasture use across management and virtual-fencing treatments.\nDevelop models relating livestock space use and behavior to topography, vegetation, management, and virtual-fencing characteristics.\n\n\n\nLarge-scale data analysis · Statistical modeling · Stakeholder collaboration\nDevelop workflows for data cleaning, exploratory analysis, hierarchical clustering, and mixed-effects modeling of vegetation condition.\nSynthesize four years of vegetation monitoring across 47 plots, integrating statistical analyses, climate context, trend visualization, and annual reporting.\n\n\n\nGeospatial methods · LiDAR · High-performance computing\nDevelop methods to identify and resolve duplicated tree-crown polygons produced across adjacent image tiles. Implement scalable workflows for evaluating and deduplicating crown delineations across the New Mexico Highlands."
-  },
-  {
-    "objectID": "Projects.html#research-highlights",
-    "href": "Projects.html#research-highlights",
-    "title": "Research Projects",
-    "section": "Research Highlights",
-    "text": "Research Highlights\n\nPost-fire snowpack dynamics\n2024–2026\nWildfire can reshape how snow accumulates and melts across mountain landscapes, with implications for downstream water resources. This project examines snow-depth patterns across burn severities, snow zones, and seasons in Colorado’s Front Range watersheds using airborne lidar, field observations, and terrain data. A manuscript exploring these relationships is currently in preparation.\n\n\nMapping quaking aspen after wildfire\n2025–2026\nQuaking aspen plays an important role in forest diversity and post-fire recovery, but its distribution can be difficult to map across large landscapes. This project combines optical satellite imagery, radar, and terrain data with random forest modeling to identify aspen occurrence in northern Colorado. Model predictions are evaluated using spatial validation and independent reference observations.\n\n\nCattle movement and rangeland use\n2024–Present\nHow do cattle move through and use rangelands under different virtual fencing configurations? Using GPS-collar observations, this research examines livestock movement, grazing, resting, and spatial patterns of pasture use. The work explores how environmental conditions and management treatments relate to cattle behavior and landscape use.\n\n\nEvaluating virtual fencing in rangelands\n2024–2026\nVirtual fencing offers new possibilities for managing livestock without conventional physical fences, but understanding its ecological implications requires long-term monitoring. This project synthesized four years of vegetation observations across 47 monitoring plots, using statistical analyses and climate data to examine vegetation conditions and trends associated with rangeland management.\n\n\nImproving individual tree-crown mapping\n2025–Present\nMapping individual tree crowns across large landscapes often requires processing imagery in overlapping tiles, which can introduce duplicate tree detections. This project develops spatial methods to identify and resolve overlapping crown polygons, improving the consistency of tree-crown datasets across the New Mexico Highlands."
-  },
-  {
-    "objectID": "Projects.html#selected-publications-technical-reports",
-    "href": "Projects.html#selected-publications-technical-reports",
-    "title": "Research Projects",
-    "section": "Selected Publications & Technical Reports",
-    "text": "Selected Publications & Technical Reports\n\nNASA DEVELOP Technical Reports\nNorthern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management\nHondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024).\nNASA DEVELOP National Program.\nRead technical paper\nIllinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors\nHamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024).\nNASA DEVELOP National Program.\nRead technical paper\n\n\nManuscript in Preparation\nLandscape-Scale Patterns of Post-Fire Snow Depth Across Burn Severities, Snow Zones, and Seasons in Colorado Front Range Watersheds\nManuscript in preparation.\nColorado State University, Natural Resource Ecology Laboratory."
-  },
-  {
-    "objectID": "bookshelf.html",
-    "href": "bookshelf.html",
-    "title": "Bookshelf",
-    "section": "",
-    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Some science, literature, philosophy, and some music scores.\n\n\n  \n    福\n  \n\n  \n  \n    The Story of Birds\n  \n\n  \n    The Three-Body Problem\n  \n\n  Taiwan Travelogue\n  \n\n  \n    The Dispossessed\n  \n\n  \n    The Book of Why\n  \n\n  \n    Gödel, Escher, Bach\n  \n\n  \n    Dune\n  \n\n  \n    Moby-Dick\n  \n\n  \n    The Well-Tempered Clavier\n   \n  \n\n  \n\n  \n  Select a book\n  \n  \n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "bookshelf.html#my-bookshelf",
-    "href": "bookshelf.html#my-bookshelf",
-    "title": "Bookshelf",
-    "section": "",
-    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Mostly science, literature, philosophy, and a little music.\n\n\n&lt;button class=\"book book-sage\"\n  data-title=\"The Story of Birds\"\n  data-author=\"Nature and ornithology\"&gt;\n  &lt;span&gt;The Story of Birds&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-clay\"\n  data-title=\"The Three-Body Problem\"\n  data-author=\"Liu Cixin\"&gt;\n  &lt;span&gt;The Three-Body Problem&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-sand\"\n  data-title=\"Taiwan Travelogue\"\n  data-author=\"Yáng Shuāng-zǐ\"&gt;\n  &lt;span&gt;Taiwan Travelogue&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-blue\"\n  data-title=\"The Dispossessed\"\n  data-author=\"Ursula K. Le Guin\"&gt;\n  &lt;span&gt;The Dispossessed&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-green\"\n  data-title=\"The Book of Why\"\n  data-author=\"Judea Pearl & Dana Mackenzie\"&gt;\n  &lt;span&gt;The Book of Why&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-burgundy\"\n  data-title=\"Gödel, Escher, Bach\"\n  data-author=\"Douglas Hofstadter\"&gt;\n  &lt;span&gt;Gödel, Escher, Bach&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-ochre\"\n  data-title=\"Dune\"\n  data-author=\"Frank Herbert\"&gt;\n  &lt;span&gt;Dune&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-navy\"\n  data-title=\"Moby-Dick\"\n  data-author=\"Herman Melville\"&gt;\n  &lt;span&gt;Moby-Dick&lt;/span&gt;\n&lt;/button&gt;\n\n&lt;button class=\"book book-ivory\"\n  data-title=\"The Well-Tempered Clavier\"\n  data-author=\"Johann Sebastian Bach\"&gt;\n  &lt;span&gt;The Well-Tempered Clavier&lt;/span&gt;\n&lt;/button&gt;\n\n\n\n\n\n&lt;strong id=\"selected-book-title\"&gt;Select a book&lt;/strong&gt;\n&lt;p id=\"selected-book-author\"&gt;\n  Click a spine to explore my bookshelf.\n&lt;/p&gt;"
   }
 ]
