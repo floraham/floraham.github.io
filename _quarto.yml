@@ -12,7 +12,7 @@ website:
     - href: about.qmd
       text: About
     - href: Projects.qmd #need to change this to Blog one day. and then a separate section to Projects (list of projects)
-      text: Blog
+      text: Projects
     - href: Hamilton_resume_1page_website.pdf
       text: Resume
     - href: bookshelf.qmd
