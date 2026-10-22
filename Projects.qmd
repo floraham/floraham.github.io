@@ -19,18 +19,17 @@ How do burn severity and snow zone shape snow depth across the accumulation and 
 
 ## Other selected work
 
-:::::::: project-grid
-::: project-item
+:::: {.project-grid}
+
+::: {.project-item}
 #### Quaking aspen after wildfire
 
 *Northern Colorado · 2025–2026*
 
 Mapping aspen occurrence with optical and radar imagery, terrain data, and spatially validated models.
-
-Deliverable: Maps, models, code repo., technical report
 :::
 
-::: project-item
+::: {.project-item}
 #### Cattle movement and rangeland use
 
 *Rangelands · 2024–Present*
@@ -38,7 +37,7 @@ Deliverable: Maps, models, code repo., technical report
 Using GPS-collar data to study how cattle movement, behavior, and preferences vary across pastures and management treatments.
 :::
 
-::: project-item
+::: {.project-item}
 #### Virtual fencing and vegetation
 
 *Rangelands · 2024–2026*
@@ -46,29 +45,20 @@ Using GPS-collar data to study how cattle movement, behavior, and preferences va
 Four years of monitoring across 47 plots to examine vegetation patterns alongside climate and management.
 :::
 
-::: project-item
+::: {.project-item}
 #### Individual tree-crown mapping
 
 *New Mexico Highlands · 2025–Present*
 
-Resolving duplicate crowns at overlapping image-tile boundaries to improve a map product of individual tree crown and tree top detections in surviving tree islands across the New Mexico Highlands.
+Resolving duplicate crowns at overlapping image-tile boundaries to improve individual tree-crown and treetop mapping.
 :::
 
-::: project-item
+::: {.project-item}
 #### Vegetation monitoring
 
 *Western Rangelands · 2024–Present*
 
-Translating Line Point Intersect and datasets from other vegetation monitoring methods into insights about field conditions and management results.
+Turning line-point-intercept and other vegetation monitoring data into insights about field conditions and management.
 :::
-::::::::
 
-### NASA DEVELOP Technical Reports
-
-[**Northern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management**](https://ntrs.nasa.gov/citations/20240010934)
-
-Hondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024). *NASA DEVELOP National Program.*
-
-[**Illinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors**](https://ntrs.nasa.gov/citations/20250004216)
-
-Hamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024). *NASA DEVELOP National Program.*
+::::
