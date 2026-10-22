@@ -4,76 +4,69 @@
     "href": "bookshelf.html",
     "title": "Bookshelf",
     "section": "",
-    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Some science, literature, philosophy, and some music scores.\n\n\n  \n    福\n  \n\n  \n  \n    The Story of Birds\n  \n\n  \n    The Three-Body Problem\n  \n\n  Taiwan Travelogue\n  \n\n  \n    The Dispossessed\n  \n\n  \n    The Book of Why\n  \n\n  \n    Gödel, Escher, Bach\n  \n\n  \n    Dune\n  \n\n  \n    Moby-Dick\n  \n\n  \n    The Well-Tempered Clavier\n   \n  \n\n  \n\n  \n  Select a book\n  \n  \n\n\n\n\n\n\n Back to top"
+    "text": "A small collection of books I’ve been reading, revisiting, or thinking about lately. Some science, literature, philosophy, and some music scores.\n\n\n  \n    福\n  \n\n  \n  \n    The Story of Birds\n  \n\n  \n    The Three-Body Problem\n  \n\n  Taiwan Travelogue\n  \n\n  \n    The Dispossessed\n  \n\n  \n    Advanced R, 2e\n  \n\n  \n    Gödel, Escher, Bach\n  \n\n  \n    Dune\n  \n\n  \n    Moby-Dick\n  \n\n  \n    The Well-Tempered Clavier\n   \n  \n\n  \n\n  \n  Select a book\n  \n  \n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes\nCurrently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management.\nCoding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
+    "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in western landscapes.\nI’m a Research Associate with the Ecosystem Management and Research Group at Colorado State University’s Natural Resource Ecology Laboratory (NREL). I bring together field observations, drone and satellite imagery, animal GPS data, and other ecological datasets to study landscape patterns and support evidence-based management.\n\nWorkEducationTools / Skills\n\n\n\nResearch Associate (Jun 2025–Present) ← Research Analyst (Sep 2024–May 2025) · NREL, CSU\n\n\nGeospatial Data Analyst (Jun–Nov 2024) · NASA DEVELOP, CSU, Fort Collins CO\n\n\nData Jam Data Intern (Dec 2022–Jun 2023) · Cary Institute, Millbrook NY\n\n\nEnvironmental Analyst, Contract (Aug–Oct 2022) · Open Sensory, Portland OR\n\n\nInvestment Specialist (Jul 2021–Apr 2022) · Orbit Startups @ SOSV, Taipei, Taiwan\n\n\n\n\nMaster of Environmental Data Science · June 2024\nBren School of Environmental Science & Management, UCSB\n\n\nBA in Mathematics and Environmental Studies, Economics Minor · May 2021\nBowdoin College, Brunswick, ME\n\n\n\nTools: R · Python · Google Earth Engine · ArcGIS · QGIS · Excel · Git\nMethods: Remote sensing analysis · Data Analytics · Data Visualization · QA/QC · Machine learning · Data visualization · Modelling · Data management · Dashboard Building (RShiny, GEE Apps)"
   },
   {
     "objectID": "index.html#welcome-to-my-page-im-flora",
     "href": "index.html#welcome-to-my-page-im-flora",
     "title": "Flora Hamilton",
     "section": "",
-    "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes\nCurrently, I’m a Research Associate at Colorado State University’s Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management.\nCoding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Flora Hamilton",
-    "section": "Experience",
-    "text": "Experience\nResearch Associate | June 2025 - Present\nNatural Resource Ecology Lab (NREL), Colorado State University\n\nResearch Analyst | Sept 2024 - May 2025\n\nGeospatial Data Analyst | Jun 2024 - Nov 2024\nNASA DEVELOP, Goddard Space Flight Center & Colorado State University\nData Jam Data Intern | Dec 2022 - Jun 2023\nCary Institute of Ecosystems Studies, NY\nEnvironmental Analyst (Contract) | Aug 2022 - Oct 2022\nOpen Sensory LLC, Portland, OR\nInvestment Specialist | Jul 2021 - April 2022\nOrbit Startups @ SOSV, Taipei, Taiwan"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Flora Hamilton",
-    "section": "Education",
-    "text": "Education\nMaster of Environmental Data Science | June 2024\nBren School of Environmental Science & Management, UCSB\nBA in Mathematics and Environmental Studies, Economics Minor | May 2021\nBowdoin College, Brunswick, ME"
+    "text": "I’m an environmental data scientist specializing in remote sensing and geospatial analytics in western landscapes.\nI’m a Research Associate with the Ecosystem Management and Research Group at Colorado State University’s Natural Resource Ecology Laboratory (NREL). I bring together field observations, drone and satellite imagery, animal GPS data, and other ecological datasets to study landscape patterns and support evidence-based management.\n\nWorkEducationTools / Skills\n\n\n\nResearch Associate (Jun 2025–Present) ← Research Analyst (Sep 2024–May 2025) · NREL, CSU\n\n\nGeospatial Data Analyst (Jun–Nov 2024) · NASA DEVELOP, CSU, Fort Collins CO\n\n\nData Jam Data Intern (Dec 2022–Jun 2023) · Cary Institute, Millbrook NY\n\n\nEnvironmental Analyst, Contract (Aug–Oct 2022) · Open Sensory, Portland OR\n\n\nInvestment Specialist (Jul 2021–Apr 2022) · Orbit Startups @ SOSV, Taipei, Taiwan\n\n\n\n\nMaster of Environmental Data Science · June 2024\nBren School of Environmental Science & Management, UCSB\n\n\nBA in Mathematics and Environmental Studies, Economics Minor · May 2021\nBowdoin College, Brunswick, ME\n\n\n\nTools: R · Python · Google Earth Engine · ArcGIS · QGIS · Excel · Git\nMethods: Remote sensing analysis · Data Analytics · Data Visualization · QA/QC · Machine learning · Data visualization · Modelling · Data management · Dashboard Building (RShiny, GEE Apps)"
   },
   {
     "objectID": "Projects.html",
     "href": "Projects.html",
     "title": "Research Projects",
     "section": "",
-    "text": "My work spans remote sensing, spatial ecology, statistical modeling, and applied conservation science. Below are selected highlights of my research projects and technical publications."
+    "text": "I use remote sensing, field data, and spatial models to understand how western ecosystems respond to disturbance and management. These highlights include collaborative work from my roles at CSU NREL and NASA DEVELOP, alongside ongoing research; related and publically available technical reports are linked below."
   },
   {
-    "objectID": "Projects.html#research-highlights",
-    "href": "Projects.html#research-highlights",
+    "objectID": "Projects.html#highlighted-project",
+    "href": "Projects.html#highlighted-project",
     "title": "Research Projects",
-    "section": "Research Highlights",
-    "text": "Research Highlights\n\nPost-fire snowpack dynamics\n2024–2026\nWildfire can reshape how snow accumulates and melts across mountain landscapes, with implications for downstream water resources. This project examines snow-depth patterns across burn severities, snow zones, and seasons in Colorado’s Front Range watersheds using airborne lidar, field observations, and terrain data. A manuscript exploring these relationships is currently in preparation.\n\n\nMapping quaking aspen after wildfire\n2025–2026\nQuaking aspen plays an important role in forest diversity and post-fire recovery, but its distribution can be difficult to map across large landscapes. This project combines optical satellite imagery, radar, and terrain data with random forest modeling to identify aspen occurrence in northern Colorado. Model predictions are evaluated using spatial validation and independent reference observations.\n\n\nCattle movement and rangeland use\n2024–Present\nHow do cattle move through and use rangelands under different virtual fencing configurations? Using GPS-collar observations, this research examines livestock movement, grazing, resting, and spatial patterns of pasture use. The work explores how environmental conditions and management treatments relate to cattle behavior and landscape use.\n\n\nEvaluating virtual fencing in rangelands\n2024–2026\nVirtual fencing offers new possibilities for managing livestock without conventional physical fences, but understanding its ecological implications requires long-term monitoring. This project synthesized four years of vegetation observations across 47 monitoring plots, using statistical analyses and climate data to examine vegetation conditions and trends associated with rangeland management.\n\n\nImproving individual tree-crown mapping\n2025–Present\nMapping individual tree crowns across large landscapes often requires processing imagery in overlapping tiles, which can introduce duplicate tree detections. This project develops spatial methods to identify and resolve overlapping crown polygons, improving the consistency of tree-crown datasets across the New Mexico Highlands."
+    "section": "Highlighted project",
+    "text": "Highlighted project\n\nPost-fire snowpack dynamics in the Colorado Front Range\nHow do burn severity and snow zone shape snow depth across the accumulation and melt seasons? My team and I combine airborne lidar, field observations, and terrain data to investigate this across two Front Range watershed using airborne Lidar and satellite imagery.\nManuscript in preparation."
   },
   {
-    "objectID": "Projects.html#selected-publications-technical-reports",
-    "href": "Projects.html#selected-publications-technical-reports",
+    "objectID": "Projects.html#other-selected-work",
+    "href": "Projects.html#other-selected-work",
     "title": "Research Projects",
-    "section": "Selected Publications & Technical Reports",
-    "text": "Selected Publications & Technical Reports\n\nNASA DEVELOP Technical Reports\nNorthern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management\nHondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024).\nNASA DEVELOP National Program.\nRead technical paper\nIllinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors\nHamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024).\nNASA DEVELOP National Program.\nRead technical paper\n\n\nManuscript in Preparation\nLandscape-Scale Patterns of Post-Fire Snow Depth Across Burn Severities, Snow Zones, and Seasons in Colorado Front Range Watersheds\nManuscript in preparation.\nColorado State University, Natural Resource Ecology Laboratory."
+    "section": "Other selected work",
+    "text": "Other selected work\n\n\nQuaking aspen after wildfire\nNorthern Colorado · 2025–2026\nMapping aspen occurrence with optical and radar imagery, terrain data, and spatially validated models.\nDeliverable: Maps, models, code repo., technical report\n\n\nCattle movement and rangeland use\nRangelands · 2024–Present\nUsing GPS-collar data to study how cattle movement, behavior, and preferences vary across pastures and management treatments.\n\n\nVirtual fencing and vegetation\nRangelands · 2024–2026\nFour years of monitoring across 47 plots to examine vegetation patterns alongside climate and management.\n\n\nIndividual tree-crown mapping\nNew Mexico Highlands · 2025–Present\nResolving duplicate crowns at overlapping image-tile boundaries to improve a map product of individual tree crown and tree top detections in surviving tree islands across the New Mexico Highlands.\n\n\nVegetation monitoring\nWestern Rangelands · 2024–Present\nTranslating Line Point Intersect and datasets from other vegetation monitoring methods into insights about field conditions and management results.\n\n\n\nNASA DEVELOP Technical Reports\nNorthern Colorado Water Resources: Using Earth Observations to Assess Relationships between Snowpack and Wildfires for Water Utility Management\nHondorp, R., Hamilton, F., Ellis, K., & Biswas, T. (2024). NASA DEVELOP National Program.\nIllinois Ecological Conservation: Using Earth Observations to Identify Areas of Oak Decline in Illinois and Investigate Contributing Risk Factors\nHamilton, F., Nthiga, N., Rubin, E., & Shostak, B. (2024). NASA DEVELOP National Program."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Curently, I’m an Ecological Research Associate at Colorado State University’s (CSU) Natural Resource and Ecology Laboratory (NREL), contributing to ecological management projects in Western landscapes, including grazelands and forests. I use data science methods, geoprogramming, and machine learning to synthesize remotely-sensed and field sampled datasets to evaluate field conditions and management impacts.\nI have varied professional experiences, from working with tech startups in venture capital, leading contract projects, working for academic research institutions, to classroom teaching.\nI am passionate about using data science to deepen our understanding of the natural world and translating those insights into more informed approaches for improving human interactions with natural systems.\n\nI grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan’s mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon’s high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — mangrove forests, banyan trees, stag beetles, blue magpies, and Formosan Rock Macaques in Taiwan— and redwoods, salmon berries, and huge Columbia Sturgeon in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world."
+    "text": "I’m a Research Associate with the Ecosystem Management and Research Group at Colorado State University’s Natural Resource Ecology Laboratory (NREL). My work supports ecological management research across western rangelands and forests. I combine field observations, drone and satellite imagery, animal GPS data, and geospatial, statistical, and machine-learning methods to study ecological patterns and management outcomes.\nI’m interested in how environmental data can deepen our understanding of ecosystems and inform how people manage them. My background also includes applied research, contract project leadership, classroom teaching, and work with technology startups."
   },
   {
-    "objectID": "about.html#fa-code-currently",
-    "href": "about.html#fa-code-currently",
+    "objectID": "about.html#fa-code-research",
+    "href": "about.html#fa-code-research",
     "title": "About",
     "section": "",
-    "text": "Curently, I’m an Ecological Research Associate at Colorado State University’s (CSU) Natural Resource and Ecology Laboratory (NREL), contributing to ecological management projects in Western landscapes, including grazelands and forests. I use data science methods, geoprogramming, and machine learning to synthesize remotely-sensed and field sampled datasets to evaluate field conditions and management impacts.\nI have varied professional experiences, from working with tech startups in venture capital, leading contract projects, working for academic research institutions, to classroom teaching.\nI am passionate about using data science to deepen our understanding of the natural world and translating those insights into more informed approaches for improving human interactions with natural systems.\n\nI grew up in Taiwan and Oregon, two vastly different regions each with their unique ecosystems. Taiwan’s mountains host a range of forest types, from subtropical forests in the lowlands to temperate and alpine forests at higher elevations. On the other hand, Oregon’s high deserts, alpine forests, and basalt rock groups together create a whole other universe for exploration. My early acquaintances with these two polar opposite natural worlds — mangrove forests, banyan trees, stag beetles, blue magpies, and Formosan Rock Macaques in Taiwan— and redwoods, salmon berries, and huge Columbia Sturgeon in Oregon, fostered a life-long appreciation for productive ecosystems and the natural world."
+    "text": "I’m a Research Associate with the Ecosystem Management and Research Group at Colorado State University’s Natural Resource Ecology Laboratory (NREL). My work supports ecological management research across western rangelands and forests. I combine field observations, drone and satellite imagery, animal GPS data, and geospatial, statistical, and machine-learning methods to study ecological patterns and management outcomes.\nI’m interested in how environmental data can deepen our understanding of ecosystems and inform how people manage them. My background also includes applied research, contract project leadership, classroom teaching, and work with technology startups."
   },
   {
-    "objectID": "about.html#fa-shuttle-space-misc",
-    "href": "about.html#fa-shuttle-space-misc",
+    "objectID": "about.html#fa-clock-rotate-left-background",
+    "href": "about.html#fa-clock-rotate-left-background",
     "title": "About",
-    "section": " /Misc/",
-    "text": "/Misc/\nOutside of work, I spend my time practicing classical and jazz piano, learning languages, exploring new hobbies, and reading."
+    "section": " Background",
+    "text": "Background\nI grew up in Taiwan and Oregon, places with very different landscapes that shaped my curiosity about ecology. Taiwan’s mountains span subtropical lowland forests to temperate and alpine forests. Oregon’s high deserts, forests, and basalt landscapes offered another world to explore. Some of my favorite memories are amongst Taiwan’s mangroves, banyan trees, stag beetles, blue magpies, and Formosan macaques, as well as Oregon’s redwoods, salmonberries, and sturgeon in the Columbia River."
+  },
+  {
+    "objectID": "about.html#outside-of-work",
+    "href": "about.html#outside-of-work",
+    "title": "About",
+    "section": "Outside of Work",
+    "text": "Outside of Work\nI spend my time practicing classical and jazz piano, learning languages, exploring new hobbies, and reading."
   }
 ]

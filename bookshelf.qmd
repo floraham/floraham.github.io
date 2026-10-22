@@ -43,9 +43,9 @@ A small collection of books I've been reading, revisiting, or thinking about lat
   </button>
 
   <button class="book book-green"
-    data-title="The Book of Why"
-    data-author="Judea Pearl & Dana Mackenzie">
-    <span>The Book of Why</span>
+    data-title="Advanced R, 2e"
+    data-author="Hadley Wickham">
+    <span>Advanced R, 2e</span>
   </button>
 
   <button class="book book-burgundy"

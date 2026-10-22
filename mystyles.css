@@ -63,6 +63,32 @@ h1, h2, h3, h4 {
   color: $black;
 }
 
+// ABOUT PAGE 
+/*-- scss:rules --*/
+
+.employer {
+  color: inherit;
+  font-size: inherit;
+  margin-top: 0.25rem;
+}
+
+.role-progression {
+  border-left: 1px solid #ccc;
+  display: grid;
+  gap: 0.25rem;
+  margin-left: 0.2rem;
+  padding-left: 0.85rem;
+}
+
+.panel-tabset .tab-content {
+  border: 0;
+  padding: 1rem 0 0;
+}
+
+.cv-entry {
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.65rem;
+}
 
 // RESEARCH HIGHLIGHTS
 
@@ -85,13 +111,42 @@ h1, h2, h3, h4 {
 }
 
 // Research descriptions
-.research-highlights p {
-  font-size: 1rem;
-  font-weight: 400 !important;
-  line-height: 1.7;
-  margin-bottom: 0.9rem;
+
+.project-feature {
+  border-left: 3px solid #9a8565;
+  margin: 2rem 0 2.5rem;
+  padding-left: 1.25rem;
 }
 
+.project-feature h3 {
+  margin-top: 0.35rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+.project-item {
+  border-top: 1px solid #ddd;
+  padding-top: 0.75rem;
+}
+
+.project-item h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.project-item p {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 700px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
 // ============================================================
 // PUBLICATIONS
 // ============================================================

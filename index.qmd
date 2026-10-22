@@ -17,41 +17,56 @@ about:
       
 page-layout: full
 ---
-## Welcome to my page! I'm Flora 
 
-**I'm an environmental data scientist specializing in remote sensing and geospatial analytics in Western landscapes**
+## Welcome to my page! I'm Flora
 
-Currently, I'm a Research Associate at Colorado State University's Natural Resource Ecology Laboratory (NREL) supporting rangeland management research. My current work integrates varied datasets from field samples, remote sensing technology (drones & satellites), animal GPS data, and other sources to analyze ecological patterns and support evidence-based landscape management. 
+I’m an environmental data scientist specializing in remote sensing and geospatial analytics in western landscapes.
 
-Coding/Workflow Stack: R, Python, Google Earth Engine, ArcGIS, QGIS, Remote Sensing Analysis, Machine Learning, Data Visualization, Excel, Data Management, Modelling, Git
+I’m a Research Associate with the Ecosystem Management and Research Group at Colorado State University’s Natural Resource Ecology Laboratory (NREL). I bring together field observations, drone and satellite imagery, animal GPS data, and other ecological datasets to study landscape patterns and support evidence-based management.
 
-------------------------------------------------------------------------
+::: {.panel-tabset}
 
-## Experience
+## Work
 
-**Research Associate** \| June 2025 - Present\
-Natural Resource Ecology Lab (NREL), Colorado State University
+::: {.cv-entry}
+**Research Associate** (Jun 2025–Present) ← **Research Analyst** (Sep 2024–May 2025) · NREL, CSU
+:::
 
--   **Research Analyst** \| Sept 2024 - May 2025
+::: {.cv-entry}
+**Geospatial Data Analyst** (Jun–Nov 2024) · NASA DEVELOP, CSU, Fort Collins CO
+:::
 
-**Geospatial Data Analyst** \| Jun 2024 - Nov 2024\
-NASA DEVELOP, Goddard Space Flight Center & Colorado State University
+::: {.cv-entry}
+**Data Jam Data Intern** (Dec 2022–Jun 2023) · Cary Institute, Millbrook NY
+:::
 
-**Data Jam Data Intern** \| Dec 2022 - Jun 2023\
-Cary Institute of Ecosystems Studies, NY
+::: {.cv-entry}
+**Environmental Analyst, Contract** (Aug–Oct 2022) · Open Sensory, Portland OR
+:::
 
-**Environmental Analyst (Contract)** \| Aug 2022 - Oct 2022\
-Open Sensory LLC, Portland, OR
-
-**Investment Specialist** \| Jul 2021 - April 2022\
-Orbit Startups \@ SOSV, Taipei, Taiwan
-
-------------------------------------------------------------------------
+::: {.cv-entry}
+**Investment Specialist** (Jul 2021–Apr 2022) · Orbit Startups @ SOSV, Taipei, Taiwan
+:::
 
 ## Education
 
-**Master of Environmental Data Science** \| June 2024\
+::: {.cv-entry}
+**Master of Environmental Data Science** · June 2024  
 Bren School of Environmental Science & Management, UCSB
+:::
 
-**BA in Mathematics and Environmental Studies, Economics Minor** \| May 2021\
+::: {.cv-entry}
+**BA in Mathematics and Environmental Studies, Economics Minor** · May 2021  
 Bowdoin College, Brunswick, ME
+:::
+
+## Tools / Skills
+
+**Tools:** R · Python · Google Earth Engine · ArcGIS · QGIS · Excel · Git
+
+**Methods:** Remote sensing analysis · Data Analytics · Data Visualization · QA/QC ·  Machine learning · Data visualization · Modelling  · Data management · Dashboard Building (RShiny, GEE Apps) 
+
+:::
+
+
+
